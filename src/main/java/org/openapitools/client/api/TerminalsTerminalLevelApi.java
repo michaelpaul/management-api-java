@@ -35,6 +35,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import javax.ws.rs.core.GenericType;
 
 public class TerminalsTerminalLevelApi {
     private ApiClient localVarApiClient;
@@ -98,7 +99,6 @@ public class TerminalsTerminalLevelApi {
      */
     public okhttp3.Call getTerminalsCall(String searchQuery, String countries, String merchantIds, String storeIds, String brandModels, Integer pageNumber, Integer pageSize, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 

@@ -2,13 +2,13 @@
 
 All URIs are relative to *https://management-test.adyen.com/v1*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**deleteMerchantsMerchantIdPayoutSettingsPayoutSettingsId**](PayoutSettingsMerchantLevelApi.md#deleteMerchantsMerchantIdPayoutSettingsPayoutSettingsId) | **DELETE** /merchants/{merchantId}/payoutSettings/{payoutSettingsId} | Delete a payout setting
-[**getMerchantsMerchantIdPayoutSettings**](PayoutSettingsMerchantLevelApi.md#getMerchantsMerchantIdPayoutSettings) | **GET** /merchants/{merchantId}/payoutSettings | Get a list of payout settings
-[**getMerchantsMerchantIdPayoutSettingsPayoutSettingsId**](PayoutSettingsMerchantLevelApi.md#getMerchantsMerchantIdPayoutSettingsPayoutSettingsId) | **GET** /merchants/{merchantId}/payoutSettings/{payoutSettingsId} | Get a payout setting
-[**patchMerchantsMerchantIdPayoutSettingsPayoutSettingsId**](PayoutSettingsMerchantLevelApi.md#patchMerchantsMerchantIdPayoutSettingsPayoutSettingsId) | **PATCH** /merchants/{merchantId}/payoutSettings/{payoutSettingsId} | Update a payout setting
-[**postMerchantsMerchantIdPayoutSettings**](PayoutSettingsMerchantLevelApi.md#postMerchantsMerchantIdPayoutSettings) | **POST** /merchants/{merchantId}/payoutSettings | Add a payout setting
+| Method | HTTP request | Description |
+|------------- | ------------- | -------------|
+| [**deleteMerchantsMerchantIdPayoutSettingsPayoutSettingsId**](PayoutSettingsMerchantLevelApi.md#deleteMerchantsMerchantIdPayoutSettingsPayoutSettingsId) | **DELETE** /merchants/{merchantId}/payoutSettings/{payoutSettingsId} | Delete a payout setting |
+| [**getMerchantsMerchantIdPayoutSettings**](PayoutSettingsMerchantLevelApi.md#getMerchantsMerchantIdPayoutSettings) | **GET** /merchants/{merchantId}/payoutSettings | Get a list of payout settings |
+| [**getMerchantsMerchantIdPayoutSettingsPayoutSettingsId**](PayoutSettingsMerchantLevelApi.md#getMerchantsMerchantIdPayoutSettingsPayoutSettingsId) | **GET** /merchants/{merchantId}/payoutSettings/{payoutSettingsId} | Get a payout setting |
+| [**patchMerchantsMerchantIdPayoutSettingsPayoutSettingsId**](PayoutSettingsMerchantLevelApi.md#patchMerchantsMerchantIdPayoutSettingsPayoutSettingsId) | **PATCH** /merchants/{merchantId}/payoutSettings/{payoutSettingsId} | Update a payout setting |
+| [**postMerchantsMerchantIdPayoutSettings**](PayoutSettingsMerchantLevelApi.md#postMerchantsMerchantIdPayoutSettings) | **POST** /merchants/{merchantId}/payoutSettings | Add a payout setting |
 
 
 <a name="deleteMerchantsMerchantIdPayoutSettingsPayoutSettingsId"></a>
@@ -64,10 +64,10 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **merchantId** | **String**| The unique identifier of the merchant account. |
- **payoutSettingsId** | **String**| The unique identifier of the payout setting. |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **merchantId** | **String**| The unique identifier of the merchant account. | |
+| **payoutSettingsId** | **String**| The unique identifier of the payout setting. | |
 
 ### Return type
 
@@ -85,13 +85,13 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | OK - the request has succeeded. |  -  |
-**204** | No Content - the request has been successfully processed, but there is no additional content. |  -  |
-**400** | Bad Request - a problem reading or understanding the request. |  -  |
-**401** | Unauthorized - authentication required. |  -  |
-**403** | Forbidden - insufficient permissions to process the request. |  -  |
-**422** | Unprocessable Entity - a request validation error. |  -  |
-**500** | Internal Server Error - the server could not process the request. |  -  |
+| **200** | OK - the request has succeeded. |  -  |
+| **204** | No Content - the request has been successfully processed, but there is no additional content. |  -  |
+| **400** | Bad Request - a problem reading or understanding the request. |  -  |
+| **401** | Unauthorized - authentication required. |  -  |
+| **403** | Forbidden - insufficient permissions to process the request. |  -  |
+| **422** | Unprocessable Entity - a request validation error. |  -  |
+| **500** | Internal Server Error - the server could not process the request. |  -  |
 
 <a name="getMerchantsMerchantIdPayoutSettings"></a>
 # **getMerchantsMerchantIdPayoutSettings**
@@ -145,9 +145,9 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **merchantId** | **String**| The unique identifier of the merchant account. |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **merchantId** | **String**| The unique identifier of the merchant account. | |
 
 ### Return type
 
@@ -165,13 +165,13 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | OK - the request has succeeded. |  -  |
-**204** | No Content - the request has been successfully processed, but there is no additional content. |  -  |
-**400** | Bad Request - a problem reading or understanding the request. |  -  |
-**401** | Unauthorized - authentication required. |  -  |
-**403** | Forbidden - insufficient permissions to process the request. |  -  |
-**422** | Unprocessable Entity - a request validation error. |  -  |
-**500** | Internal Server Error - the server could not process the request. |  -  |
+| **200** | OK - the request has succeeded. |  -  |
+| **204** | No Content - the request has been successfully processed, but there is no additional content. |  -  |
+| **400** | Bad Request - a problem reading or understanding the request. |  -  |
+| **401** | Unauthorized - authentication required. |  -  |
+| **403** | Forbidden - insufficient permissions to process the request. |  -  |
+| **422** | Unprocessable Entity - a request validation error. |  -  |
+| **500** | Internal Server Error - the server could not process the request. |  -  |
 
 <a name="getMerchantsMerchantIdPayoutSettingsPayoutSettingsId"></a>
 # **getMerchantsMerchantIdPayoutSettingsPayoutSettingsId**
@@ -226,10 +226,10 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **merchantId** | **String**| The unique identifier of the merchant account. |
- **payoutSettingsId** | **String**| The unique identifier of the payout setting. |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **merchantId** | **String**| The unique identifier of the merchant account. | |
+| **payoutSettingsId** | **String**| The unique identifier of the payout setting. | |
 
 ### Return type
 
@@ -247,13 +247,13 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | OK - the request has succeeded. |  -  |
-**204** | No Content - the request has been successfully processed, but there is no additional content. |  -  |
-**400** | Bad Request - a problem reading or understanding the request. |  -  |
-**401** | Unauthorized - authentication required. |  -  |
-**403** | Forbidden - insufficient permissions to process the request. |  -  |
-**422** | Unprocessable Entity - a request validation error. |  -  |
-**500** | Internal Server Error - the server could not process the request. |  -  |
+| **200** | OK - the request has succeeded. |  -  |
+| **204** | No Content - the request has been successfully processed, but there is no additional content. |  -  |
+| **400** | Bad Request - a problem reading or understanding the request. |  -  |
+| **401** | Unauthorized - authentication required. |  -  |
+| **403** | Forbidden - insufficient permissions to process the request. |  -  |
+| **422** | Unprocessable Entity - a request validation error. |  -  |
+| **500** | Internal Server Error - the server could not process the request. |  -  |
 
 <a name="patchMerchantsMerchantIdPayoutSettingsPayoutSettingsId"></a>
 # **patchMerchantsMerchantIdPayoutSettingsPayoutSettingsId**
@@ -309,11 +309,11 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **merchantId** | **String**| The unique identifier of the merchant account. |
- **payoutSettingsId** | **String**| The unique identifier of the payout setting. |
- **updatePayoutSettingsRequest** | [**UpdatePayoutSettingsRequest**](UpdatePayoutSettingsRequest.md)|  | [optional]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **merchantId** | **String**| The unique identifier of the merchant account. | |
+| **payoutSettingsId** | **String**| The unique identifier of the payout setting. | |
+| **updatePayoutSettingsRequest** | [**UpdatePayoutSettingsRequest**](UpdatePayoutSettingsRequest.md)|  | [optional] |
 
 ### Return type
 
@@ -331,13 +331,13 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | OK - the request has succeeded. |  -  |
-**204** | No Content - the request has been successfully processed, but there is no additional content. |  -  |
-**400** | Bad Request - a problem reading or understanding the request. |  -  |
-**401** | Unauthorized - authentication required. |  -  |
-**403** | Forbidden - insufficient permissions to process the request. |  -  |
-**422** | Unprocessable Entity - a request validation error. |  -  |
-**500** | Internal Server Error - the server could not process the request. |  -  |
+| **200** | OK - the request has succeeded. |  -  |
+| **204** | No Content - the request has been successfully processed, but there is no additional content. |  -  |
+| **400** | Bad Request - a problem reading or understanding the request. |  -  |
+| **401** | Unauthorized - authentication required. |  -  |
+| **403** | Forbidden - insufficient permissions to process the request. |  -  |
+| **422** | Unprocessable Entity - a request validation error. |  -  |
+| **500** | Internal Server Error - the server could not process the request. |  -  |
 
 <a name="postMerchantsMerchantIdPayoutSettings"></a>
 # **postMerchantsMerchantIdPayoutSettings**
@@ -392,10 +392,10 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **merchantId** | **String**| The unique identifier of the merchant account. |
- **payoutSettingsRequest** | [**PayoutSettingsRequest**](PayoutSettingsRequest.md)|  | [optional]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **merchantId** | **String**| The unique identifier of the merchant account. | |
+| **payoutSettingsRequest** | [**PayoutSettingsRequest**](PayoutSettingsRequest.md)|  | [optional] |
 
 ### Return type
 
@@ -413,11 +413,11 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | OK - the request has succeeded. |  -  |
-**204** | No Content - the request has been successfully processed, but there is no additional content. |  -  |
-**400** | Bad Request - a problem reading or understanding the request. |  -  |
-**401** | Unauthorized - authentication required. |  -  |
-**403** | Forbidden - insufficient permissions to process the request. |  -  |
-**422** | Unprocessable Entity - a request validation error. |  -  |
-**500** | Internal Server Error - the server could not process the request. |  -  |
+| **200** | OK - the request has succeeded. |  -  |
+| **204** | No Content - the request has been successfully processed, but there is no additional content. |  -  |
+| **400** | Bad Request - a problem reading or understanding the request. |  -  |
+| **401** | Unauthorized - authentication required. |  -  |
+| **403** | Forbidden - insufficient permissions to process the request. |  -  |
+| **422** | Unprocessable Entity - a request validation error. |  -  |
+| **500** | Internal Server Error - the server could not process the request. |  -  |
 

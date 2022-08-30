@@ -27,10 +27,30 @@ import java.util.ArrayList;
 import java.util.List;
 import org.openapitools.client.model.Name;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonDeserializationContext;
+import com.google.gson.JsonDeserializer;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParseException;
+import com.google.gson.TypeAdapterFactory;
+import com.google.gson.reflect.TypeToken;
+
+import java.lang.reflect.Type;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
+
+import org.openapitools.client.JSON;
+
 /**
  * CreateMerchantUserRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-08-30T16:56:39.721579+02:00[Europe/Amsterdam]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-08-30T15:05:30.841Z[Etc/UTC]")
 public class CreateMerchantUserRequest {
   public static final String SERIALIZED_NAME_ACCOUNT_GROUPS = "accountGroups";
   @SerializedName(SERIALIZED_NAME_ACCOUNT_GROUPS)
@@ -67,7 +87,7 @@ public class CreateMerchantUserRequest {
 
   public CreateMerchantUserRequest addAccountGroupsItem(String accountGroupsItem) {
     if (this.accountGroups == null) {
-      this.accountGroups = new ArrayList<String>();
+      this.accountGroups = new ArrayList<>();
     }
     this.accountGroups.add(accountGroupsItem);
     return this;
@@ -144,7 +164,7 @@ public class CreateMerchantUserRequest {
 
   public CreateMerchantUserRequest addRolesItem(String rolesItem) {
     if (this.roles == null) {
-      this.roles = new ArrayList<String>();
+      this.roles = new ArrayList<>();
     }
     this.roles.add(rolesItem);
     return this;
@@ -213,6 +233,7 @@ public class CreateMerchantUserRequest {
   }
 
 
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -260,5 +281,126 @@ public class CreateMerchantUserRequest {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+  public static HashSet<String> openapiFields;
+  public static HashSet<String> openapiRequiredFields;
+
+  static {
+    // a set of all properties/fields (JSON key names)
+    openapiFields = new HashSet<String>();
+    openapiFields.add("accountGroups");
+    openapiFields.add("email");
+    openapiFields.add("name");
+    openapiFields.add("roles");
+    openapiFields.add("timeZoneCode");
+    openapiFields.add("username");
+
+    // a set of required properties/fields (JSON key names)
+    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields.add("email");
+    openapiRequiredFields.add("name");
+    openapiRequiredFields.add("username");
+  }
+
+ /**
+  * Validates the JSON Object and throws an exception if issues found
+  *
+  * @param jsonObj JSON Object
+  * @throws IOException if the JSON Object is invalid with respect to CreateMerchantUserRequest
+  */
+  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
+      if (jsonObj == null) {
+        if (CreateMerchantUserRequest.openapiRequiredFields.isEmpty()) {
+          return;
+        } else { // has required fields
+          throw new IllegalArgumentException(String.format("The required field(s) %s in CreateMerchantUserRequest is not found in the empty JSON string", CreateMerchantUserRequest.openapiRequiredFields.toString()));
+        }
+      }
+
+      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
+      // check to see if the JSON string contains additional fields
+      for (Entry<String, JsonElement> entry : entries) {
+        if (!CreateMerchantUserRequest.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `CreateMerchantUserRequest` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
+        }
+      }
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : CreateMerchantUserRequest.openapiRequiredFields) {
+        if (jsonObj.get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
+        }
+      }
+      // ensure the json data is an array
+      if (jsonObj.get("accountGroups") != null && !jsonObj.get("accountGroups").isJsonArray()) {
+        throw new IllegalArgumentException(String.format("Expected the field `accountGroups` to be an array in the JSON string but got `%s`", jsonObj.get("accountGroups").toString()));
+      }
+      if (jsonObj.get("email") != null && !jsonObj.get("email").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `email` to be a primitive type in the JSON string but got `%s`", jsonObj.get("email").toString()));
+      }
+      // validate the optional field `name`
+      if (jsonObj.getAsJsonObject("name") != null) {
+        Name.validateJsonObject(jsonObj.getAsJsonObject("name"));
+      }
+      // ensure the json data is an array
+      if (jsonObj.get("roles") != null && !jsonObj.get("roles").isJsonArray()) {
+        throw new IllegalArgumentException(String.format("Expected the field `roles` to be an array in the JSON string but got `%s`", jsonObj.get("roles").toString()));
+      }
+      if (jsonObj.get("timeZoneCode") != null && !jsonObj.get("timeZoneCode").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `timeZoneCode` to be a primitive type in the JSON string but got `%s`", jsonObj.get("timeZoneCode").toString()));
+      }
+      if (jsonObj.get("username") != null && !jsonObj.get("username").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `username` to be a primitive type in the JSON string but got `%s`", jsonObj.get("username").toString()));
+      }
+  }
+
+  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
+    @SuppressWarnings("unchecked")
+    @Override
+    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
+       if (!CreateMerchantUserRequest.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'CreateMerchantUserRequest' and its subtypes
+       }
+       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
+       final TypeAdapter<CreateMerchantUserRequest> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(CreateMerchantUserRequest.class));
+
+       return (TypeAdapter<T>) new TypeAdapter<CreateMerchantUserRequest>() {
+           @Override
+           public void write(JsonWriter out, CreateMerchantUserRequest value) throws IOException {
+             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+             elementAdapter.write(out, obj);
+           }
+
+           @Override
+           public CreateMerchantUserRequest read(JsonReader in) throws IOException {
+             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
+             validateJsonObject(jsonObj);
+             return thisAdapter.fromJsonTree(jsonObj);
+           }
+
+       }.nullSafe();
+    }
+  }
+
+ /**
+  * Create an instance of CreateMerchantUserRequest given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of CreateMerchantUserRequest
+  * @throws IOException if the JSON string is invalid with respect to CreateMerchantUserRequest
+  */
+  public static CreateMerchantUserRequest fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, CreateMerchantUserRequest.class);
+  }
+
+ /**
+  * Convert an instance of CreateMerchantUserRequest to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
+  }
 }
 

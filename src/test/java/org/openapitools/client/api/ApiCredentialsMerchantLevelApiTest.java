@@ -20,8 +20,8 @@ import org.openapitools.client.model.CreateMerchantApiCredentialRequest;
 import org.openapitools.client.model.ListMerchantApiCredentialsResponse;
 import org.openapitools.client.model.RestServiceError;
 import org.openapitools.client.model.UpdateMerchantApiCredentialRequest;
-import org.junit.Test;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -31,76 +31,71 @@ import java.util.Map;
 /**
  * API tests for ApiCredentialsMerchantLevelApi
  */
-@Ignore
+@Disabled
 public class ApiCredentialsMerchantLevelApiTest {
 
     private final ApiCredentialsMerchantLevelApi api = new ApiCredentialsMerchantLevelApi();
 
-    
     /**
      * Get a list of API credentials
      *
      * Returns the list of [API credentials](https://docs.adyen.com/development-resources/api-credentials) for the merchant account. The list is grouped into pages as defined by the query parameters.  To make this request, your API credential must have the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions): * Management API—API credentials read and write
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void getMerchantsMerchantIdApiCredentialsTest() throws ApiException {
         String merchantId = null;
         Integer pageNumber = null;
         Integer pageSize = null;
-                ListMerchantApiCredentialsResponse response = api.getMerchantsMerchantIdApiCredentials(merchantId, pageNumber, pageSize);
+        ListMerchantApiCredentialsResponse response = api.getMerchantsMerchantIdApiCredentials(merchantId, pageNumber, pageSize);
         // TODO: test validations
     }
-    
+
     /**
      * Get an API credential
      *
      * Returns the [API credential](https://docs.adyen.com/development-resources/api-credentials) identified in the path.  To make this request, your API credential must have the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions): * Management API—API credentials read and write
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void getMerchantsMerchantIdApiCredentialsApiCredentialIdTest() throws ApiException {
         String merchantId = null;
         String apiCredentialId = null;
-                ApiCredential response = api.getMerchantsMerchantIdApiCredentialsApiCredentialId(merchantId, apiCredentialId);
+        ApiCredential response = api.getMerchantsMerchantIdApiCredentialsApiCredentialId(merchantId, apiCredentialId);
         // TODO: test validations
     }
-    
+
     /**
      * Update an API credential
      *
      * Changes the API credential&#39;s roles, or allowed origins. The request has the new values for the fields you want to change. The response contains the full updated API credential, including the new values from the request.   To make this request, your API credential must have the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions): * Management API—API credentials read and write
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void patchMerchantsMerchantIdApiCredentialsApiCredentialIdTest() throws ApiException {
         String merchantId = null;
         String apiCredentialId = null;
         UpdateMerchantApiCredentialRequest updateMerchantApiCredentialRequest = null;
-                ApiCredential response = api.patchMerchantsMerchantIdApiCredentialsApiCredentialId(merchantId, apiCredentialId, updateMerchantApiCredentialRequest);
+        ApiCredential response = api.patchMerchantsMerchantIdApiCredentialsApiCredentialId(merchantId, apiCredentialId, updateMerchantApiCredentialRequest);
         // TODO: test validations
     }
-    
+
     /**
      * Create an API credential
      *
      * Creates an [API credential](https://docs.adyen.com/development-resources/api-credentials) for the company account identified in the path. In the request, you can specify the roles and allowed origins for the new API credential.  The response includes the: * [API key](https://docs.adyen.com/development-resources/api-authentication#api-key-authentication): used for API request authentication. * [Client key](https://docs.adyen.com/development-resources/client-side-authentication#how-it-works): public key used for client-side authentication. * [Username and password](https://docs.adyen.com/development-resources/api-authentication#using-basic-authentication): used for basic authentication.  &gt; Make sure you store the API key securely in your system. You won&#39;t be able to retrieve it later.  If your API key is lost or compromised, you need to [generate a new API key](https://docs.adyen.com/api-explorer/#/ManagementService/v1/post/merchants/{merchantId}/apiCredentials/{apiCredentialId}/generateApiKey).  To make this request, your API credential must have the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions): * Management API—API credentials read and write
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void postMerchantsMerchantIdApiCredentialsTest() throws ApiException {
         String merchantId = null;
         CreateMerchantApiCredentialRequest createMerchantApiCredentialRequest = null;
-                CreateApiCredentialResponse response = api.postMerchantsMerchantIdApiCredentials(merchantId, createMerchantApiCredentialRequest);
+        CreateApiCredentialResponse response = api.postMerchantsMerchantIdApiCredentials(merchantId, createMerchantApiCredentialRequest);
         // TODO: test validations
     }
-    
+
 }

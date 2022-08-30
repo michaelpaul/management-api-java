@@ -25,16 +25,10 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import org.openapitools.client.model.InstallAndroidAppDetails;
-import org.openapitools.client.model.InstallAndroidCertificateDetails;
-import org.openapitools.client.model.ReleaseUpdateDetails;
+import org.openapitools.client.model.ScheduleTerminalActionsRequestActionDetails;
 import org.openapitools.client.model.TerminalActionScheduleDetail;
-import org.openapitools.client.model.UninstallAndroidAppDetails;
-import org.openapitools.client.model.UninstallAndroidCertificateDetails;
-import org.openapitools.jackson.nullable.JsonNullable;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 
 /**

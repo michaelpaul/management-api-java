@@ -2,15 +2,15 @@
 
 All URIs are relative to *https://management-test.adyen.com/v1*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**deleteCompaniesCompanyIdWebhooksWebhookId**](WebhooksCompanyLevelApi.md#deleteCompaniesCompanyIdWebhooksWebhookId) | **DELETE** /companies/{companyId}/webhooks/{webhookId} | Remove a webhook
-[**getCompaniesCompanyIdWebhooks**](WebhooksCompanyLevelApi.md#getCompaniesCompanyIdWebhooks) | **GET** /companies/{companyId}/webhooks | List all webhooks
-[**getCompaniesCompanyIdWebhooksWebhookId**](WebhooksCompanyLevelApi.md#getCompaniesCompanyIdWebhooksWebhookId) | **GET** /companies/{companyId}/webhooks/{webhookId} | Get a webhook
-[**patchCompaniesCompanyIdWebhooksWebhookId**](WebhooksCompanyLevelApi.md#patchCompaniesCompanyIdWebhooksWebhookId) | **PATCH** /companies/{companyId}/webhooks/{webhookId} | Update a webhook
-[**postCompaniesCompanyIdWebhooks**](WebhooksCompanyLevelApi.md#postCompaniesCompanyIdWebhooks) | **POST** /companies/{companyId}/webhooks | Set up a webhook
-[**postCompaniesCompanyIdWebhooksWebhookIdGenerateHmac**](WebhooksCompanyLevelApi.md#postCompaniesCompanyIdWebhooksWebhookIdGenerateHmac) | **POST** /companies/{companyId}/webhooks/{webhookId}/generateHmac | Generate an HMAC key
-[**postCompaniesCompanyIdWebhooksWebhookIdTest**](WebhooksCompanyLevelApi.md#postCompaniesCompanyIdWebhooksWebhookIdTest) | **POST** /companies/{companyId}/webhooks/{webhookId}/test | Test a webhook
+| Method | HTTP request | Description |
+|------------- | ------------- | -------------|
+| [**deleteCompaniesCompanyIdWebhooksWebhookId**](WebhooksCompanyLevelApi.md#deleteCompaniesCompanyIdWebhooksWebhookId) | **DELETE** /companies/{companyId}/webhooks/{webhookId} | Remove a webhook |
+| [**getCompaniesCompanyIdWebhooks**](WebhooksCompanyLevelApi.md#getCompaniesCompanyIdWebhooks) | **GET** /companies/{companyId}/webhooks | List all webhooks |
+| [**getCompaniesCompanyIdWebhooksWebhookId**](WebhooksCompanyLevelApi.md#getCompaniesCompanyIdWebhooksWebhookId) | **GET** /companies/{companyId}/webhooks/{webhookId} | Get a webhook |
+| [**patchCompaniesCompanyIdWebhooksWebhookId**](WebhooksCompanyLevelApi.md#patchCompaniesCompanyIdWebhooksWebhookId) | **PATCH** /companies/{companyId}/webhooks/{webhookId} | Update a webhook |
+| [**postCompaniesCompanyIdWebhooks**](WebhooksCompanyLevelApi.md#postCompaniesCompanyIdWebhooks) | **POST** /companies/{companyId}/webhooks | Set up a webhook |
+| [**postCompaniesCompanyIdWebhooksWebhookIdGenerateHmac**](WebhooksCompanyLevelApi.md#postCompaniesCompanyIdWebhooksWebhookIdGenerateHmac) | **POST** /companies/{companyId}/webhooks/{webhookId}/generateHmac | Generate an HMAC key |
+| [**postCompaniesCompanyIdWebhooksWebhookIdTest**](WebhooksCompanyLevelApi.md#postCompaniesCompanyIdWebhooksWebhookIdTest) | **POST** /companies/{companyId}/webhooks/{webhookId}/test | Test a webhook |
 
 
 <a name="deleteCompaniesCompanyIdWebhooksWebhookId"></a>
@@ -65,10 +65,10 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **companyId** | **String**| The unique identifier of the company account. |
- **webhookId** | **String**| Unique identifier of the webhook configuration. |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **companyId** | **String**| The unique identifier of the company account. | |
+| **webhookId** | **String**| Unique identifier of the webhook configuration. | |
 
 ### Return type
 
@@ -86,12 +86,12 @@ null (empty response body)
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**204** | No Content - the request has been successfully processed, but there is no additional content. |  -  |
-**400** | Bad Request - a problem reading or understanding the request. |  -  |
-**401** | Unauthorized - authentication required. |  -  |
-**403** | Forbidden - insufficient permissions to process the request. |  -  |
-**422** | Unprocessable Entity - a request validation error. |  -  |
-**500** | Internal Server Error - the server could not process the request. |  -  |
+| **204** | No Content - the request has been successfully processed, but there is no additional content. |  -  |
+| **400** | Bad Request - a problem reading or understanding the request. |  -  |
+| **401** | Unauthorized - authentication required. |  -  |
+| **403** | Forbidden - insufficient permissions to process the request. |  -  |
+| **422** | Unprocessable Entity - a request validation error. |  -  |
+| **500** | Internal Server Error - the server could not process the request. |  -  |
 
 <a name="getCompaniesCompanyIdWebhooks"></a>
 # **getCompaniesCompanyIdWebhooks**
@@ -147,11 +147,11 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **companyId** | **String**| Unique identifier of the [company account](https://docs.adyen.com/account/account-structure#company-account). |
- **pageNumber** | **Integer**| The number of the page to fetch. | [optional]
- **pageSize** | **Integer**| The number of items to have on a page, maximum 100. The default is 10 items on a page. | [optional]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **companyId** | **String**| Unique identifier of the [company account](https://docs.adyen.com/account/account-structure#company-account). | |
+| **pageNumber** | **Integer**| The number of the page to fetch. | [optional] |
+| **pageSize** | **Integer**| The number of items to have on a page, maximum 100. The default is 10 items on a page. | [optional] |
 
 ### Return type
 
@@ -169,12 +169,12 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | OK - the request has succeeded. |  -  |
-**400** | Bad Request - a problem reading or understanding the request. |  -  |
-**401** | Unauthorized - authentication required. |  -  |
-**403** | Forbidden - insufficient permissions to process the request. |  -  |
-**422** | Unprocessable Entity - a request validation error. |  -  |
-**500** | Internal Server Error - the server could not process the request. |  -  |
+| **200** | OK - the request has succeeded. |  -  |
+| **400** | Bad Request - a problem reading or understanding the request. |  -  |
+| **401** | Unauthorized - authentication required. |  -  |
+| **403** | Forbidden - insufficient permissions to process the request. |  -  |
+| **422** | Unprocessable Entity - a request validation error. |  -  |
+| **500** | Internal Server Error - the server could not process the request. |  -  |
 
 <a name="getCompaniesCompanyIdWebhooksWebhookId"></a>
 # **getCompaniesCompanyIdWebhooksWebhookId**
@@ -229,10 +229,10 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **companyId** | **String**| Unique identifier of the [company account](https://docs.adyen.com/account/account-structure#company-account). |
- **webhookId** | **String**| Unique identifier of the webhook configuration. |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **companyId** | **String**| Unique identifier of the [company account](https://docs.adyen.com/account/account-structure#company-account). | |
+| **webhookId** | **String**| Unique identifier of the webhook configuration. | |
 
 ### Return type
 
@@ -250,12 +250,12 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | OK - the request has succeeded. |  -  |
-**400** | Bad Request - a problem reading or understanding the request. |  -  |
-**401** | Unauthorized - authentication required. |  -  |
-**403** | Forbidden - insufficient permissions to process the request. |  -  |
-**422** | Unprocessable Entity - a request validation error. |  -  |
-**500** | Internal Server Error - the server could not process the request. |  -  |
+| **200** | OK - the request has succeeded. |  -  |
+| **400** | Bad Request - a problem reading or understanding the request. |  -  |
+| **401** | Unauthorized - authentication required. |  -  |
+| **403** | Forbidden - insufficient permissions to process the request. |  -  |
+| **422** | Unprocessable Entity - a request validation error. |  -  |
+| **500** | Internal Server Error - the server could not process the request. |  -  |
 
 <a name="patchCompaniesCompanyIdWebhooksWebhookId"></a>
 # **patchCompaniesCompanyIdWebhooksWebhookId**
@@ -311,11 +311,11 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **companyId** | **String**| The unique identifier of the company account. |
- **webhookId** | **String**| Unique identifier of the webhook configuration. |
- **updateCompanyWebhookRequest** | [**UpdateCompanyWebhookRequest**](UpdateCompanyWebhookRequest.md)|  | [optional]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **companyId** | **String**| The unique identifier of the company account. | |
+| **webhookId** | **String**| Unique identifier of the webhook configuration. | |
+| **updateCompanyWebhookRequest** | [**UpdateCompanyWebhookRequest**](UpdateCompanyWebhookRequest.md)|  | [optional] |
 
 ### Return type
 
@@ -333,12 +333,12 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | OK - the request has succeeded. |  -  |
-**400** | Bad Request - a problem reading or understanding the request. |  -  |
-**401** | Unauthorized - authentication required. |  -  |
-**403** | Forbidden - insufficient permissions to process the request. |  -  |
-**422** | Unprocessable Entity - a request validation error. |  -  |
-**500** | Internal Server Error - the server could not process the request. |  -  |
+| **200** | OK - the request has succeeded. |  -  |
+| **400** | Bad Request - a problem reading or understanding the request. |  -  |
+| **401** | Unauthorized - authentication required. |  -  |
+| **403** | Forbidden - insufficient permissions to process the request. |  -  |
+| **422** | Unprocessable Entity - a request validation error. |  -  |
+| **500** | Internal Server Error - the server could not process the request. |  -  |
 
 <a name="postCompaniesCompanyIdWebhooks"></a>
 # **postCompaniesCompanyIdWebhooks**
@@ -393,10 +393,10 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **companyId** | **String**| Unique identifier of the [company account](https://docs.adyen.com/account/account-structure#company-account). |
- **createCompanyWebhookRequest** | [**CreateCompanyWebhookRequest**](CreateCompanyWebhookRequest.md)|  | [optional]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **companyId** | **String**| Unique identifier of the [company account](https://docs.adyen.com/account/account-structure#company-account). | |
+| **createCompanyWebhookRequest** | [**CreateCompanyWebhookRequest**](CreateCompanyWebhookRequest.md)|  | [optional] |
 
 ### Return type
 
@@ -414,12 +414,12 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | OK - the request has succeeded. |  -  |
-**400** | Bad Request - a problem reading or understanding the request. |  -  |
-**401** | Unauthorized - authentication required. |  -  |
-**403** | Forbidden - insufficient permissions to process the request. |  -  |
-**422** | Unprocessable Entity - a request validation error. |  -  |
-**500** | Internal Server Error - the server could not process the request. |  -  |
+| **200** | OK - the request has succeeded. |  -  |
+| **400** | Bad Request - a problem reading or understanding the request. |  -  |
+| **401** | Unauthorized - authentication required. |  -  |
+| **403** | Forbidden - insufficient permissions to process the request. |  -  |
+| **422** | Unprocessable Entity - a request validation error. |  -  |
+| **500** | Internal Server Error - the server could not process the request. |  -  |
 
 <a name="postCompaniesCompanyIdWebhooksWebhookIdGenerateHmac"></a>
 # **postCompaniesCompanyIdWebhooksWebhookIdGenerateHmac**
@@ -474,10 +474,10 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **companyId** | **String**| The unique identifier of the company account. |
- **webhookId** | **String**| Unique identifier of the webhook configuration. |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **companyId** | **String**| The unique identifier of the company account. | |
+| **webhookId** | **String**| Unique identifier of the webhook configuration. | |
 
 ### Return type
 
@@ -495,12 +495,12 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | OK - the request has succeeded. |  -  |
-**400** | Bad Request - a problem reading or understanding the request. |  -  |
-**401** | Unauthorized - authentication required. |  -  |
-**403** | Forbidden - insufficient permissions to process the request. |  -  |
-**422** | Unprocessable Entity - a request validation error. |  -  |
-**500** | Internal Server Error - the server could not process the request. |  -  |
+| **200** | OK - the request has succeeded. |  -  |
+| **400** | Bad Request - a problem reading or understanding the request. |  -  |
+| **401** | Unauthorized - authentication required. |  -  |
+| **403** | Forbidden - insufficient permissions to process the request. |  -  |
+| **422** | Unprocessable Entity - a request validation error. |  -  |
+| **500** | Internal Server Error - the server could not process the request. |  -  |
 
 <a name="postCompaniesCompanyIdWebhooksWebhookIdTest"></a>
 # **postCompaniesCompanyIdWebhooksWebhookIdTest**
@@ -556,11 +556,11 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **companyId** | **String**| The unique identifier of the company account. |
- **webhookId** | **String**| Unique identifier of the webhook configuration. |
- **testCompanyWebhookRequest** | [**TestCompanyWebhookRequest**](TestCompanyWebhookRequest.md)|  | [optional]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **companyId** | **String**| The unique identifier of the company account. | |
+| **webhookId** | **String**| Unique identifier of the webhook configuration. | |
+| **testCompanyWebhookRequest** | [**TestCompanyWebhookRequest**](TestCompanyWebhookRequest.md)|  | [optional] |
 
 ### Return type
 
@@ -578,10 +578,10 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | OK - the request has succeeded. |  -  |
-**400** | Bad Request - a problem reading or understanding the request. |  -  |
-**401** | Unauthorized - authentication required. |  -  |
-**403** | Forbidden - insufficient permissions to process the request. |  -  |
-**422** | Unprocessable Entity - a request validation error. |  -  |
-**500** | Internal Server Error - the server could not process the request. |  -  |
+| **200** | OK - the request has succeeded. |  -  |
+| **400** | Bad Request - a problem reading or understanding the request. |  -  |
+| **401** | Unauthorized - authentication required. |  -  |
+| **403** | Forbidden - insufficient permissions to process the request. |  -  |
+| **422** | Unprocessable Entity - a request validation error. |  -  |
+| **500** | Internal Server Error - the server could not process the request. |  -  |
 

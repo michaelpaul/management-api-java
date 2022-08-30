@@ -36,6 +36,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import javax.ws.rs.core.GenericType;
 
 public class AllowedOriginsCompanyLevelApi {
     private ApiClient localVarApiClient;
@@ -95,7 +96,6 @@ public class AllowedOriginsCompanyLevelApi {
      */
     public okhttp3.Call deleteCompaniesCompanyIdApiCredentialsApiCredentialIdAllowedOriginsOriginIdCall(String companyId, String apiCredentialId, String originId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -258,7 +258,6 @@ public class AllowedOriginsCompanyLevelApi {
      */
     public okhttp3.Call getCompaniesCompanyIdApiCredentialsApiCredentialIdAllowedOriginsCall(String companyId, String apiCredentialId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -417,7 +416,6 @@ public class AllowedOriginsCompanyLevelApi {
      */
     public okhttp3.Call getCompaniesCompanyIdApiCredentialsApiCredentialIdAllowedOriginsOriginIdCall(String companyId, String apiCredentialId, String originId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -585,7 +583,6 @@ public class AllowedOriginsCompanyLevelApi {
      */
     public okhttp3.Call postCompaniesCompanyIdApiCredentialsApiCredentialIdAllowedOriginsCall(String companyId, String apiCredentialId, AllowedOrigin allowedOrigin, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 

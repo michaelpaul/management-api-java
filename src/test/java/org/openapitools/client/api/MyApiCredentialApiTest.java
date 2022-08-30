@@ -19,8 +19,8 @@ import org.openapitools.client.model.AllowedOriginsResponse;
 import org.openapitools.client.model.CreateAllowedOriginRequest;
 import org.openapitools.client.model.MeApiCredential;
 import org.openapitools.client.model.RestServiceError;
-import org.junit.Test;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -30,83 +30,77 @@ import java.util.Map;
 /**
  * API tests for MyApiCredentialApi
  */
-@Ignore
+@Disabled
 public class MyApiCredentialApiTest {
 
     private final MyApiCredentialApi api = new MyApiCredentialApi();
 
-    
     /**
      * Remove allowed origin
      *
      * Removes the [allowed origin](https://docs.adyen.com/development-resources/client-side-authentication#allowed-origins) specified in the path. The API key from the request is used to identify the [API credential](https://docs.adyen.com/development-resources/api-credentials).  You can make this request with any of the Management API roles.
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void deleteMeAllowedOriginsOriginIdTest() throws ApiException {
         String originId = null;
-                api.deleteMeAllowedOriginsOriginId(originId);
+        api.deleteMeAllowedOriginsOriginId(originId);
         // TODO: test validations
     }
-    
+
     /**
      * Get API credential details
      *
      * Returns your [API credential](https://docs.adyen.com/development-resources/api-credentials) details based on the API Key you used in the request.  You can make this request with any of the Management API roles.
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void getMeTest() throws ApiException {
-                MeApiCredential response = api.getMe();
+        MeApiCredential response = api.getMe();
         // TODO: test validations
     }
-    
+
     /**
      * Get allowed origins
      *
      * Returns the list of [allowed origins](https://docs.adyen.com/development-resources/client-side-authentication#allowed-origins) of your [API credential](https://docs.adyen.com/development-resources/api-credentials) based on the API key you used in the request.  You can make this request with any of the Management API roles.
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void getMeAllowedOriginsTest() throws ApiException {
-                AllowedOriginsResponse response = api.getMeAllowedOrigins();
+        AllowedOriginsResponse response = api.getMeAllowedOrigins();
         // TODO: test validations
     }
-    
+
     /**
      * Get allowed origin details
      *
      * Returns the details of the [allowed origin](https://docs.adyen.com/development-resources/client-side-authentication#allowed-origins) specified in the path. The API key from the request is used to identify the [API credential](https://docs.adyen.com/development-resources/api-credentials).  You can make this request with any of the Management API roles.
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void getMeAllowedOriginsOriginIdTest() throws ApiException {
         String originId = null;
-                AllowedOrigin response = api.getMeAllowedOriginsOriginId(originId);
+        AllowedOrigin response = api.getMeAllowedOriginsOriginId(originId);
         // TODO: test validations
     }
-    
+
     /**
      * Add allowed origin
      *
      * Adds an allowed origin to the list of [allowed origins](https://docs.adyen.com/development-resources/client-side-authentication#allowed-origins) of your API credential. The API key from the request is used to identify the [API credential](https://docs.adyen.com/development-resources/api-credentials).  You can make this request with any of the Management API roles.
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void postMeAllowedOriginsTest() throws ApiException {
         CreateAllowedOriginRequest createAllowedOriginRequest = null;
-                AllowedOriginsResponse response = api.postMeAllowedOrigins(createAllowedOriginRequest);
+        AllowedOriginsResponse response = api.postMeAllowedOrigins(createAllowedOriginRequest);
         // TODO: test validations
     }
-    
+
 }

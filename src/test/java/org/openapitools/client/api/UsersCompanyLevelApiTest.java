@@ -20,8 +20,8 @@ import org.openapitools.client.model.CreateCompanyUserResponse;
 import org.openapitools.client.model.ListCompanyUsersResponse;
 import org.openapitools.client.model.RestServiceError;
 import org.openapitools.client.model.UpdateCompanyUserRequest;
-import org.junit.Test;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -31,76 +31,71 @@ import java.util.Map;
 /**
  * API tests for UsersCompanyLevelApi
  */
-@Ignore
+@Disabled
 public class UsersCompanyLevelApiTest {
 
     private final UsersCompanyLevelApi api = new UsersCompanyLevelApi();
 
-    
     /**
      * Get a list of users
      *
      * Returns the list of users for the &#x60;companyId&#x60; identified in the path.  To make this request, your API credential must have the following [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions): * Management API—Users read and write 
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void getCompaniesCompanyIdUsersTest() throws ApiException {
         String companyId = null;
         Integer pageNumber = null;
         Integer pageSize = null;
-                ListCompanyUsersResponse response = api.getCompaniesCompanyIdUsers(companyId, pageNumber, pageSize);
+        ListCompanyUsersResponse response = api.getCompaniesCompanyIdUsers(companyId, pageNumber, pageSize);
         // TODO: test validations
     }
-    
+
     /**
      * Get user details
      *
      * Returns user details for the &#x60;userId&#x60; and the &#x60;companyId&#x60; identified in the path.  To make this request, your API credential must have the following [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions): * Management API—Users read and write 
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void getCompaniesCompanyIdUsersUserIdTest() throws ApiException {
         String companyId = null;
         String userId = null;
-                CompanyUser response = api.getCompaniesCompanyIdUsersUserId(companyId, userId);
+        CompanyUser response = api.getCompaniesCompanyIdUsersUserId(companyId, userId);
         // TODO: test validations
     }
-    
+
     /**
      * Update user details
      *
      * Updates user details for the &#x60;userId&#x60; and the &#x60;companyId&#x60; identified in the path.  To make this request, your API credential must have the following [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions): * Management API—Users read and write 
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void patchCompaniesCompanyIdUsersUserIdTest() throws ApiException {
         String companyId = null;
         String userId = null;
         UpdateCompanyUserRequest updateCompanyUserRequest = null;
-                CompanyUser response = api.patchCompaniesCompanyIdUsersUserId(companyId, userId, updateCompanyUserRequest);
+        CompanyUser response = api.patchCompaniesCompanyIdUsersUserId(companyId, userId, updateCompanyUserRequest);
         // TODO: test validations
     }
-    
+
     /**
      * Create a new user
      *
      * Creates the user for the &#x60;companyId&#x60; identified in the path.  To make this request, your API credential must have the following [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions): * Management API—Users read and write 
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void postCompaniesCompanyIdUsersTest() throws ApiException {
         String companyId = null;
         CreateCompanyUserRequest createCompanyUserRequest = null;
-                CreateCompanyUserResponse response = api.postCompaniesCompanyIdUsers(companyId, createCompanyUserRequest);
+        CreateCompanyUserResponse response = api.postCompaniesCompanyIdUsers(companyId, createCompanyUserRequest);
         // TODO: test validations
     }
-    
+
 }

@@ -39,6 +39,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import javax.ws.rs.core.GenericType;
 
 public class AccountMerchantLevelApi {
     private ApiClient localVarApiClient;
@@ -98,7 +99,6 @@ public class AccountMerchantLevelApi {
      */
     public okhttp3.Call getMerchantsCall(Integer pageNumber, Integer pageSize, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -255,7 +255,6 @@ public class AccountMerchantLevelApi {
      */
     public okhttp3.Call getMerchantsMerchantIdCall(String merchantId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -407,7 +406,6 @@ public class AccountMerchantLevelApi {
      */
     public okhttp3.Call postMerchantsCall(CreateMerchantRequest createMerchantRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -553,7 +551,6 @@ public class AccountMerchantLevelApi {
      */
     public okhttp3.Call postMerchantsMerchantIdActivateCall(String merchantId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 

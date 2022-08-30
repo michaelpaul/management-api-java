@@ -2,12 +2,12 @@
 
 All URIs are relative to *https://management-test.adyen.com/v1*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**getCompaniesCompanyIdApiCredentials**](ApiCredentialsCompanyLevelApi.md#getCompaniesCompanyIdApiCredentials) | **GET** /companies/{companyId}/apiCredentials | Get a list of API credentials
-[**getCompaniesCompanyIdApiCredentialsApiCredentialId**](ApiCredentialsCompanyLevelApi.md#getCompaniesCompanyIdApiCredentialsApiCredentialId) | **GET** /companies/{companyId}/apiCredentials/{apiCredentialId} | Get an API credential
-[**patchCompaniesCompanyIdApiCredentialsApiCredentialId**](ApiCredentialsCompanyLevelApi.md#patchCompaniesCompanyIdApiCredentialsApiCredentialId) | **PATCH** /companies/{companyId}/apiCredentials/{apiCredentialId} | Update an API credential.
-[**postCompaniesCompanyIdApiCredentials**](ApiCredentialsCompanyLevelApi.md#postCompaniesCompanyIdApiCredentials) | **POST** /companies/{companyId}/apiCredentials | Create an API credential.
+| Method | HTTP request | Description |
+|------------- | ------------- | -------------|
+| [**getCompaniesCompanyIdApiCredentials**](ApiCredentialsCompanyLevelApi.md#getCompaniesCompanyIdApiCredentials) | **GET** /companies/{companyId}/apiCredentials | Get a list of API credentials |
+| [**getCompaniesCompanyIdApiCredentialsApiCredentialId**](ApiCredentialsCompanyLevelApi.md#getCompaniesCompanyIdApiCredentialsApiCredentialId) | **GET** /companies/{companyId}/apiCredentials/{apiCredentialId} | Get an API credential |
+| [**patchCompaniesCompanyIdApiCredentialsApiCredentialId**](ApiCredentialsCompanyLevelApi.md#patchCompaniesCompanyIdApiCredentialsApiCredentialId) | **PATCH** /companies/{companyId}/apiCredentials/{apiCredentialId} | Update an API credential. |
+| [**postCompaniesCompanyIdApiCredentials**](ApiCredentialsCompanyLevelApi.md#postCompaniesCompanyIdApiCredentials) | **POST** /companies/{companyId}/apiCredentials | Create an API credential. |
 
 
 <a name="getCompaniesCompanyIdApiCredentials"></a>
@@ -64,11 +64,11 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **companyId** | **String**| The unique identifier of the company account. |
- **pageNumber** | **Integer**| The number of the page to fetch. | [optional]
- **pageSize** | **Integer**| The number of items to have on a page, maximum 100. The default is 10 items on a page. | [optional]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **companyId** | **String**| The unique identifier of the company account. | |
+| **pageNumber** | **Integer**| The number of the page to fetch. | [optional] |
+| **pageSize** | **Integer**| The number of items to have on a page, maximum 100. The default is 10 items on a page. | [optional] |
 
 ### Return type
 
@@ -86,12 +86,12 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | OK - the request has succeeded. |  -  |
-**400** | Bad Request - a problem reading or understanding the request. |  -  |
-**401** | Unauthorized - authentication required. |  -  |
-**403** | Forbidden - insufficient permissions to process the request. |  -  |
-**422** | Unprocessable Entity - a request validation error. |  -  |
-**500** | Internal Server Error - the server could not process the request. |  -  |
+| **200** | OK - the request has succeeded. |  -  |
+| **400** | Bad Request - a problem reading or understanding the request. |  -  |
+| **401** | Unauthorized - authentication required. |  -  |
+| **403** | Forbidden - insufficient permissions to process the request. |  -  |
+| **422** | Unprocessable Entity - a request validation error. |  -  |
+| **500** | Internal Server Error - the server could not process the request. |  -  |
 
 <a name="getCompaniesCompanyIdApiCredentialsApiCredentialId"></a>
 # **getCompaniesCompanyIdApiCredentialsApiCredentialId**
@@ -146,10 +146,10 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **companyId** | **String**| The unique identifier of the company account. |
- **apiCredentialId** | **String**| Unique identifier of the API credential. |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **companyId** | **String**| The unique identifier of the company account. | |
+| **apiCredentialId** | **String**| Unique identifier of the API credential. | |
 
 ### Return type
 
@@ -167,12 +167,12 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | OK - the request has succeeded. |  -  |
-**400** | Bad Request - a problem reading or understanding the request. |  -  |
-**401** | Unauthorized - authentication required. |  -  |
-**403** | Forbidden - insufficient permissions to process the request. |  -  |
-**422** | Unprocessable Entity - a request validation error. |  -  |
-**500** | Internal Server Error - the server could not process the request. |  -  |
+| **200** | OK - the request has succeeded. |  -  |
+| **400** | Bad Request - a problem reading or understanding the request. |  -  |
+| **401** | Unauthorized - authentication required. |  -  |
+| **403** | Forbidden - insufficient permissions to process the request. |  -  |
+| **422** | Unprocessable Entity - a request validation error. |  -  |
+| **500** | Internal Server Error - the server could not process the request. |  -  |
 
 <a name="patchCompaniesCompanyIdApiCredentialsApiCredentialId"></a>
 # **patchCompaniesCompanyIdApiCredentialsApiCredentialId**
@@ -228,11 +228,11 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **companyId** | **String**| The unique identifier of the company account. |
- **apiCredentialId** | **String**| Unique identifier of the API credential. |
- **updateCompanyApiCredentialRequest** | [**UpdateCompanyApiCredentialRequest**](UpdateCompanyApiCredentialRequest.md)|  | [optional]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **companyId** | **String**| The unique identifier of the company account. | |
+| **apiCredentialId** | **String**| Unique identifier of the API credential. | |
+| **updateCompanyApiCredentialRequest** | [**UpdateCompanyApiCredentialRequest**](UpdateCompanyApiCredentialRequest.md)|  | [optional] |
 
 ### Return type
 
@@ -250,12 +250,12 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | OK - the request has succeeded. |  -  |
-**400** | Bad Request - a problem reading or understanding the request. |  -  |
-**401** | Unauthorized - authentication required. |  -  |
-**403** | Forbidden - insufficient permissions to process the request. |  -  |
-**422** | Unprocessable Entity - a request validation error. |  -  |
-**500** | Internal Server Error - the server could not process the request. |  -  |
+| **200** | OK - the request has succeeded. |  -  |
+| **400** | Bad Request - a problem reading or understanding the request. |  -  |
+| **401** | Unauthorized - authentication required. |  -  |
+| **403** | Forbidden - insufficient permissions to process the request. |  -  |
+| **422** | Unprocessable Entity - a request validation error. |  -  |
+| **500** | Internal Server Error - the server could not process the request. |  -  |
 
 <a name="postCompaniesCompanyIdApiCredentials"></a>
 # **postCompaniesCompanyIdApiCredentials**
@@ -310,10 +310,10 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **companyId** | **String**| The unique identifier of the company account. |
- **createCompanyApiCredentialRequest** | [**CreateCompanyApiCredentialRequest**](CreateCompanyApiCredentialRequest.md)|  | [optional]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **companyId** | **String**| The unique identifier of the company account. | |
+| **createCompanyApiCredentialRequest** | [**CreateCompanyApiCredentialRequest**](CreateCompanyApiCredentialRequest.md)|  | [optional] |
 
 ### Return type
 
@@ -331,10 +331,10 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | OK - the request has succeeded. |  -  |
-**400** | Bad Request - a problem reading or understanding the request. |  -  |
-**401** | Unauthorized - authentication required. |  -  |
-**403** | Forbidden - insufficient permissions to process the request. |  -  |
-**422** | Unprocessable Entity - a request validation error. |  -  |
-**500** | Internal Server Error - the server could not process the request. |  -  |
+| **200** | OK - the request has succeeded. |  -  |
+| **400** | Bad Request - a problem reading or understanding the request. |  -  |
+| **401** | Unauthorized - authentication required. |  -  |
+| **403** | Forbidden - insufficient permissions to process the request. |  -  |
+| **422** | Unprocessable Entity - a request validation error. |  -  |
+| **500** | Internal Server Error - the server could not process the request. |  -  |
 

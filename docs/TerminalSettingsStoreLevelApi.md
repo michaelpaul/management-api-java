@@ -2,16 +2,16 @@
 
 All URIs are relative to *https://management-test.adyen.com/v1*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**getMerchantsMerchantIdStoresReferenceTerminalLogos**](TerminalSettingsStoreLevelApi.md#getMerchantsMerchantIdStoresReferenceTerminalLogos) | **GET** /merchants/{merchantId}/stores/{reference}/terminalLogos | Get the terminal logo
-[**getMerchantsMerchantIdStoresReferenceTerminalSettings**](TerminalSettingsStoreLevelApi.md#getMerchantsMerchantIdStoresReferenceTerminalSettings) | **GET** /merchants/{merchantId}/stores/{reference}/terminalSettings | Get terminal settings
-[**getStoresStoreIdTerminalLogos**](TerminalSettingsStoreLevelApi.md#getStoresStoreIdTerminalLogos) | **GET** /stores/{storeId}/terminalLogos | Get the terminal logo
-[**getStoresStoreIdTerminalSettings**](TerminalSettingsStoreLevelApi.md#getStoresStoreIdTerminalSettings) | **GET** /stores/{storeId}/terminalSettings | Get terminal settings
-[**patchMerchantsMerchantIdStoresReferenceTerminalLogos**](TerminalSettingsStoreLevelApi.md#patchMerchantsMerchantIdStoresReferenceTerminalLogos) | **PATCH** /merchants/{merchantId}/stores/{reference}/terminalLogos | Update the terminal logo
-[**patchMerchantsMerchantIdStoresReferenceTerminalSettings**](TerminalSettingsStoreLevelApi.md#patchMerchantsMerchantIdStoresReferenceTerminalSettings) | **PATCH** /merchants/{merchantId}/stores/{reference}/terminalSettings | Update terminal settings
-[**patchStoresStoreIdTerminalLogos**](TerminalSettingsStoreLevelApi.md#patchStoresStoreIdTerminalLogos) | **PATCH** /stores/{storeId}/terminalLogos | Update the terminal logo
-[**patchStoresStoreIdTerminalSettings**](TerminalSettingsStoreLevelApi.md#patchStoresStoreIdTerminalSettings) | **PATCH** /stores/{storeId}/terminalSettings | Update terminal settings
+| Method | HTTP request | Description |
+|------------- | ------------- | -------------|
+| [**getMerchantsMerchantIdStoresReferenceTerminalLogos**](TerminalSettingsStoreLevelApi.md#getMerchantsMerchantIdStoresReferenceTerminalLogos) | **GET** /merchants/{merchantId}/stores/{reference}/terminalLogos | Get the terminal logo |
+| [**getMerchantsMerchantIdStoresReferenceTerminalSettings**](TerminalSettingsStoreLevelApi.md#getMerchantsMerchantIdStoresReferenceTerminalSettings) | **GET** /merchants/{merchantId}/stores/{reference}/terminalSettings | Get terminal settings |
+| [**getStoresStoreIdTerminalLogos**](TerminalSettingsStoreLevelApi.md#getStoresStoreIdTerminalLogos) | **GET** /stores/{storeId}/terminalLogos | Get the terminal logo |
+| [**getStoresStoreIdTerminalSettings**](TerminalSettingsStoreLevelApi.md#getStoresStoreIdTerminalSettings) | **GET** /stores/{storeId}/terminalSettings | Get terminal settings |
+| [**patchMerchantsMerchantIdStoresReferenceTerminalLogos**](TerminalSettingsStoreLevelApi.md#patchMerchantsMerchantIdStoresReferenceTerminalLogos) | **PATCH** /merchants/{merchantId}/stores/{reference}/terminalLogos | Update the terminal logo |
+| [**patchMerchantsMerchantIdStoresReferenceTerminalSettings**](TerminalSettingsStoreLevelApi.md#patchMerchantsMerchantIdStoresReferenceTerminalSettings) | **PATCH** /merchants/{merchantId}/stores/{reference}/terminalSettings | Update terminal settings |
+| [**patchStoresStoreIdTerminalLogos**](TerminalSettingsStoreLevelApi.md#patchStoresStoreIdTerminalLogos) | **PATCH** /stores/{storeId}/terminalLogos | Update the terminal logo |
+| [**patchStoresStoreIdTerminalSettings**](TerminalSettingsStoreLevelApi.md#patchStoresStoreIdTerminalSettings) | **PATCH** /stores/{storeId}/terminalSettings | Update terminal settings |
 
 
 <a name="getMerchantsMerchantIdStoresReferenceTerminalLogos"></a>
@@ -68,11 +68,11 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **merchantId** | **String**| The unique identifier of the merchant account. |
- **reference** | **String**| The reference that identifies the store. |
- **model** | **String**| The terminal model. Possible values: E355, VX675WIFIBT, VX680, VX690, VX700, VX820, M400, MX925, P400Plus, UX300, UX410, V200cPlus, V240mPlus, V400cPlus, V400m, e280, e285, e285p, S1E, S1EL, S1F2, S1L, S1U, S7T. | [optional]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **merchantId** | **String**| The unique identifier of the merchant account. | |
+| **reference** | **String**| The reference that identifies the store. | |
+| **model** | **String**| The terminal model. Possible values: E355, VX675WIFIBT, VX680, VX690, VX700, VX820, M400, MX925, P400Plus, UX300, UX410, V200cPlus, V240mPlus, V400cPlus, V400m, e280, e285, e285p, S1E, S1EL, S1F2, S1L, S1U, S7T. | [optional] |
 
 ### Return type
 
@@ -90,13 +90,13 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | OK - the request has succeeded. |  -  |
-**204** | No Content - the request has been successfully processed, but there is no additional content. |  -  |
-**400** | Bad Request - a problem reading or understanding the request. |  -  |
-**401** | Unauthorized - authentication required. |  -  |
-**403** | Forbidden - insufficient permissions to process the request. |  -  |
-**422** | Unprocessable Entity - a request validation error. |  -  |
-**500** | Internal Server Error - the server could not process the request. |  -  |
+| **200** | OK - the request has succeeded. |  -  |
+| **204** | No Content - the request has been successfully processed, but there is no additional content. |  -  |
+| **400** | Bad Request - a problem reading or understanding the request. |  -  |
+| **401** | Unauthorized - authentication required. |  -  |
+| **403** | Forbidden - insufficient permissions to process the request. |  -  |
+| **422** | Unprocessable Entity - a request validation error. |  -  |
+| **500** | Internal Server Error - the server could not process the request. |  -  |
 
 <a name="getMerchantsMerchantIdStoresReferenceTerminalSettings"></a>
 # **getMerchantsMerchantIdStoresReferenceTerminalSettings**
@@ -151,10 +151,10 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **merchantId** | **String**| The unique identifier of the merchant account. |
- **reference** | **String**| The reference that identifies the store. |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **merchantId** | **String**| The unique identifier of the merchant account. | |
+| **reference** | **String**| The reference that identifies the store. | |
 
 ### Return type
 
@@ -172,13 +172,13 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | OK - the request has succeeded. |  -  |
-**204** | No Content - the request has been successfully processed, but there is no additional content. |  -  |
-**400** | Bad Request - a problem reading or understanding the request. |  -  |
-**401** | Unauthorized - authentication required. |  -  |
-**403** | Forbidden - insufficient permissions to process the request. |  -  |
-**422** | Unprocessable Entity - a request validation error. |  -  |
-**500** | Internal Server Error - the server could not process the request. |  -  |
+| **200** | OK - the request has succeeded. |  -  |
+| **204** | No Content - the request has been successfully processed, but there is no additional content. |  -  |
+| **400** | Bad Request - a problem reading or understanding the request. |  -  |
+| **401** | Unauthorized - authentication required. |  -  |
+| **403** | Forbidden - insufficient permissions to process the request. |  -  |
+| **422** | Unprocessable Entity - a request validation error. |  -  |
+| **500** | Internal Server Error - the server could not process the request. |  -  |
 
 <a name="getStoresStoreIdTerminalLogos"></a>
 # **getStoresStoreIdTerminalLogos**
@@ -233,10 +233,10 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **storeId** | **String**| The unique identifier of the store. |
- **model** | **String**| The terminal model. Possible values: E355, VX675WIFIBT, VX680, VX690, VX700, VX820, M400, MX925, P400Plus, UX300, UX410, V200cPlus, V240mPlus, V400cPlus, V400m, e280, e285, e285p, S1E, S1EL, S1F2, S1L, S1U, S7T. | [optional]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **storeId** | **String**| The unique identifier of the store. | |
+| **model** | **String**| The terminal model. Possible values: E355, VX675WIFIBT, VX680, VX690, VX700, VX820, M400, MX925, P400Plus, UX300, UX410, V200cPlus, V240mPlus, V400cPlus, V400m, e280, e285, e285p, S1E, S1EL, S1F2, S1L, S1U, S7T. | [optional] |
 
 ### Return type
 
@@ -254,12 +254,12 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | OK - the request has succeeded. |  -  |
-**400** | Bad Request - a problem reading or understanding the request. |  -  |
-**401** | Unauthorized - authentication required. |  -  |
-**403** | Forbidden - insufficient permissions to process the request. |  -  |
-**422** | Unprocessable Entity - a request validation error. |  -  |
-**500** | Internal Server Error - the server could not process the request. |  -  |
+| **200** | OK - the request has succeeded. |  -  |
+| **400** | Bad Request - a problem reading or understanding the request. |  -  |
+| **401** | Unauthorized - authentication required. |  -  |
+| **403** | Forbidden - insufficient permissions to process the request. |  -  |
+| **422** | Unprocessable Entity - a request validation error. |  -  |
+| **500** | Internal Server Error - the server could not process the request. |  -  |
 
 <a name="getStoresStoreIdTerminalSettings"></a>
 # **getStoresStoreIdTerminalSettings**
@@ -313,9 +313,9 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **storeId** | **String**| The unique identifier of the store. |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **storeId** | **String**| The unique identifier of the store. | |
 
 ### Return type
 
@@ -333,12 +333,12 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | OK - the request has succeeded. |  -  |
-**400** | Bad Request - a problem reading or understanding the request. |  -  |
-**401** | Unauthorized - authentication required. |  -  |
-**403** | Forbidden - insufficient permissions to process the request. |  -  |
-**422** | Unprocessable Entity - a request validation error. |  -  |
-**500** | Internal Server Error - the server could not process the request. |  -  |
+| **200** | OK - the request has succeeded. |  -  |
+| **400** | Bad Request - a problem reading or understanding the request. |  -  |
+| **401** | Unauthorized - authentication required. |  -  |
+| **403** | Forbidden - insufficient permissions to process the request. |  -  |
+| **422** | Unprocessable Entity - a request validation error. |  -  |
+| **500** | Internal Server Error - the server could not process the request. |  -  |
 
 <a name="patchMerchantsMerchantIdStoresReferenceTerminalLogos"></a>
 # **patchMerchantsMerchantIdStoresReferenceTerminalLogos**
@@ -395,12 +395,12 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **merchantId** | **String**| The unique identifier of the merchant account. |
- **reference** | **String**| The reference that identifies the store. |
- **model** | **String**| The terminal model. Possible values: E355, VX675WIFIBT, VX680, VX690, VX700, VX820, M400, MX925, P400Plus, UX300, UX410, V200cPlus, V240mPlus, V400cPlus, V400m, e280, e285, e285p, S1E, S1EL, S1F2, S1L, S1U, S7T | [optional]
- **logo** | [**Logo**](Logo.md)|  | [optional]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **merchantId** | **String**| The unique identifier of the merchant account. | |
+| **reference** | **String**| The reference that identifies the store. | |
+| **model** | **String**| The terminal model. Possible values: E355, VX675WIFIBT, VX680, VX690, VX700, VX820, M400, MX925, P400Plus, UX300, UX410, V200cPlus, V240mPlus, V400cPlus, V400m, e280, e285, e285p, S1E, S1EL, S1F2, S1L, S1U, S7T | [optional] |
+| **logo** | [**Logo**](Logo.md)|  | [optional] |
 
 ### Return type
 
@@ -418,13 +418,13 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | OK - the request has succeeded. |  -  |
-**204** | No Content - the request has been successfully processed, but there is no additional content. |  -  |
-**400** | Bad Request - a problem reading or understanding the request. |  -  |
-**401** | Unauthorized - authentication required. |  -  |
-**403** | Forbidden - insufficient permissions to process the request. |  -  |
-**422** | Unprocessable Entity - a request validation error. |  -  |
-**500** | Internal Server Error - the server could not process the request. |  -  |
+| **200** | OK - the request has succeeded. |  -  |
+| **204** | No Content - the request has been successfully processed, but there is no additional content. |  -  |
+| **400** | Bad Request - a problem reading or understanding the request. |  -  |
+| **401** | Unauthorized - authentication required. |  -  |
+| **403** | Forbidden - insufficient permissions to process the request. |  -  |
+| **422** | Unprocessable Entity - a request validation error. |  -  |
+| **500** | Internal Server Error - the server could not process the request. |  -  |
 
 <a name="patchMerchantsMerchantIdStoresReferenceTerminalSettings"></a>
 # **patchMerchantsMerchantIdStoresReferenceTerminalSettings**
@@ -480,11 +480,11 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **merchantId** | **String**| The unique identifier of the merchant account. |
- **reference** | **String**| The reference that identifies the store. |
- **terminalSettings** | [**TerminalSettings**](TerminalSettings.md)|  | [optional]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **merchantId** | **String**| The unique identifier of the merchant account. | |
+| **reference** | **String**| The reference that identifies the store. | |
+| **terminalSettings** | [**TerminalSettings**](TerminalSettings.md)|  | [optional] |
 
 ### Return type
 
@@ -502,13 +502,13 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | OK - the request has succeeded. |  -  |
-**204** | No Content - the request has been successfully processed, but there is no additional content. |  -  |
-**400** | Bad Request - a problem reading or understanding the request. |  -  |
-**401** | Unauthorized - authentication required. |  -  |
-**403** | Forbidden - insufficient permissions to process the request. |  -  |
-**422** | Unprocessable Entity - a request validation error. |  -  |
-**500** | Internal Server Error - the server could not process the request. |  -  |
+| **200** | OK - the request has succeeded. |  -  |
+| **204** | No Content - the request has been successfully processed, but there is no additional content. |  -  |
+| **400** | Bad Request - a problem reading or understanding the request. |  -  |
+| **401** | Unauthorized - authentication required. |  -  |
+| **403** | Forbidden - insufficient permissions to process the request. |  -  |
+| **422** | Unprocessable Entity - a request validation error. |  -  |
+| **500** | Internal Server Error - the server could not process the request. |  -  |
 
 <a name="patchStoresStoreIdTerminalLogos"></a>
 # **patchStoresStoreIdTerminalLogos**
@@ -564,11 +564,11 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **storeId** | **String**| The unique identifier of the store. |
- **model** | **String**| The terminal model. Possible values: E355, VX675WIFIBT, VX680, VX690, VX700, VX820, M400, MX925, P400Plus, UX300, UX410, V200cPlus, V240mPlus, V400cPlus, V400m, e280, e285, e285p, S1E, S1EL, S1F2, S1L, S1U, S7T. | [optional]
- **logo** | [**Logo**](Logo.md)|  | [optional]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **storeId** | **String**| The unique identifier of the store. | |
+| **model** | **String**| The terminal model. Possible values: E355, VX675WIFIBT, VX680, VX690, VX700, VX820, M400, MX925, P400Plus, UX300, UX410, V200cPlus, V240mPlus, V400cPlus, V400m, e280, e285, e285p, S1E, S1EL, S1F2, S1L, S1U, S7T. | [optional] |
+| **logo** | [**Logo**](Logo.md)|  | [optional] |
 
 ### Return type
 
@@ -586,12 +586,12 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | OK - the request has succeeded. |  -  |
-**400** | Bad Request - a problem reading or understanding the request. |  -  |
-**401** | Unauthorized - authentication required. |  -  |
-**403** | Forbidden - insufficient permissions to process the request. |  -  |
-**422** | Unprocessable Entity - a request validation error. |  -  |
-**500** | Internal Server Error - the server could not process the request. |  -  |
+| **200** | OK - the request has succeeded. |  -  |
+| **400** | Bad Request - a problem reading or understanding the request. |  -  |
+| **401** | Unauthorized - authentication required. |  -  |
+| **403** | Forbidden - insufficient permissions to process the request. |  -  |
+| **422** | Unprocessable Entity - a request validation error. |  -  |
+| **500** | Internal Server Error - the server could not process the request. |  -  |
 
 <a name="patchStoresStoreIdTerminalSettings"></a>
 # **patchStoresStoreIdTerminalSettings**
@@ -646,10 +646,10 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **storeId** | **String**| The unique identifier of the store. |
- **terminalSettings** | [**TerminalSettings**](TerminalSettings.md)|  | [optional]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **storeId** | **String**| The unique identifier of the store. | |
+| **terminalSettings** | [**TerminalSettings**](TerminalSettings.md)|  | [optional] |
 
 ### Return type
 
@@ -667,10 +667,10 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | OK - the request has succeeded. |  -  |
-**400** | Bad Request - a problem reading or understanding the request. |  -  |
-**401** | Unauthorized - authentication required. |  -  |
-**403** | Forbidden - insufficient permissions to process the request. |  -  |
-**422** | Unprocessable Entity - a request validation error. |  -  |
-**500** | Internal Server Error - the server could not process the request. |  -  |
+| **200** | OK - the request has succeeded. |  -  |
+| **400** | Bad Request - a problem reading or understanding the request. |  -  |
+| **401** | Unauthorized - authentication required. |  -  |
+| **403** | Forbidden - insufficient permissions to process the request. |  -  |
+| **422** | Unprocessable Entity - a request validation error. |  -  |
+| **500** | Internal Server Error - the server could not process the request. |  -  |
 

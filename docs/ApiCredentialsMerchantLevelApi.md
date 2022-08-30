@@ -2,12 +2,12 @@
 
 All URIs are relative to *https://management-test.adyen.com/v1*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**getMerchantsMerchantIdApiCredentials**](ApiCredentialsMerchantLevelApi.md#getMerchantsMerchantIdApiCredentials) | **GET** /merchants/{merchantId}/apiCredentials | Get a list of API credentials
-[**getMerchantsMerchantIdApiCredentialsApiCredentialId**](ApiCredentialsMerchantLevelApi.md#getMerchantsMerchantIdApiCredentialsApiCredentialId) | **GET** /merchants/{merchantId}/apiCredentials/{apiCredentialId} | Get an API credential
-[**patchMerchantsMerchantIdApiCredentialsApiCredentialId**](ApiCredentialsMerchantLevelApi.md#patchMerchantsMerchantIdApiCredentialsApiCredentialId) | **PATCH** /merchants/{merchantId}/apiCredentials/{apiCredentialId} | Update an API credential
-[**postMerchantsMerchantIdApiCredentials**](ApiCredentialsMerchantLevelApi.md#postMerchantsMerchantIdApiCredentials) | **POST** /merchants/{merchantId}/apiCredentials | Create an API credential
+| Method | HTTP request | Description |
+|------------- | ------------- | -------------|
+| [**getMerchantsMerchantIdApiCredentials**](ApiCredentialsMerchantLevelApi.md#getMerchantsMerchantIdApiCredentials) | **GET** /merchants/{merchantId}/apiCredentials | Get a list of API credentials |
+| [**getMerchantsMerchantIdApiCredentialsApiCredentialId**](ApiCredentialsMerchantLevelApi.md#getMerchantsMerchantIdApiCredentialsApiCredentialId) | **GET** /merchants/{merchantId}/apiCredentials/{apiCredentialId} | Get an API credential |
+| [**patchMerchantsMerchantIdApiCredentialsApiCredentialId**](ApiCredentialsMerchantLevelApi.md#patchMerchantsMerchantIdApiCredentialsApiCredentialId) | **PATCH** /merchants/{merchantId}/apiCredentials/{apiCredentialId} | Update an API credential |
+| [**postMerchantsMerchantIdApiCredentials**](ApiCredentialsMerchantLevelApi.md#postMerchantsMerchantIdApiCredentials) | **POST** /merchants/{merchantId}/apiCredentials | Create an API credential |
 
 
 <a name="getMerchantsMerchantIdApiCredentials"></a>
@@ -64,11 +64,11 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **merchantId** | **String**| The unique identifier of the merchant account. |
- **pageNumber** | **Integer**| The number of the page to fetch. | [optional]
- **pageSize** | **Integer**| The number of items to have on a page, maximum 100. The default is 10 items on a page. | [optional]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **merchantId** | **String**| The unique identifier of the merchant account. | |
+| **pageNumber** | **Integer**| The number of the page to fetch. | [optional] |
+| **pageSize** | **Integer**| The number of items to have on a page, maximum 100. The default is 10 items on a page. | [optional] |
 
 ### Return type
 
@@ -86,13 +86,13 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | OK - the request has succeeded. |  -  |
-**204** | No Content - the request has been successfully processed, but there is no additional content. |  -  |
-**400** | Bad Request - a problem reading or understanding the request. |  -  |
-**401** | Unauthorized - authentication required. |  -  |
-**403** | Forbidden - insufficient permissions to process the request. |  -  |
-**422** | Unprocessable Entity - a request validation error. |  -  |
-**500** | Internal Server Error - the server could not process the request. |  -  |
+| **200** | OK - the request has succeeded. |  -  |
+| **204** | No Content - the request has been successfully processed, but there is no additional content. |  -  |
+| **400** | Bad Request - a problem reading or understanding the request. |  -  |
+| **401** | Unauthorized - authentication required. |  -  |
+| **403** | Forbidden - insufficient permissions to process the request. |  -  |
+| **422** | Unprocessable Entity - a request validation error. |  -  |
+| **500** | Internal Server Error - the server could not process the request. |  -  |
 
 <a name="getMerchantsMerchantIdApiCredentialsApiCredentialId"></a>
 # **getMerchantsMerchantIdApiCredentialsApiCredentialId**
@@ -147,10 +147,10 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **merchantId** | **String**| The unique identifier of the merchant account. |
- **apiCredentialId** | **String**| Unique identifier of the API credential. |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **merchantId** | **String**| The unique identifier of the merchant account. | |
+| **apiCredentialId** | **String**| Unique identifier of the API credential. | |
 
 ### Return type
 
@@ -168,13 +168,13 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | OK - the request has succeeded. |  -  |
-**204** | No Content - the request has been successfully processed, but there is no additional content. |  -  |
-**400** | Bad Request - a problem reading or understanding the request. |  -  |
-**401** | Unauthorized - authentication required. |  -  |
-**403** | Forbidden - insufficient permissions to process the request. |  -  |
-**422** | Unprocessable Entity - a request validation error. |  -  |
-**500** | Internal Server Error - the server could not process the request. |  -  |
+| **200** | OK - the request has succeeded. |  -  |
+| **204** | No Content - the request has been successfully processed, but there is no additional content. |  -  |
+| **400** | Bad Request - a problem reading or understanding the request. |  -  |
+| **401** | Unauthorized - authentication required. |  -  |
+| **403** | Forbidden - insufficient permissions to process the request. |  -  |
+| **422** | Unprocessable Entity - a request validation error. |  -  |
+| **500** | Internal Server Error - the server could not process the request. |  -  |
 
 <a name="patchMerchantsMerchantIdApiCredentialsApiCredentialId"></a>
 # **patchMerchantsMerchantIdApiCredentialsApiCredentialId**
@@ -230,11 +230,11 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **merchantId** | **String**| The unique identifier of the merchant account. |
- **apiCredentialId** | **String**| Unique identifier of the API credential. |
- **updateMerchantApiCredentialRequest** | [**UpdateMerchantApiCredentialRequest**](UpdateMerchantApiCredentialRequest.md)|  | [optional]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **merchantId** | **String**| The unique identifier of the merchant account. | |
+| **apiCredentialId** | **String**| Unique identifier of the API credential. | |
+| **updateMerchantApiCredentialRequest** | [**UpdateMerchantApiCredentialRequest**](UpdateMerchantApiCredentialRequest.md)|  | [optional] |
 
 ### Return type
 
@@ -252,13 +252,13 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | OK - the request has succeeded. |  -  |
-**204** | No Content - the request has been successfully processed, but there is no additional content. |  -  |
-**400** | Bad Request - a problem reading or understanding the request. |  -  |
-**401** | Unauthorized - authentication required. |  -  |
-**403** | Forbidden - insufficient permissions to process the request. |  -  |
-**422** | Unprocessable Entity - a request validation error. |  -  |
-**500** | Internal Server Error - the server could not process the request. |  -  |
+| **200** | OK - the request has succeeded. |  -  |
+| **204** | No Content - the request has been successfully processed, but there is no additional content. |  -  |
+| **400** | Bad Request - a problem reading or understanding the request. |  -  |
+| **401** | Unauthorized - authentication required. |  -  |
+| **403** | Forbidden - insufficient permissions to process the request. |  -  |
+| **422** | Unprocessable Entity - a request validation error. |  -  |
+| **500** | Internal Server Error - the server could not process the request. |  -  |
 
 <a name="postMerchantsMerchantIdApiCredentials"></a>
 # **postMerchantsMerchantIdApiCredentials**
@@ -313,10 +313,10 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **merchantId** | **String**| The unique identifier of the merchant account. |
- **createMerchantApiCredentialRequest** | [**CreateMerchantApiCredentialRequest**](CreateMerchantApiCredentialRequest.md)|  | [optional]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **merchantId** | **String**| The unique identifier of the merchant account. | |
+| **createMerchantApiCredentialRequest** | [**CreateMerchantApiCredentialRequest**](CreateMerchantApiCredentialRequest.md)|  | [optional] |
 
 ### Return type
 
@@ -334,11 +334,11 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | OK - the request has succeeded. |  -  |
-**204** | No Content - the request has been successfully processed, but there is no additional content. |  -  |
-**400** | Bad Request - a problem reading or understanding the request. |  -  |
-**401** | Unauthorized - authentication required. |  -  |
-**403** | Forbidden - insufficient permissions to process the request. |  -  |
-**422** | Unprocessable Entity - a request validation error. |  -  |
-**500** | Internal Server Error - the server could not process the request. |  -  |
+| **200** | OK - the request has succeeded. |  -  |
+| **204** | No Content - the request has been successfully processed, but there is no additional content. |  -  |
+| **400** | Bad Request - a problem reading or understanding the request. |  -  |
+| **401** | Unauthorized - authentication required. |  -  |
+| **403** | Forbidden - insufficient permissions to process the request. |  -  |
+| **422** | Unprocessable Entity - a request validation error. |  -  |
+| **500** | Internal Server Error - the server could not process the request. |  -  |
 

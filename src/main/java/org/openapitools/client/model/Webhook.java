@@ -28,10 +28,30 @@ import java.util.List;
 import org.openapitools.client.model.AdditionalSettingsResponse;
 import org.openapitools.client.model.WebhookLinks;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonDeserializationContext;
+import com.google.gson.JsonDeserializer;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParseException;
+import com.google.gson.TypeAdapterFactory;
+import com.google.gson.reflect.TypeToken;
+
+import java.lang.reflect.Type;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
+
+import org.openapitools.client.JSON;
+
 /**
  * Webhook
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-08-30T16:56:39.721579+02:00[Europe/Amsterdam]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-08-30T15:05:30.841Z[Etc/UTC]")
 public class Webhook {
   public static final String SERIALIZED_NAME_LINKS = "_links";
   @SerializedName(SERIALIZED_NAME_LINKS)
@@ -591,7 +611,7 @@ public class Webhook {
 
   public Webhook addFilterMerchantAccountsItem(String filterMerchantAccountsItem) {
     if (this.filterMerchantAccounts == null) {
-      this.filterMerchantAccounts = new ArrayList<String>();
+      this.filterMerchantAccounts = new ArrayList<>();
     }
     this.filterMerchantAccounts.add(filterMerchantAccountsItem);
     return this;
@@ -844,6 +864,7 @@ public class Webhook {
   }
 
 
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -923,5 +944,170 @@ public class Webhook {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+  public static HashSet<String> openapiFields;
+  public static HashSet<String> openapiRequiredFields;
+
+  static {
+    // a set of all properties/fields (JSON key names)
+    openapiFields = new HashSet<String>();
+    openapiFields.add("_links");
+    openapiFields.add("acceptsExpiredCertificate");
+    openapiFields.add("acceptsSelfSignedCertificate");
+    openapiFields.add("acceptsUntrustedRootCertificate");
+    openapiFields.add("accountReference");
+    openapiFields.add("active");
+    openapiFields.add("additionalSettings");
+    openapiFields.add("certificateAlias");
+    openapiFields.add("communicationFormat");
+    openapiFields.add("description");
+    openapiFields.add("filterMerchantAccountType");
+    openapiFields.add("filterMerchantAccounts");
+    openapiFields.add("hasError");
+    openapiFields.add("hasPassword");
+    openapiFields.add("hmacKeyCheckValue");
+    openapiFields.add("id");
+    openapiFields.add("networkType");
+    openapiFields.add("populateSoapActionHeader");
+    openapiFields.add("sslVersion");
+    openapiFields.add("type");
+    openapiFields.add("url");
+    openapiFields.add("username");
+
+    // a set of required properties/fields (JSON key names)
+    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields.add("active");
+    openapiRequiredFields.add("communicationFormat");
+    openapiRequiredFields.add("type");
+    openapiRequiredFields.add("url");
+  }
+
+ /**
+  * Validates the JSON Object and throws an exception if issues found
+  *
+  * @param jsonObj JSON Object
+  * @throws IOException if the JSON Object is invalid with respect to Webhook
+  */
+  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
+      if (jsonObj == null) {
+        if (Webhook.openapiRequiredFields.isEmpty()) {
+          return;
+        } else { // has required fields
+          throw new IllegalArgumentException(String.format("The required field(s) %s in Webhook is not found in the empty JSON string", Webhook.openapiRequiredFields.toString()));
+        }
+      }
+
+      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
+      // check to see if the JSON string contains additional fields
+      for (Entry<String, JsonElement> entry : entries) {
+        if (!Webhook.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Webhook` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
+        }
+      }
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : Webhook.openapiRequiredFields) {
+        if (jsonObj.get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
+        }
+      }
+      // validate the optional field `_links`
+      if (jsonObj.getAsJsonObject("_links") != null) {
+        WebhookLinks.validateJsonObject(jsonObj.getAsJsonObject("_links"));
+      }
+      if (jsonObj.get("accountReference") != null && !jsonObj.get("accountReference").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `accountReference` to be a primitive type in the JSON string but got `%s`", jsonObj.get("accountReference").toString()));
+      }
+      // validate the optional field `additionalSettings`
+      if (jsonObj.getAsJsonObject("additionalSettings") != null) {
+        AdditionalSettingsResponse.validateJsonObject(jsonObj.getAsJsonObject("additionalSettings"));
+      }
+      if (jsonObj.get("certificateAlias") != null && !jsonObj.get("certificateAlias").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `certificateAlias` to be a primitive type in the JSON string but got `%s`", jsonObj.get("certificateAlias").toString()));
+      }
+      if (jsonObj.get("communicationFormat") != null && !jsonObj.get("communicationFormat").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `communicationFormat` to be a primitive type in the JSON string but got `%s`", jsonObj.get("communicationFormat").toString()));
+      }
+      if (jsonObj.get("description") != null && !jsonObj.get("description").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("description").toString()));
+      }
+      if (jsonObj.get("filterMerchantAccountType") != null && !jsonObj.get("filterMerchantAccountType").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `filterMerchantAccountType` to be a primitive type in the JSON string but got `%s`", jsonObj.get("filterMerchantAccountType").toString()));
+      }
+      // ensure the json data is an array
+      if (jsonObj.get("filterMerchantAccounts") != null && !jsonObj.get("filterMerchantAccounts").isJsonArray()) {
+        throw new IllegalArgumentException(String.format("Expected the field `filterMerchantAccounts` to be an array in the JSON string but got `%s`", jsonObj.get("filterMerchantAccounts").toString()));
+      }
+      if (jsonObj.get("hmacKeyCheckValue") != null && !jsonObj.get("hmacKeyCheckValue").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `hmacKeyCheckValue` to be a primitive type in the JSON string but got `%s`", jsonObj.get("hmacKeyCheckValue").toString()));
+      }
+      if (jsonObj.get("id") != null && !jsonObj.get("id").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("id").toString()));
+      }
+      if (jsonObj.get("networkType") != null && !jsonObj.get("networkType").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `networkType` to be a primitive type in the JSON string but got `%s`", jsonObj.get("networkType").toString()));
+      }
+      if (jsonObj.get("sslVersion") != null && !jsonObj.get("sslVersion").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sslVersion` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sslVersion").toString()));
+      }
+      if (jsonObj.get("type") != null && !jsonObj.get("type").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("type").toString()));
+      }
+      if (jsonObj.get("url") != null && !jsonObj.get("url").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `url` to be a primitive type in the JSON string but got `%s`", jsonObj.get("url").toString()));
+      }
+      if (jsonObj.get("username") != null && !jsonObj.get("username").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `username` to be a primitive type in the JSON string but got `%s`", jsonObj.get("username").toString()));
+      }
+  }
+
+  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
+    @SuppressWarnings("unchecked")
+    @Override
+    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
+       if (!Webhook.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'Webhook' and its subtypes
+       }
+       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
+       final TypeAdapter<Webhook> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(Webhook.class));
+
+       return (TypeAdapter<T>) new TypeAdapter<Webhook>() {
+           @Override
+           public void write(JsonWriter out, Webhook value) throws IOException {
+             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+             elementAdapter.write(out, obj);
+           }
+
+           @Override
+           public Webhook read(JsonReader in) throws IOException {
+             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
+             validateJsonObject(jsonObj);
+             return thisAdapter.fromJsonTree(jsonObj);
+           }
+
+       }.nullSafe();
+    }
+  }
+
+ /**
+  * Create an instance of Webhook given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of Webhook
+  * @throws IOException if the JSON string is invalid with respect to Webhook
+  */
+  public static Webhook fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, Webhook.class);
+  }
+
+ /**
+  * Convert an instance of Webhook to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
+  }
 }
 

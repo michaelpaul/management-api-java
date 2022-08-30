@@ -26,10 +26,30 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonDeserializationContext;
+import com.google.gson.JsonDeserializer;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParseException;
+import com.google.gson.TypeAdapterFactory;
+import com.google.gson.reflect.TypeToken;
+
+import java.lang.reflect.Type;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
+
+import org.openapitools.client.JSON;
+
 /**
  * UpdatePaymentMethodInfo
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-08-30T16:56:39.721579+02:00[Europe/Amsterdam]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-08-30T15:05:30.841Z[Etc/UTC]")
 public class UpdatePaymentMethodInfo {
   public static final String SERIALIZED_NAME_COUNTRIES = "countries";
   @SerializedName(SERIALIZED_NAME_COUNTRIES)
@@ -54,7 +74,7 @@ public class UpdatePaymentMethodInfo {
 
   public UpdatePaymentMethodInfo addCountriesItem(String countriesItem) {
     if (this.countries == null) {
-      this.countries = new ArrayList<String>();
+      this.countries = new ArrayList<>();
     }
     this.countries.add(countriesItem);
     return this;
@@ -85,7 +105,7 @@ public class UpdatePaymentMethodInfo {
 
   public UpdatePaymentMethodInfo addCurrenciesItem(String currenciesItem) {
     if (this.currencies == null) {
-      this.currencies = new ArrayList<String>();
+      this.currencies = new ArrayList<>();
     }
     this.currencies.add(currenciesItem);
     return this;
@@ -131,6 +151,7 @@ public class UpdatePaymentMethodInfo {
   }
 
 
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -172,5 +193,100 @@ public class UpdatePaymentMethodInfo {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+  public static HashSet<String> openapiFields;
+  public static HashSet<String> openapiRequiredFields;
+
+  static {
+    // a set of all properties/fields (JSON key names)
+    openapiFields = new HashSet<String>();
+    openapiFields.add("countries");
+    openapiFields.add("currencies");
+    openapiFields.add("enabled");
+
+    // a set of required properties/fields (JSON key names)
+    openapiRequiredFields = new HashSet<String>();
+  }
+
+ /**
+  * Validates the JSON Object and throws an exception if issues found
+  *
+  * @param jsonObj JSON Object
+  * @throws IOException if the JSON Object is invalid with respect to UpdatePaymentMethodInfo
+  */
+  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
+      if (jsonObj == null) {
+        if (UpdatePaymentMethodInfo.openapiRequiredFields.isEmpty()) {
+          return;
+        } else { // has required fields
+          throw new IllegalArgumentException(String.format("The required field(s) %s in UpdatePaymentMethodInfo is not found in the empty JSON string", UpdatePaymentMethodInfo.openapiRequiredFields.toString()));
+        }
+      }
+
+      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
+      // check to see if the JSON string contains additional fields
+      for (Entry<String, JsonElement> entry : entries) {
+        if (!UpdatePaymentMethodInfo.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `UpdatePaymentMethodInfo` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
+        }
+      }
+      // ensure the json data is an array
+      if (jsonObj.get("countries") != null && !jsonObj.get("countries").isJsonArray()) {
+        throw new IllegalArgumentException(String.format("Expected the field `countries` to be an array in the JSON string but got `%s`", jsonObj.get("countries").toString()));
+      }
+      // ensure the json data is an array
+      if (jsonObj.get("currencies") != null && !jsonObj.get("currencies").isJsonArray()) {
+        throw new IllegalArgumentException(String.format("Expected the field `currencies` to be an array in the JSON string but got `%s`", jsonObj.get("currencies").toString()));
+      }
+  }
+
+  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
+    @SuppressWarnings("unchecked")
+    @Override
+    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
+       if (!UpdatePaymentMethodInfo.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'UpdatePaymentMethodInfo' and its subtypes
+       }
+       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
+       final TypeAdapter<UpdatePaymentMethodInfo> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(UpdatePaymentMethodInfo.class));
+
+       return (TypeAdapter<T>) new TypeAdapter<UpdatePaymentMethodInfo>() {
+           @Override
+           public void write(JsonWriter out, UpdatePaymentMethodInfo value) throws IOException {
+             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+             elementAdapter.write(out, obj);
+           }
+
+           @Override
+           public UpdatePaymentMethodInfo read(JsonReader in) throws IOException {
+             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
+             validateJsonObject(jsonObj);
+             return thisAdapter.fromJsonTree(jsonObj);
+           }
+
+       }.nullSafe();
+    }
+  }
+
+ /**
+  * Create an instance of UpdatePaymentMethodInfo given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of UpdatePaymentMethodInfo
+  * @throws IOException if the JSON string is invalid with respect to UpdatePaymentMethodInfo
+  */
+  public static UpdatePaymentMethodInfo fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, UpdatePaymentMethodInfo.class);
+  }
+
+ /**
+  * Convert an instance of UpdatePaymentMethodInfo to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
+  }
 }
 

@@ -17,8 +17,8 @@ import org.openapitools.client.ApiException;
 import org.openapitools.client.model.Logo;
 import org.openapitools.client.model.RestServiceError;
 import org.openapitools.client.model.TerminalSettings;
-import org.junit.Test;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -28,83 +28,77 @@ import java.util.Map;
 /**
  * API tests for TerminalSettingsStoreLevelApi
  */
-@Ignore
+@Disabled
 public class TerminalSettingsStoreLevelApiTest {
 
     private final TerminalSettingsStoreLevelApi api = new TerminalSettingsStoreLevelApi();
 
-    
     /**
      * Get the terminal logo
      *
      * Returns the logo that is configured for a specific payment terminal model at the store identified in the path. You must specify the terminal model as a query parameter.  The logo is returned as a Base64-encoded string. You need to Base64-decode the string to get the actual image file.  This logo applies to all terminals of the specified model under the store, unless a different logo is configured for an individual terminal.  To make this request, your API credential must have one of the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions): * Management API—Terminal settings read * Management API—Terminal settings read and write
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void getMerchantsMerchantIdStoresReferenceTerminalLogosTest() throws ApiException {
         String merchantId = null;
         String reference = null;
         String model = null;
-                Logo response = api.getMerchantsMerchantIdStoresReferenceTerminalLogos(merchantId, reference, model);
+        Logo response = api.getMerchantsMerchantIdStoresReferenceTerminalLogos(merchantId, reference, model);
         // TODO: test validations
     }
-    
+
     /**
      * Get terminal settings
      *
      * Returns the payment terminal settings that are configured for the store identified in the path. These settings apply to all terminals under the store unless different values are configured for an individual terminal.  To make this request, your API credential must have one of the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions): * Management API—Terminal settings read * Management API—Terminal settings read and write
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void getMerchantsMerchantIdStoresReferenceTerminalSettingsTest() throws ApiException {
         String merchantId = null;
         String reference = null;
-                TerminalSettings response = api.getMerchantsMerchantIdStoresReferenceTerminalSettings(merchantId, reference);
+        TerminalSettings response = api.getMerchantsMerchantIdStoresReferenceTerminalSettings(merchantId, reference);
         // TODO: test validations
     }
-    
+
     /**
      * Get the terminal logo
      *
      * Returns the logo that is configured for a specific payment terminal model at the store identified in the path. The terminal model must be specified as a query parameter.   The logo is returned as a Base64-encoded string. You need to Base64-decode the string to get the actual image file.  This logo applies to all terminals of that model under the store unless a different logo is configured for an individual terminal.  To make this request, your API credential must have one of the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions): * Management API—Terminal settings read * Management API—Terminal settings read and write
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void getStoresStoreIdTerminalLogosTest() throws ApiException {
         String storeId = null;
         String model = null;
-                Logo response = api.getStoresStoreIdTerminalLogos(storeId, model);
+        Logo response = api.getStoresStoreIdTerminalLogos(storeId, model);
         // TODO: test validations
     }
-    
+
     /**
      * Get terminal settings
      *
      * Returns the payment terminal settings that are configured for the store identified in the path. These settings apply to all terminals under the store unless different values are configured for an individual terminal.  To make this request, your API credential must have one of the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions): * Management API—Terminal settings read * Management API—Terminal settings read and write
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void getStoresStoreIdTerminalSettingsTest() throws ApiException {
         String storeId = null;
-                TerminalSettings response = api.getStoresStoreIdTerminalSettings(storeId);
+        TerminalSettings response = api.getStoresStoreIdTerminalSettings(storeId);
         // TODO: test validations
     }
-    
+
     /**
      * Update the terminal logo
      *
      * Updates the logo that is configured for a specific payment terminal model at the store identified in the path. You must specify the terminal model as a query parameter. You can update the logo for only one terminal model at a time. This logo applies to all terminals of the specified model under the store, unless a different logo is configured for an individual terminal.   * To change the logo, specify the image file as a Base64-encoded string. * To restore the logo inherited from a higher level (merchant or company account), specify an empty logo value.  To make this request, your API credential must have the following [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions): * Management API—Terminal settings read and write
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void patchMerchantsMerchantIdStoresReferenceTerminalLogosTest() throws ApiException {
@@ -112,58 +106,55 @@ public class TerminalSettingsStoreLevelApiTest {
         String reference = null;
         String model = null;
         Logo logo = null;
-                Logo response = api.patchMerchantsMerchantIdStoresReferenceTerminalLogos(merchantId, reference, model, logo);
+        Logo response = api.patchMerchantsMerchantIdStoresReferenceTerminalLogos(merchantId, reference, model, logo);
         // TODO: test validations
     }
-    
+
     /**
      * Update terminal settings
      *
      * Updates payment terminal settings for the store identified in the path. These settings apply to all terminals under the store, unless different values are configured for an individual terminal.  * To change a parameter value, include the full object that contains the parameter, even if you don&#39;t want to change all parameters in the object. * To restore a parameter value inherited from a higher level, include the full object that contains the parameter, and specify an empty value for the parameter or omit the parameter. * Objects that are not included in the request are not updated.  To make this request, your API credential must have the following [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions): * Management API—Terminal settings read and write
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void patchMerchantsMerchantIdStoresReferenceTerminalSettingsTest() throws ApiException {
         String merchantId = null;
         String reference = null;
         TerminalSettings terminalSettings = null;
-                TerminalSettings response = api.patchMerchantsMerchantIdStoresReferenceTerminalSettings(merchantId, reference, terminalSettings);
+        TerminalSettings response = api.patchMerchantsMerchantIdStoresReferenceTerminalSettings(merchantId, reference, terminalSettings);
         // TODO: test validations
     }
-    
+
     /**
      * Update the terminal logo
      *
      * Updates the logo that is configured for a specific payment terminal model at the store identified in the path. You must specify the terminal model as a query parameter. You can update the logo for only one terminal model at a time. This logo applies to all terminals of the specified model under the store, unless a different logo is configured for an individual terminal.   * To change the logo, specify the image file as a Base64-encoded string. * To restore the logo inherited from a higher level (merchant or company account), specify an empty logo value.  To make this request, your API credential must have the following [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions): * Management API—Terminal settings read and write
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void patchStoresStoreIdTerminalLogosTest() throws ApiException {
         String storeId = null;
         String model = null;
         Logo logo = null;
-                Logo response = api.patchStoresStoreIdTerminalLogos(storeId, model, logo);
+        Logo response = api.patchStoresStoreIdTerminalLogos(storeId, model, logo);
         // TODO: test validations
     }
-    
+
     /**
      * Update terminal settings
      *
      * Updates payment terminal settings for the store identified in the path. These settings apply to all terminals under the store, unless different values are configured for an individual terminal.  * To change a parameter value, include the full object that contains the parameter, even if you don&#39;t want to change all parameters in the object. * To restore a parameter value inherited from a higher level, include the full object that contains the parameter, and specify an empty value for the parameter or omit the parameter. * Objects that are not included in the request are not updated.  To make this request, your API credential must have the following [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions): * Management API—Terminal settings read and write
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void patchStoresStoreIdTerminalSettingsTest() throws ApiException {
         String storeId = null;
         TerminalSettings terminalSettings = null;
-                TerminalSettings response = api.patchStoresStoreIdTerminalSettings(storeId, terminalSettings);
+        TerminalSettings response = api.patchStoresStoreIdTerminalSettings(storeId, terminalSettings);
         // TODO: test validations
     }
-    
+
 }

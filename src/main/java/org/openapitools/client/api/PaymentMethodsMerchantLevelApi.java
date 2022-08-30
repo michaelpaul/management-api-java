@@ -38,6 +38,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import javax.ws.rs.core.GenericType;
 
 public class PaymentMethodsMerchantLevelApi {
     private ApiClient localVarApiClient;
@@ -100,7 +101,6 @@ public class PaymentMethodsMerchantLevelApi {
      */
     public okhttp3.Call getMerchantsMerchantIdPaymentMethodSettingsCall(String merchantId, String storeId, String businessLineId, Integer pageSize, Integer pageNumber, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -281,7 +281,6 @@ public class PaymentMethodsMerchantLevelApi {
      */
     public okhttp3.Call getMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdCall(String merchantId, String paymentMethodId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -444,7 +443,6 @@ public class PaymentMethodsMerchantLevelApi {
      */
     public okhttp3.Call patchMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdCall(String merchantId, String paymentMethodId, UpdatePaymentMethodInfo updatePaymentMethodInfo, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -609,7 +607,6 @@ public class PaymentMethodsMerchantLevelApi {
      */
     public okhttp3.Call postMerchantsMerchantIdPaymentMethodSettingsCall(String merchantId, PaymentMethodSetupInfo paymentMethodSetupInfo, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 

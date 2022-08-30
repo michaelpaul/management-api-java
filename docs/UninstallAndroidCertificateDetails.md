@@ -5,18 +5,18 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**certificateId** | **String** | The unique identifier of the certificate to be uninstalled. |  [optional]
-**type** | [**TypeEnum**](#TypeEnum) | Type of terminal action: Uninstall an Android certificate. |  [optional]
+| Name | Type | Description | Notes |
+|------------ | ------------- | ------------- | -------------|
+|**certificateId** | **String** | The unique identifier of the certificate to be uninstalled. |  [optional] |
+|**type** | [**TypeEnum**](#TypeEnum) | Type of terminal action: Uninstall an Android certificate. |  [optional] |
 
 
 
 ## Enum: TypeEnum
 
-Name | Value
----- | -----
-UNINSTALLANDROIDCERTIFICATE | &quot;UninstallAndroidCertificate&quot;
+| Name | Value |
+|---- | -----|
+| UNINSTALLANDROIDCERTIFICATE | &quot;UninstallAndroidCertificate&quot; |
 
 
 

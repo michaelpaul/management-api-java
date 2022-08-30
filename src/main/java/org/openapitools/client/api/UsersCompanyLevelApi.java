@@ -39,6 +39,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import javax.ws.rs.core.GenericType;
 
 public class UsersCompanyLevelApi {
     private ApiClient localVarApiClient;
@@ -98,7 +99,6 @@ public class UsersCompanyLevelApi {
      */
     public okhttp3.Call getCompaniesCompanyIdUsersCall(String companyId, Integer pageNumber, Integer pageSize, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -261,7 +261,6 @@ public class UsersCompanyLevelApi {
      */
     public okhttp3.Call getCompaniesCompanyIdUsersUserIdCall(String companyId, String userId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -420,7 +419,6 @@ public class UsersCompanyLevelApi {
      */
     public okhttp3.Call patchCompaniesCompanyIdUsersUserIdCall(String companyId, String userId, UpdateCompanyUserRequest updateCompanyUserRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -581,7 +579,6 @@ public class UsersCompanyLevelApi {
      */
     public okhttp3.Call postCompaniesCompanyIdUsersCall(String companyId, CreateCompanyUserRequest createCompanyUserRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 

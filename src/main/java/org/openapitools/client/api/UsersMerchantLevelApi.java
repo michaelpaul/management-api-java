@@ -39,6 +39,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import javax.ws.rs.core.GenericType;
 
 public class UsersMerchantLevelApi {
     private ApiClient localVarApiClient;
@@ -99,7 +100,6 @@ public class UsersMerchantLevelApi {
      */
     public okhttp3.Call getMerchantsMerchantIdUsersCall(String merchantId, Integer pageNumber, Integer pageSize, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -266,7 +266,6 @@ public class UsersMerchantLevelApi {
      */
     public okhttp3.Call getMerchantsMerchantIdUsersUserIdCall(String merchantId, String userId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -429,7 +428,6 @@ public class UsersMerchantLevelApi {
      */
     public okhttp3.Call patchMerchantsMerchantIdUsersUserIdCall(String merchantId, String userId, UpdateMerchantUserRequest updateMerchantUserRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -594,7 +592,6 @@ public class UsersMerchantLevelApi {
      */
     public okhttp3.Call postMerchantsMerchantIdUsersCall(String merchantId, CreateMerchantUserRequest createMerchantUserRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 

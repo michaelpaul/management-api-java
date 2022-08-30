@@ -20,8 +20,8 @@ import org.openapitools.client.model.CreateCompanyApiCredentialResponse;
 import org.openapitools.client.model.ListCompanyApiCredentialsResponse;
 import org.openapitools.client.model.RestServiceError;
 import org.openapitools.client.model.UpdateCompanyApiCredentialRequest;
-import org.junit.Test;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -31,76 +31,71 @@ import java.util.Map;
 /**
  * API tests for ApiCredentialsCompanyLevelApi
  */
-@Ignore
+@Disabled
 public class ApiCredentialsCompanyLevelApiTest {
 
     private final ApiCredentialsCompanyLevelApi api = new ApiCredentialsCompanyLevelApi();
 
-    
     /**
      * Get a list of API credentials
      *
      * Returns the list of [API credentials](https://docs.adyen.com/development-resources/api-credentials) for the company account. The list is grouped into pages as defined by the query parameters.  To make this request, your API credential must have the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions): * Management API—API credentials read and write
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void getCompaniesCompanyIdApiCredentialsTest() throws ApiException {
         String companyId = null;
         Integer pageNumber = null;
         Integer pageSize = null;
-                ListCompanyApiCredentialsResponse response = api.getCompaniesCompanyIdApiCredentials(companyId, pageNumber, pageSize);
+        ListCompanyApiCredentialsResponse response = api.getCompaniesCompanyIdApiCredentials(companyId, pageNumber, pageSize);
         // TODO: test validations
     }
-    
+
     /**
      * Get an API credential
      *
      * Returns the [API credential](https://docs.adyen.com/development-resources/api-credentials) identified in the path.  To make this request, your API credential must have the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions): * Management API—API credentials read and write
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void getCompaniesCompanyIdApiCredentialsApiCredentialIdTest() throws ApiException {
         String companyId = null;
         String apiCredentialId = null;
-                CompanyApiCredential response = api.getCompaniesCompanyIdApiCredentialsApiCredentialId(companyId, apiCredentialId);
+        CompanyApiCredential response = api.getCompaniesCompanyIdApiCredentialsApiCredentialId(companyId, apiCredentialId);
         // TODO: test validations
     }
-    
+
     /**
      * Update an API credential.
      *
      * Changes the API credential&#39;s roles, merchant account access, or allowed origins. The request has the new values for the fields you want to change. The response contains the full updated API credential, including the new values from the request.   To make this request, your API credential must have the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions): * Management API—API credentials read and write
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void patchCompaniesCompanyIdApiCredentialsApiCredentialIdTest() throws ApiException {
         String companyId = null;
         String apiCredentialId = null;
         UpdateCompanyApiCredentialRequest updateCompanyApiCredentialRequest = null;
-                CompanyApiCredential response = api.patchCompaniesCompanyIdApiCredentialsApiCredentialId(companyId, apiCredentialId, updateCompanyApiCredentialRequest);
+        CompanyApiCredential response = api.patchCompaniesCompanyIdApiCredentialsApiCredentialId(companyId, apiCredentialId, updateCompanyApiCredentialRequest);
         // TODO: test validations
     }
-    
+
     /**
      * Create an API credential.
      *
      * Creates an [API credential](https://docs.adyen.com/development-resources/api-credentials) for the company account identified in the path. In the request, you can specify which merchant accounts the new API credential will have access to, as well as its roles and allowed origins.  The response includes several types of authentication details: * [API key](https://docs.adyen.com/development-resources/api-authentication#api-key-authentication): used for API request authentication. * [Client key](https://docs.adyen.com/development-resources/client-side-authentication#how-it-works): public key used for client-side authentication. * [Username and password](https://docs.adyen.com/development-resources/api-authentication#using-basic-authentication): used for basic authentication.  &gt; Make sure you store the API key securely in your system. You won&#39;t be able to retrieve it later.  If your API key is lost or compromised, you need to [generate a new API key](https://docs.adyen.com/api-explorer/#/ManagementService/v1/post/companies/{companyId}/apiCredentials/{apiCredentialId}/generateApiKey).  To make this request, your API credential must have the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions): * Management API—API credentials read and write
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void postCompaniesCompanyIdApiCredentialsTest() throws ApiException {
         String companyId = null;
         CreateCompanyApiCredentialRequest createCompanyApiCredentialRequest = null;
-                CreateCompanyApiCredentialResponse response = api.postCompaniesCompanyIdApiCredentials(companyId, createCompanyApiCredentialRequest);
+        CreateCompanyApiCredentialResponse response = api.postCompaniesCompanyIdApiCredentials(companyId, createCompanyApiCredentialRequest);
         // TODO: test validations
     }
-    
+
 }

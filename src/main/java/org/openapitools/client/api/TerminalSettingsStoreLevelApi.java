@@ -36,6 +36,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import javax.ws.rs.core.GenericType;
 
 public class TerminalSettingsStoreLevelApi {
     private ApiClient localVarApiClient;
@@ -96,7 +97,6 @@ public class TerminalSettingsStoreLevelApi {
      */
     public okhttp3.Call getMerchantsMerchantIdStoresReferenceTerminalLogosCall(String merchantId, String reference, String model, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -265,7 +265,6 @@ public class TerminalSettingsStoreLevelApi {
      */
     public okhttp3.Call getMerchantsMerchantIdStoresReferenceTerminalSettingsCall(String merchantId, String reference, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -426,7 +425,6 @@ public class TerminalSettingsStoreLevelApi {
      */
     public okhttp3.Call getStoresStoreIdTerminalLogosCall(String storeId, String model, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -581,7 +579,6 @@ public class TerminalSettingsStoreLevelApi {
      */
     public okhttp3.Call getStoresStoreIdTerminalSettingsCall(String storeId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -733,7 +730,6 @@ public class TerminalSettingsStoreLevelApi {
      */
     public okhttp3.Call patchMerchantsMerchantIdStoresReferenceTerminalLogosCall(String merchantId, String reference, String model, Logo logo, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -906,7 +902,6 @@ public class TerminalSettingsStoreLevelApi {
      */
     public okhttp3.Call patchMerchantsMerchantIdStoresReferenceTerminalSettingsCall(String merchantId, String reference, TerminalSettings terminalSettings, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -1071,7 +1066,6 @@ public class TerminalSettingsStoreLevelApi {
      */
     public okhttp3.Call patchStoresStoreIdTerminalLogosCall(String storeId, String model, Logo logo, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -1230,7 +1224,6 @@ public class TerminalSettingsStoreLevelApi {
      */
     public okhttp3.Call patchStoresStoreIdTerminalSettingsCall(String storeId, TerminalSettings terminalSettings, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 

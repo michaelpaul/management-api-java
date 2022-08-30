@@ -20,8 +20,8 @@ import org.openapitools.client.model.ListMerchantUsersResponse;
 import org.openapitools.client.model.RestServiceError;
 import org.openapitools.client.model.UpdateMerchantUserRequest;
 import org.openapitools.client.model.User;
-import org.junit.Test;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -31,76 +31,71 @@ import java.util.Map;
 /**
  * API tests for UsersMerchantLevelApi
  */
-@Ignore
+@Disabled
 public class UsersMerchantLevelApiTest {
 
     private final UsersMerchantLevelApi api = new UsersMerchantLevelApi();
 
-    
     /**
      * Get a list of users
      *
      * Returns a list of users associated with the &#x60;merchantId&#x60; specified in the path.  To make this request, your API credential must have the following [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions): * Management API—Users read and write 
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void getMerchantsMerchantIdUsersTest() throws ApiException {
         String merchantId = null;
         Integer pageNumber = null;
         Integer pageSize = null;
-                ListMerchantUsersResponse response = api.getMerchantsMerchantIdUsers(merchantId, pageNumber, pageSize);
+        ListMerchantUsersResponse response = api.getMerchantsMerchantIdUsers(merchantId, pageNumber, pageSize);
         // TODO: test validations
     }
-    
+
     /**
      * Get user details
      *
      * Returns user details for the &#x60;userId&#x60; and the &#x60;merchantId&#x60; specified in the path.  To make this request, your API credential must have the following [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions): * Management API—Users read and write 
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void getMerchantsMerchantIdUsersUserIdTest() throws ApiException {
         String merchantId = null;
         String userId = null;
-                User response = api.getMerchantsMerchantIdUsersUserId(merchantId, userId);
+        User response = api.getMerchantsMerchantIdUsersUserId(merchantId, userId);
         // TODO: test validations
     }
-    
+
     /**
      * Update a user
      *
      * Updates user details for the &#x60;userId&#x60; and the &#x60;merchantId&#x60; specified in the path.  To make this request, your API credential must have the following [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions): * Management API—Users read and write 
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void patchMerchantsMerchantIdUsersUserIdTest() throws ApiException {
         String merchantId = null;
         String userId = null;
         UpdateMerchantUserRequest updateMerchantUserRequest = null;
-                User response = api.patchMerchantsMerchantIdUsersUserId(merchantId, userId, updateMerchantUserRequest);
+        User response = api.patchMerchantsMerchantIdUsersUserId(merchantId, userId, updateMerchantUserRequest);
         // TODO: test validations
     }
-    
+
     /**
      * Create a new user
      *
      * Creates a user for the &#x60;merchantId&#x60; specified in the path.  To make this request, your API credential must have the following [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions): * Management API—Users read and write 
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void postMerchantsMerchantIdUsersTest() throws ApiException {
         String merchantId = null;
         CreateMerchantUserRequest createMerchantUserRequest = null;
-                CreateUserResponse response = api.postMerchantsMerchantIdUsers(merchantId, createMerchantUserRequest);
+        CreateUserResponse response = api.postMerchantsMerchantIdUsers(merchantId, createMerchantUserRequest);
         // TODO: test validations
     }
-    
+
 }

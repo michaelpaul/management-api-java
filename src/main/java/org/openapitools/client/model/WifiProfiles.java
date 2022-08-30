@@ -28,10 +28,30 @@ import java.util.List;
 import org.openapitools.client.model.Profile;
 import org.openapitools.client.model.Settings;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonDeserializationContext;
+import com.google.gson.JsonDeserializer;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParseException;
+import com.google.gson.TypeAdapterFactory;
+import com.google.gson.reflect.TypeToken;
+
+import java.lang.reflect.Type;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
+
+import org.openapitools.client.JSON;
+
 /**
  * WifiProfiles
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-08-30T16:56:39.721579+02:00[Europe/Amsterdam]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-08-30T15:05:30.841Z[Etc/UTC]")
 public class WifiProfiles {
   public static final String SERIALIZED_NAME_PROFILES = "profiles";
   @SerializedName(SERIALIZED_NAME_PROFILES)
@@ -52,7 +72,7 @@ public class WifiProfiles {
 
   public WifiProfiles addProfilesItem(Profile profilesItem) {
     if (this.profiles == null) {
-      this.profiles = new ArrayList<Profile>();
+      this.profiles = new ArrayList<>();
     }
     this.profiles.add(profilesItem);
     return this;
@@ -98,6 +118,7 @@ public class WifiProfiles {
   }
 
 
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -137,5 +158,107 @@ public class WifiProfiles {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+  public static HashSet<String> openapiFields;
+  public static HashSet<String> openapiRequiredFields;
+
+  static {
+    // a set of all properties/fields (JSON key names)
+    openapiFields = new HashSet<String>();
+    openapiFields.add("profiles");
+    openapiFields.add("settings");
+
+    // a set of required properties/fields (JSON key names)
+    openapiRequiredFields = new HashSet<String>();
+  }
+
+ /**
+  * Validates the JSON Object and throws an exception if issues found
+  *
+  * @param jsonObj JSON Object
+  * @throws IOException if the JSON Object is invalid with respect to WifiProfiles
+  */
+  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
+      if (jsonObj == null) {
+        if (WifiProfiles.openapiRequiredFields.isEmpty()) {
+          return;
+        } else { // has required fields
+          throw new IllegalArgumentException(String.format("The required field(s) %s in WifiProfiles is not found in the empty JSON string", WifiProfiles.openapiRequiredFields.toString()));
+        }
+      }
+
+      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
+      // check to see if the JSON string contains additional fields
+      for (Entry<String, JsonElement> entry : entries) {
+        if (!WifiProfiles.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `WifiProfiles` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
+        }
+      }
+      JsonArray jsonArrayprofiles = jsonObj.getAsJsonArray("profiles");
+      if (jsonArrayprofiles != null) {
+        // ensure the json data is an array
+        if (!jsonObj.get("profiles").isJsonArray()) {
+          throw new IllegalArgumentException(String.format("Expected the field `profiles` to be an array in the JSON string but got `%s`", jsonObj.get("profiles").toString()));
+        }
+
+        // validate the optional field `profiles` (array)
+        for (int i = 0; i < jsonArrayprofiles.size(); i++) {
+          Profile.validateJsonObject(jsonArrayprofiles.get(i).getAsJsonObject());
+        };
+      }
+      // validate the optional field `settings`
+      if (jsonObj.getAsJsonObject("settings") != null) {
+        Settings.validateJsonObject(jsonObj.getAsJsonObject("settings"));
+      }
+  }
+
+  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
+    @SuppressWarnings("unchecked")
+    @Override
+    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
+       if (!WifiProfiles.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'WifiProfiles' and its subtypes
+       }
+       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
+       final TypeAdapter<WifiProfiles> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(WifiProfiles.class));
+
+       return (TypeAdapter<T>) new TypeAdapter<WifiProfiles>() {
+           @Override
+           public void write(JsonWriter out, WifiProfiles value) throws IOException {
+             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+             elementAdapter.write(out, obj);
+           }
+
+           @Override
+           public WifiProfiles read(JsonReader in) throws IOException {
+             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
+             validateJsonObject(jsonObj);
+             return thisAdapter.fromJsonTree(jsonObj);
+           }
+
+       }.nullSafe();
+    }
+  }
+
+ /**
+  * Create an instance of WifiProfiles given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of WifiProfiles
+  * @throws IOException if the JSON string is invalid with respect to WifiProfiles
+  */
+  public static WifiProfiles fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, WifiProfiles.class);
+  }
+
+ /**
+  * Convert an instance of WifiProfiles to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
+  }
 }
 

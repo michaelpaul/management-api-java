@@ -25,10 +25,30 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import org.openapitools.client.model.AdditionalSettings;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonDeserializationContext;
+import com.google.gson.JsonDeserializer;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParseException;
+import com.google.gson.TypeAdapterFactory;
+import com.google.gson.reflect.TypeToken;
+
+import java.lang.reflect.Type;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
+
+import org.openapitools.client.JSON;
+
 /**
  * CreateMerchantWebhookRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-08-30T16:56:39.721579+02:00[Europe/Amsterdam]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-08-30T15:05:30.841Z[Etc/UTC]")
 public class CreateMerchantWebhookRequest {
   public static final String SERIALIZED_NAME_ACCEPTS_EXPIRED_CERTIFICATE = "acceptsExpiredCertificate";
   @SerializedName(SERIALIZED_NAME_ACCEPTS_EXPIRED_CERTIFICATE)
@@ -568,6 +588,7 @@ public class CreateMerchantWebhookRequest {
   }
 
 
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -631,5 +652,142 @@ public class CreateMerchantWebhookRequest {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+  public static HashSet<String> openapiFields;
+  public static HashSet<String> openapiRequiredFields;
+
+  static {
+    // a set of all properties/fields (JSON key names)
+    openapiFields = new HashSet<String>();
+    openapiFields.add("acceptsExpiredCertificate");
+    openapiFields.add("acceptsSelfSignedCertificate");
+    openapiFields.add("acceptsUntrustedRootCertificate");
+    openapiFields.add("active");
+    openapiFields.add("additionalSettings");
+    openapiFields.add("communicationFormat");
+    openapiFields.add("description");
+    openapiFields.add("networkType");
+    openapiFields.add("password");
+    openapiFields.add("populateSoapActionHeader");
+    openapiFields.add("sslVersion");
+    openapiFields.add("type");
+    openapiFields.add("url");
+    openapiFields.add("username");
+
+    // a set of required properties/fields (JSON key names)
+    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields.add("active");
+    openapiRequiredFields.add("communicationFormat");
+    openapiRequiredFields.add("type");
+    openapiRequiredFields.add("url");
+  }
+
+ /**
+  * Validates the JSON Object and throws an exception if issues found
+  *
+  * @param jsonObj JSON Object
+  * @throws IOException if the JSON Object is invalid with respect to CreateMerchantWebhookRequest
+  */
+  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
+      if (jsonObj == null) {
+        if (CreateMerchantWebhookRequest.openapiRequiredFields.isEmpty()) {
+          return;
+        } else { // has required fields
+          throw new IllegalArgumentException(String.format("The required field(s) %s in CreateMerchantWebhookRequest is not found in the empty JSON string", CreateMerchantWebhookRequest.openapiRequiredFields.toString()));
+        }
+      }
+
+      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
+      // check to see if the JSON string contains additional fields
+      for (Entry<String, JsonElement> entry : entries) {
+        if (!CreateMerchantWebhookRequest.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `CreateMerchantWebhookRequest` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
+        }
+      }
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : CreateMerchantWebhookRequest.openapiRequiredFields) {
+        if (jsonObj.get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
+        }
+      }
+      // validate the optional field `additionalSettings`
+      if (jsonObj.getAsJsonObject("additionalSettings") != null) {
+        AdditionalSettings.validateJsonObject(jsonObj.getAsJsonObject("additionalSettings"));
+      }
+      if (jsonObj.get("communicationFormat") != null && !jsonObj.get("communicationFormat").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `communicationFormat` to be a primitive type in the JSON string but got `%s`", jsonObj.get("communicationFormat").toString()));
+      }
+      if (jsonObj.get("description") != null && !jsonObj.get("description").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("description").toString()));
+      }
+      if (jsonObj.get("networkType") != null && !jsonObj.get("networkType").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `networkType` to be a primitive type in the JSON string but got `%s`", jsonObj.get("networkType").toString()));
+      }
+      if (jsonObj.get("password") != null && !jsonObj.get("password").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `password` to be a primitive type in the JSON string but got `%s`", jsonObj.get("password").toString()));
+      }
+      if (jsonObj.get("sslVersion") != null && !jsonObj.get("sslVersion").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sslVersion` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sslVersion").toString()));
+      }
+      if (jsonObj.get("type") != null && !jsonObj.get("type").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("type").toString()));
+      }
+      if (jsonObj.get("url") != null && !jsonObj.get("url").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `url` to be a primitive type in the JSON string but got `%s`", jsonObj.get("url").toString()));
+      }
+      if (jsonObj.get("username") != null && !jsonObj.get("username").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `username` to be a primitive type in the JSON string but got `%s`", jsonObj.get("username").toString()));
+      }
+  }
+
+  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
+    @SuppressWarnings("unchecked")
+    @Override
+    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
+       if (!CreateMerchantWebhookRequest.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'CreateMerchantWebhookRequest' and its subtypes
+       }
+       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
+       final TypeAdapter<CreateMerchantWebhookRequest> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(CreateMerchantWebhookRequest.class));
+
+       return (TypeAdapter<T>) new TypeAdapter<CreateMerchantWebhookRequest>() {
+           @Override
+           public void write(JsonWriter out, CreateMerchantWebhookRequest value) throws IOException {
+             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+             elementAdapter.write(out, obj);
+           }
+
+           @Override
+           public CreateMerchantWebhookRequest read(JsonReader in) throws IOException {
+             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
+             validateJsonObject(jsonObj);
+             return thisAdapter.fromJsonTree(jsonObj);
+           }
+
+       }.nullSafe();
+    }
+  }
+
+ /**
+  * Create an instance of CreateMerchantWebhookRequest given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of CreateMerchantWebhookRequest
+  * @throws IOException if the JSON string is invalid with respect to CreateMerchantWebhookRequest
+  */
+  public static CreateMerchantWebhookRequest fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, CreateMerchantWebhookRequest.class);
+  }
+
+ /**
+  * Convert an instance of CreateMerchantWebhookRequest to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
+  }
 }
 

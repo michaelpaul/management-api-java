@@ -36,6 +36,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import javax.ws.rs.core.GenericType;
 
 public class AllowedOriginsMerchantLevelApi {
     private ApiClient localVarApiClient;
@@ -95,7 +96,6 @@ public class AllowedOriginsMerchantLevelApi {
      */
     public okhttp3.Call deleteMerchantsMerchantIdApiCredentialsApiCredentialIdAllowedOriginsOriginIdCall(String merchantId, String apiCredentialId, String originId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -259,7 +259,6 @@ public class AllowedOriginsMerchantLevelApi {
      */
     public okhttp3.Call getMerchantsMerchantIdApiCredentialsApiCredentialIdAllowedOriginsCall(String merchantId, String apiCredentialId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -422,7 +421,6 @@ public class AllowedOriginsMerchantLevelApi {
      */
     public okhttp3.Call getMerchantsMerchantIdApiCredentialsApiCredentialIdAllowedOriginsOriginIdCall(String merchantId, String apiCredentialId, String originId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -594,7 +592,6 @@ public class AllowedOriginsMerchantLevelApi {
      */
     public okhttp3.Call postMerchantsMerchantIdApiCredentialsApiCredentialIdAllowedOriginsCall(String merchantId, String apiCredentialId, AllowedOrigin allowedOrigin, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 

@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import javax.ws.rs.core.GenericType;
 
 public class WebhooksMerchantLevelApi {
     private ApiClient localVarApiClient;
@@ -99,7 +100,6 @@ public class WebhooksMerchantLevelApi {
      */
     public okhttp3.Call deleteMerchantsMerchantIdWebhooksWebhookIdCall(String merchantId, String webhookId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -255,7 +255,6 @@ public class WebhooksMerchantLevelApi {
      */
     public okhttp3.Call getMerchantsMerchantIdWebhooksCall(String merchantId, Integer pageNumber, Integer pageSize, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -422,7 +421,6 @@ public class WebhooksMerchantLevelApi {
      */
     public okhttp3.Call getMerchantsMerchantIdWebhooksWebhookIdCall(String merchantId, String webhookId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -585,7 +583,6 @@ public class WebhooksMerchantLevelApi {
      */
     public okhttp3.Call patchMerchantsMerchantIdWebhooksWebhookIdCall(String merchantId, String webhookId, UpdateMerchantWebhookRequest updateMerchantWebhookRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -750,7 +747,6 @@ public class WebhooksMerchantLevelApi {
      */
     public okhttp3.Call postMerchantsMerchantIdWebhooksCall(String merchantId, CreateMerchantWebhookRequest createMerchantWebhookRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -906,7 +902,6 @@ public class WebhooksMerchantLevelApi {
      */
     public okhttp3.Call postMerchantsMerchantIdWebhooksWebhookIdGenerateHmacCall(String merchantId, String webhookId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -1069,7 +1064,6 @@ public class WebhooksMerchantLevelApi {
      */
     public okhttp3.Call postMerchantsMerchantIdWebhooksWebhookIdTestCall(String merchantId, String webhookId, TestWebhookRequest testWebhookRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 

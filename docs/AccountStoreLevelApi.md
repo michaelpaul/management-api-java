@@ -2,16 +2,16 @@
 
 All URIs are relative to *https://management-test.adyen.com/v1*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**getMerchantsMerchantIdStores**](AccountStoreLevelApi.md#getMerchantsMerchantIdStores) | **GET** /merchants/{merchantId}/stores | Get a list of stores
-[**getMerchantsMerchantIdStoresStoreId**](AccountStoreLevelApi.md#getMerchantsMerchantIdStoresStoreId) | **GET** /merchants/{merchantId}/stores/{storeId} | Get a store
-[**getStores**](AccountStoreLevelApi.md#getStores) | **GET** /stores | Get a list of stores
-[**getStoresStoreId**](AccountStoreLevelApi.md#getStoresStoreId) | **GET** /stores/{storeId} | Get a store
-[**patchMerchantsMerchantIdStoresStoreId**](AccountStoreLevelApi.md#patchMerchantsMerchantIdStoresStoreId) | **PATCH** /merchants/{merchantId}/stores/{storeId} | Update a store
-[**patchStoresStoreId**](AccountStoreLevelApi.md#patchStoresStoreId) | **PATCH** /stores/{storeId} | Update a store
-[**postMerchantsMerchantIdStores**](AccountStoreLevelApi.md#postMerchantsMerchantIdStores) | **POST** /merchants/{merchantId}/stores | Create a store
-[**postStores**](AccountStoreLevelApi.md#postStores) | **POST** /stores | Create a store
+| Method | HTTP request | Description |
+|------------- | ------------- | -------------|
+| [**getMerchantsMerchantIdStores**](AccountStoreLevelApi.md#getMerchantsMerchantIdStores) | **GET** /merchants/{merchantId}/stores | Get a list of stores |
+| [**getMerchantsMerchantIdStoresStoreId**](AccountStoreLevelApi.md#getMerchantsMerchantIdStoresStoreId) | **GET** /merchants/{merchantId}/stores/{storeId} | Get a store |
+| [**getStores**](AccountStoreLevelApi.md#getStores) | **GET** /stores | Get a list of stores |
+| [**getStoresStoreId**](AccountStoreLevelApi.md#getStoresStoreId) | **GET** /stores/{storeId} | Get a store |
+| [**patchMerchantsMerchantIdStoresStoreId**](AccountStoreLevelApi.md#patchMerchantsMerchantIdStoresStoreId) | **PATCH** /merchants/{merchantId}/stores/{storeId} | Update a store |
+| [**patchStoresStoreId**](AccountStoreLevelApi.md#patchStoresStoreId) | **PATCH** /stores/{storeId} | Update a store |
+| [**postMerchantsMerchantIdStores**](AccountStoreLevelApi.md#postMerchantsMerchantIdStores) | **POST** /merchants/{merchantId}/stores | Create a store |
+| [**postStores**](AccountStoreLevelApi.md#postStores) | **POST** /stores | Create a store |
 
 
 <a name="getMerchantsMerchantIdStores"></a>
@@ -69,12 +69,12 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **merchantId** | **String**| The unique identifier of the merchant account. |
- **pageNumber** | **Integer**| The number of the page to fetch. | [optional]
- **pageSize** | **Integer**| The number of items to have on a page, maximum 100. The default is 10 items on a page. | [optional]
- **reference** | **String**| The reference of the store. | [optional]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **merchantId** | **String**| The unique identifier of the merchant account. | |
+| **pageNumber** | **Integer**| The number of the page to fetch. | [optional] |
+| **pageSize** | **Integer**| The number of items to have on a page, maximum 100. The default is 10 items on a page. | [optional] |
+| **reference** | **String**| The reference of the store. | [optional] |
 
 ### Return type
 
@@ -92,13 +92,13 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | OK - the request has succeeded. |  -  |
-**204** | No Content - the request has been successfully processed, but there is no additional content. |  -  |
-**400** | Bad Request - a problem reading or understanding the request. |  -  |
-**401** | Unauthorized - authentication required. |  -  |
-**403** | Forbidden - insufficient permissions to process the request. |  -  |
-**422** | Unprocessable Entity - a request validation error. |  -  |
-**500** | Internal Server Error - the server could not process the request. |  -  |
+| **200** | OK - the request has succeeded. |  -  |
+| **204** | No Content - the request has been successfully processed, but there is no additional content. |  -  |
+| **400** | Bad Request - a problem reading or understanding the request. |  -  |
+| **401** | Unauthorized - authentication required. |  -  |
+| **403** | Forbidden - insufficient permissions to process the request. |  -  |
+| **422** | Unprocessable Entity - a request validation error. |  -  |
+| **500** | Internal Server Error - the server could not process the request. |  -  |
 
 <a name="getMerchantsMerchantIdStoresStoreId"></a>
 # **getMerchantsMerchantIdStoresStoreId**
@@ -153,10 +153,10 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **merchantId** | **String**| The unique identifier of the merchant account. |
- **storeId** | **String**| The unique identifier of the store. |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **merchantId** | **String**| The unique identifier of the merchant account. | |
+| **storeId** | **String**| The unique identifier of the store. | |
 
 ### Return type
 
@@ -174,13 +174,13 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | OK - the request has succeeded. |  -  |
-**204** | No Content - the request has been successfully processed, but there is no additional content. |  -  |
-**400** | Bad Request - a problem reading or understanding the request. |  -  |
-**401** | Unauthorized - authentication required. |  -  |
-**403** | Forbidden - insufficient permissions to process the request. |  -  |
-**422** | Unprocessable Entity - a request validation error. |  -  |
-**500** | Internal Server Error - the server could not process the request. |  -  |
+| **200** | OK - the request has succeeded. |  -  |
+| **204** | No Content - the request has been successfully processed, but there is no additional content. |  -  |
+| **400** | Bad Request - a problem reading or understanding the request. |  -  |
+| **401** | Unauthorized - authentication required. |  -  |
+| **403** | Forbidden - insufficient permissions to process the request. |  -  |
+| **422** | Unprocessable Entity - a request validation error. |  -  |
+| **500** | Internal Server Error - the server could not process the request. |  -  |
 
 <a name="getStores"></a>
 # **getStores**
@@ -237,12 +237,12 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pageNumber** | **Integer**| The number of the page to fetch. | [optional]
- **pageSize** | **Integer**| The number of items to have on a page, maximum 100. The default is 10 items on a page. | [optional]
- **reference** | **String**| The reference of the store. | [optional]
- **merchantId** | **String**| The unique identifier of the merchant account. | [optional]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pageNumber** | **Integer**| The number of the page to fetch. | [optional] |
+| **pageSize** | **Integer**| The number of items to have on a page, maximum 100. The default is 10 items on a page. | [optional] |
+| **reference** | **String**| The reference of the store. | [optional] |
+| **merchantId** | **String**| The unique identifier of the merchant account. | [optional] |
 
 ### Return type
 
@@ -260,12 +260,12 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | OK - the request has succeeded. |  -  |
-**400** | Bad Request - a problem reading or understanding the request. |  -  |
-**401** | Unauthorized - authentication required. |  -  |
-**403** | Forbidden - insufficient permissions to process the request. |  -  |
-**422** | Unprocessable Entity - a request validation error. |  -  |
-**500** | Internal Server Error - the server could not process the request. |  -  |
+| **200** | OK - the request has succeeded. |  -  |
+| **400** | Bad Request - a problem reading or understanding the request. |  -  |
+| **401** | Unauthorized - authentication required. |  -  |
+| **403** | Forbidden - insufficient permissions to process the request. |  -  |
+| **422** | Unprocessable Entity - a request validation error. |  -  |
+| **500** | Internal Server Error - the server could not process the request. |  -  |
 
 <a name="getStoresStoreId"></a>
 # **getStoresStoreId**
@@ -319,9 +319,9 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **storeId** | **String**| The unique identifier of the store. |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **storeId** | **String**| The unique identifier of the store. | |
 
 ### Return type
 
@@ -339,12 +339,12 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | OK - the request has succeeded. |  -  |
-**400** | Bad Request - a problem reading or understanding the request. |  -  |
-**401** | Unauthorized - authentication required. |  -  |
-**403** | Forbidden - insufficient permissions to process the request. |  -  |
-**422** | Unprocessable Entity - a request validation error. |  -  |
-**500** | Internal Server Error - the server could not process the request. |  -  |
+| **200** | OK - the request has succeeded. |  -  |
+| **400** | Bad Request - a problem reading or understanding the request. |  -  |
+| **401** | Unauthorized - authentication required. |  -  |
+| **403** | Forbidden - insufficient permissions to process the request. |  -  |
+| **422** | Unprocessable Entity - a request validation error. |  -  |
+| **500** | Internal Server Error - the server could not process the request. |  -  |
 
 <a name="patchMerchantsMerchantIdStoresStoreId"></a>
 # **patchMerchantsMerchantIdStoresStoreId**
@@ -400,11 +400,11 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **merchantId** | **String**| The unique identifier of the merchant account. |
- **storeId** | **String**| The unique identifier of the store. |
- **updateStoreRequest** | [**UpdateStoreRequest**](UpdateStoreRequest.md)|  | [optional]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **merchantId** | **String**| The unique identifier of the merchant account. | |
+| **storeId** | **String**| The unique identifier of the store. | |
+| **updateStoreRequest** | [**UpdateStoreRequest**](UpdateStoreRequest.md)|  | [optional] |
 
 ### Return type
 
@@ -422,13 +422,13 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | OK - the request has succeeded. |  -  |
-**204** | No Content - the request has been successfully processed, but there is no additional content. |  -  |
-**400** | Bad Request - a problem reading or understanding the request. |  -  |
-**401** | Unauthorized - authentication required. |  -  |
-**403** | Forbidden - insufficient permissions to process the request. |  -  |
-**422** | Unprocessable Entity - a request validation error. |  -  |
-**500** | Internal Server Error - the server could not process the request. |  -  |
+| **200** | OK - the request has succeeded. |  -  |
+| **204** | No Content - the request has been successfully processed, but there is no additional content. |  -  |
+| **400** | Bad Request - a problem reading or understanding the request. |  -  |
+| **401** | Unauthorized - authentication required. |  -  |
+| **403** | Forbidden - insufficient permissions to process the request. |  -  |
+| **422** | Unprocessable Entity - a request validation error. |  -  |
+| **500** | Internal Server Error - the server could not process the request. |  -  |
 
 <a name="patchStoresStoreId"></a>
 # **patchStoresStoreId**
@@ -483,10 +483,10 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **storeId** | **String**| The unique identifier of the store. |
- **updateStoreRequest** | [**UpdateStoreRequest**](UpdateStoreRequest.md)|  | [optional]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **storeId** | **String**| The unique identifier of the store. | |
+| **updateStoreRequest** | [**UpdateStoreRequest**](UpdateStoreRequest.md)|  | [optional] |
 
 ### Return type
 
@@ -504,12 +504,12 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | OK - the request has succeeded. |  -  |
-**400** | Bad Request - a problem reading or understanding the request. |  -  |
-**401** | Unauthorized - authentication required. |  -  |
-**403** | Forbidden - insufficient permissions to process the request. |  -  |
-**422** | Unprocessable Entity - a request validation error. |  -  |
-**500** | Internal Server Error - the server could not process the request. |  -  |
+| **200** | OK - the request has succeeded. |  -  |
+| **400** | Bad Request - a problem reading or understanding the request. |  -  |
+| **401** | Unauthorized - authentication required. |  -  |
+| **403** | Forbidden - insufficient permissions to process the request. |  -  |
+| **422** | Unprocessable Entity - a request validation error. |  -  |
+| **500** | Internal Server Error - the server could not process the request. |  -  |
 
 <a name="postMerchantsMerchantIdStores"></a>
 # **postMerchantsMerchantIdStores**
@@ -564,10 +564,10 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **merchantId** | **String**| The unique identifier of the merchant account. |
- **storeCreationRequest** | [**StoreCreationRequest**](StoreCreationRequest.md)|  | [optional]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **merchantId** | **String**| The unique identifier of the merchant account. | |
+| **storeCreationRequest** | [**StoreCreationRequest**](StoreCreationRequest.md)|  | [optional] |
 
 ### Return type
 
@@ -585,13 +585,13 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | OK - the request has succeeded. |  -  |
-**204** | No Content - the request has been successfully processed, but there is no additional content. |  -  |
-**400** | Bad Request - a problem reading or understanding the request. |  -  |
-**401** | Unauthorized - authentication required. |  -  |
-**403** | Forbidden - insufficient permissions to process the request. |  -  |
-**422** | Unprocessable Entity - a request validation error. |  -  |
-**500** | Internal Server Error - the server could not process the request. |  -  |
+| **200** | OK - the request has succeeded. |  -  |
+| **204** | No Content - the request has been successfully processed, but there is no additional content. |  -  |
+| **400** | Bad Request - a problem reading or understanding the request. |  -  |
+| **401** | Unauthorized - authentication required. |  -  |
+| **403** | Forbidden - insufficient permissions to process the request. |  -  |
+| **422** | Unprocessable Entity - a request validation error. |  -  |
+| **500** | Internal Server Error - the server could not process the request. |  -  |
 
 <a name="postStores"></a>
 # **postStores**
@@ -645,9 +645,9 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **storeCreationWithMerchantCodeRequest** | [**StoreCreationWithMerchantCodeRequest**](StoreCreationWithMerchantCodeRequest.md)|  | [optional]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **storeCreationWithMerchantCodeRequest** | [**StoreCreationWithMerchantCodeRequest**](StoreCreationWithMerchantCodeRequest.md)|  | [optional] |
 
 ### Return type
 
@@ -665,10 +665,10 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | OK - the request has succeeded. |  -  |
-**400** | Bad Request - a problem reading or understanding the request. |  -  |
-**401** | Unauthorized - authentication required. |  -  |
-**403** | Forbidden - insufficient permissions to process the request. |  -  |
-**422** | Unprocessable Entity - a request validation error. |  -  |
-**500** | Internal Server Error - the server could not process the request. |  -  |
+| **200** | OK - the request has succeeded. |  -  |
+| **400** | Bad Request - a problem reading or understanding the request. |  -  |
+| **401** | Unauthorized - authentication required. |  -  |
+| **403** | Forbidden - insufficient permissions to process the request. |  -  |
+| **422** | Unprocessable Entity - a request validation error. |  -  |
+| **500** | Internal Server Error - the server could not process the request. |  -  |
 

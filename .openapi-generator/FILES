@@ -1,3 +1,4 @@
+.github/workflows/maven.yml
 .gitignore
 .openapi-generator-ignore
 .travis.yml
@@ -116,6 +117,7 @@ docs/ReleaseUpdateDetails.md
 docs/RequestActivationResponse.md
 docs/RestServiceError.md
 docs/ScheduleTerminalActionsRequest.md
+docs/ScheduleTerminalActionsRequestActionDetails.md
 docs/ScheduleTerminalActionsResponse.md
 docs/Settings.md
 docs/ShippingLocation.md
@@ -225,6 +227,7 @@ src/main/java/org/openapitools/client/auth/ApiKeyAuth.java
 src/main/java/org/openapitools/client/auth/Authentication.java
 src/main/java/org/openapitools/client/auth/HttpBasicAuth.java
 src/main/java/org/openapitools/client/auth/HttpBearerAuth.java
+src/main/java/org/openapitools/client/model/AbstractOpenApiSchema.java
 src/main/java/org/openapitools/client/model/AdditionalSettings.java
 src/main/java/org/openapitools/client/model/AdditionalSettingsResponse.java
 src/main/java/org/openapitools/client/model/Address.java
@@ -322,6 +325,7 @@ src/main/java/org/openapitools/client/model/ReleaseUpdateDetails.java
 src/main/java/org/openapitools/client/model/RequestActivationResponse.java
 src/main/java/org/openapitools/client/model/RestServiceError.java
 src/main/java/org/openapitools/client/model/ScheduleTerminalActionsRequest.java
+src/main/java/org/openapitools/client/model/ScheduleTerminalActionsRequestActionDetails.java
 src/main/java/org/openapitools/client/model/ScheduleTerminalActionsResponse.java
 src/main/java/org/openapitools/client/model/Settings.java
 src/main/java/org/openapitools/client/model/ShippingLocation.java
@@ -488,6 +492,7 @@ src/test/java/org/openapitools/client/model/ReceiptPrintingTest.java
 src/test/java/org/openapitools/client/model/ReleaseUpdateDetailsTest.java
 src/test/java/org/openapitools/client/model/RequestActivationResponseTest.java
 src/test/java/org/openapitools/client/model/RestServiceErrorTest.java
+src/test/java/org/openapitools/client/model/ScheduleTerminalActionsRequestActionDetailsTest.java
 src/test/java/org/openapitools/client/model/ScheduleTerminalActionsRequestTest.java
 src/test/java/org/openapitools/client/model/ScheduleTerminalActionsResponseTest.java
 src/test/java/org/openapitools/client/model/SettingsTest.java

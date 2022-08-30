@@ -2,12 +2,12 @@
 
 All URIs are relative to *https://management-test.adyen.com/v1*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**deleteCompaniesCompanyIdApiCredentialsApiCredentialIdAllowedOriginsOriginId**](AllowedOriginsCompanyLevelApi.md#deleteCompaniesCompanyIdApiCredentialsApiCredentialIdAllowedOriginsOriginId) | **DELETE** /companies/{companyId}/apiCredentials/{apiCredentialId}/allowedOrigins/{originId} | Delete an allowed origin
-[**getCompaniesCompanyIdApiCredentialsApiCredentialIdAllowedOrigins**](AllowedOriginsCompanyLevelApi.md#getCompaniesCompanyIdApiCredentialsApiCredentialIdAllowedOrigins) | **GET** /companies/{companyId}/apiCredentials/{apiCredentialId}/allowedOrigins | Get a list of allowed origins
-[**getCompaniesCompanyIdApiCredentialsApiCredentialIdAllowedOriginsOriginId**](AllowedOriginsCompanyLevelApi.md#getCompaniesCompanyIdApiCredentialsApiCredentialIdAllowedOriginsOriginId) | **GET** /companies/{companyId}/apiCredentials/{apiCredentialId}/allowedOrigins/{originId} | Get an allowed origin
-[**postCompaniesCompanyIdApiCredentialsApiCredentialIdAllowedOrigins**](AllowedOriginsCompanyLevelApi.md#postCompaniesCompanyIdApiCredentialsApiCredentialIdAllowedOrigins) | **POST** /companies/{companyId}/apiCredentials/{apiCredentialId}/allowedOrigins | Create an allowed origin
+| Method | HTTP request | Description |
+|------------- | ------------- | -------------|
+| [**deleteCompaniesCompanyIdApiCredentialsApiCredentialIdAllowedOriginsOriginId**](AllowedOriginsCompanyLevelApi.md#deleteCompaniesCompanyIdApiCredentialsApiCredentialIdAllowedOriginsOriginId) | **DELETE** /companies/{companyId}/apiCredentials/{apiCredentialId}/allowedOrigins/{originId} | Delete an allowed origin |
+| [**getCompaniesCompanyIdApiCredentialsApiCredentialIdAllowedOrigins**](AllowedOriginsCompanyLevelApi.md#getCompaniesCompanyIdApiCredentialsApiCredentialIdAllowedOrigins) | **GET** /companies/{companyId}/apiCredentials/{apiCredentialId}/allowedOrigins | Get a list of allowed origins |
+| [**getCompaniesCompanyIdApiCredentialsApiCredentialIdAllowedOriginsOriginId**](AllowedOriginsCompanyLevelApi.md#getCompaniesCompanyIdApiCredentialsApiCredentialIdAllowedOriginsOriginId) | **GET** /companies/{companyId}/apiCredentials/{apiCredentialId}/allowedOrigins/{originId} | Get an allowed origin |
+| [**postCompaniesCompanyIdApiCredentialsApiCredentialIdAllowedOrigins**](AllowedOriginsCompanyLevelApi.md#postCompaniesCompanyIdApiCredentialsApiCredentialIdAllowedOrigins) | **POST** /companies/{companyId}/apiCredentials/{apiCredentialId}/allowedOrigins | Create an allowed origin |
 
 
 <a name="deleteCompaniesCompanyIdApiCredentialsApiCredentialIdAllowedOriginsOriginId"></a>
@@ -63,11 +63,11 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **companyId** | **String**| The unique identifier of the company account. |
- **apiCredentialId** | **String**| Unique identifier of the API credential. |
- **originId** | **String**| Unique identifier of the allowed origin. |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **companyId** | **String**| The unique identifier of the company account. | |
+| **apiCredentialId** | **String**| Unique identifier of the API credential. | |
+| **originId** | **String**| Unique identifier of the allowed origin. | |
 
 ### Return type
 
@@ -85,12 +85,12 @@ null (empty response body)
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**204** | No Content - the request has been successfully processed, but there is no additional content. |  -  |
-**400** | Bad Request - a problem reading or understanding the request. |  -  |
-**401** | Unauthorized - authentication required. |  -  |
-**403** | Forbidden - insufficient permissions to process the request. |  -  |
-**422** | Unprocessable Entity - a request validation error. |  -  |
-**500** | Internal Server Error - the server could not process the request. |  -  |
+| **204** | No Content - the request has been successfully processed, but there is no additional content. |  -  |
+| **400** | Bad Request - a problem reading or understanding the request. |  -  |
+| **401** | Unauthorized - authentication required. |  -  |
+| **403** | Forbidden - insufficient permissions to process the request. |  -  |
+| **422** | Unprocessable Entity - a request validation error. |  -  |
+| **500** | Internal Server Error - the server could not process the request. |  -  |
 
 <a name="getCompaniesCompanyIdApiCredentialsApiCredentialIdAllowedOrigins"></a>
 # **getCompaniesCompanyIdApiCredentialsApiCredentialIdAllowedOrigins**
@@ -145,10 +145,10 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **companyId** | **String**| The unique identifier of the company account. |
- **apiCredentialId** | **String**| Unique identifier of the API credential. |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **companyId** | **String**| The unique identifier of the company account. | |
+| **apiCredentialId** | **String**| Unique identifier of the API credential. | |
 
 ### Return type
 
@@ -166,12 +166,12 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | OK - the request has succeeded. |  -  |
-**400** | Bad Request - a problem reading or understanding the request. |  -  |
-**401** | Unauthorized - authentication required. |  -  |
-**403** | Forbidden - insufficient permissions to process the request. |  -  |
-**422** | Unprocessable Entity - a request validation error. |  -  |
-**500** | Internal Server Error - the server could not process the request. |  -  |
+| **200** | OK - the request has succeeded. |  -  |
+| **400** | Bad Request - a problem reading or understanding the request. |  -  |
+| **401** | Unauthorized - authentication required. |  -  |
+| **403** | Forbidden - insufficient permissions to process the request. |  -  |
+| **422** | Unprocessable Entity - a request validation error. |  -  |
+| **500** | Internal Server Error - the server could not process the request. |  -  |
 
 <a name="getCompaniesCompanyIdApiCredentialsApiCredentialIdAllowedOriginsOriginId"></a>
 # **getCompaniesCompanyIdApiCredentialsApiCredentialIdAllowedOriginsOriginId**
@@ -227,11 +227,11 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **companyId** | **String**| The unique identifier of the company account. |
- **apiCredentialId** | **String**| Unique identifier of the API credential. |
- **originId** | **String**| Unique identifier of the allowed origin. |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **companyId** | **String**| The unique identifier of the company account. | |
+| **apiCredentialId** | **String**| Unique identifier of the API credential. | |
+| **originId** | **String**| Unique identifier of the allowed origin. | |
 
 ### Return type
 
@@ -249,12 +249,12 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | OK - the request has succeeded. |  -  |
-**400** | Bad Request - a problem reading or understanding the request. |  -  |
-**401** | Unauthorized - authentication required. |  -  |
-**403** | Forbidden - insufficient permissions to process the request. |  -  |
-**422** | Unprocessable Entity - a request validation error. |  -  |
-**500** | Internal Server Error - the server could not process the request. |  -  |
+| **200** | OK - the request has succeeded. |  -  |
+| **400** | Bad Request - a problem reading or understanding the request. |  -  |
+| **401** | Unauthorized - authentication required. |  -  |
+| **403** | Forbidden - insufficient permissions to process the request. |  -  |
+| **422** | Unprocessable Entity - a request validation error. |  -  |
+| **500** | Internal Server Error - the server could not process the request. |  -  |
 
 <a name="postCompaniesCompanyIdApiCredentialsApiCredentialIdAllowedOrigins"></a>
 # **postCompaniesCompanyIdApiCredentialsApiCredentialIdAllowedOrigins**
@@ -310,11 +310,11 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **companyId** | **String**| The unique identifier of the company account. |
- **apiCredentialId** | **String**| Unique identifier of the API credential. |
- **allowedOrigin** | [**AllowedOrigin**](AllowedOrigin.md)|  | [optional]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **companyId** | **String**| The unique identifier of the company account. | |
+| **apiCredentialId** | **String**| Unique identifier of the API credential. | |
+| **allowedOrigin** | [**AllowedOrigin**](AllowedOrigin.md)|  | [optional] |
 
 ### Return type
 
@@ -332,10 +332,10 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | OK - the request has succeeded. |  -  |
-**400** | Bad Request - a problem reading or understanding the request. |  -  |
-**401** | Unauthorized - authentication required. |  -  |
-**403** | Forbidden - insufficient permissions to process the request. |  -  |
-**422** | Unprocessable Entity - a request validation error. |  -  |
-**500** | Internal Server Error - the server could not process the request. |  -  |
+| **200** | OK - the request has succeeded. |  -  |
+| **400** | Bad Request - a problem reading or understanding the request. |  -  |
+| **401** | Unauthorized - authentication required. |  -  |
+| **403** | Forbidden - insufficient permissions to process the request. |  -  |
+| **422** | Unprocessable Entity - a request validation error. |  -  |
+| **500** | Internal Server Error - the server could not process the request. |  -  |
 

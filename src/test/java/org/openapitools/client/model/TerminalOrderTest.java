@@ -26,9 +26,8 @@ import java.util.List;
 import org.openapitools.client.model.BillingEntity;
 import org.openapitools.client.model.OrderItem;
 import org.openapitools.client.model.ShippingLocation;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 
 /**

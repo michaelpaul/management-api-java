@@ -27,10 +27,30 @@ import java.util.ArrayList;
 import java.util.List;
 import org.openapitools.client.model.Amount;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonDeserializationContext;
+import com.google.gson.JsonDeserializer;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParseException;
+import com.google.gson.TypeAdapterFactory;
+import com.google.gson.reflect.TypeToken;
+
+import java.lang.reflect.Type;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
+
+import org.openapitools.client.JSON;
+
 /**
  * TerminalProduct
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-08-30T16:56:39.721579+02:00[Europe/Amsterdam]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-08-30T15:05:30.841Z[Etc/UTC]")
 public class TerminalProduct {
   public static final String SERIALIZED_NAME_DESCRIPTION = "description";
   @SerializedName(SERIALIZED_NAME_DESCRIPTION)
@@ -109,7 +129,7 @@ public class TerminalProduct {
 
   public TerminalProduct addItemsIncludedItem(String itemsIncludedItem) {
     if (this.itemsIncluded == null) {
-      this.itemsIncluded = new ArrayList<String>();
+      this.itemsIncluded = new ArrayList<>();
     }
     this.itemsIncluded.add(itemsIncludedItem);
     return this;
@@ -178,6 +198,7 @@ public class TerminalProduct {
   }
 
 
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -223,5 +244,111 @@ public class TerminalProduct {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+  public static HashSet<String> openapiFields;
+  public static HashSet<String> openapiRequiredFields;
+
+  static {
+    // a set of all properties/fields (JSON key names)
+    openapiFields = new HashSet<String>();
+    openapiFields.add("description");
+    openapiFields.add("id");
+    openapiFields.add("itemsIncluded");
+    openapiFields.add("name");
+    openapiFields.add("price");
+
+    // a set of required properties/fields (JSON key names)
+    openapiRequiredFields = new HashSet<String>();
+  }
+
+ /**
+  * Validates the JSON Object and throws an exception if issues found
+  *
+  * @param jsonObj JSON Object
+  * @throws IOException if the JSON Object is invalid with respect to TerminalProduct
+  */
+  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
+      if (jsonObj == null) {
+        if (TerminalProduct.openapiRequiredFields.isEmpty()) {
+          return;
+        } else { // has required fields
+          throw new IllegalArgumentException(String.format("The required field(s) %s in TerminalProduct is not found in the empty JSON string", TerminalProduct.openapiRequiredFields.toString()));
+        }
+      }
+
+      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
+      // check to see if the JSON string contains additional fields
+      for (Entry<String, JsonElement> entry : entries) {
+        if (!TerminalProduct.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `TerminalProduct` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
+        }
+      }
+      if (jsonObj.get("description") != null && !jsonObj.get("description").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("description").toString()));
+      }
+      if (jsonObj.get("id") != null && !jsonObj.get("id").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("id").toString()));
+      }
+      // ensure the json data is an array
+      if (jsonObj.get("itemsIncluded") != null && !jsonObj.get("itemsIncluded").isJsonArray()) {
+        throw new IllegalArgumentException(String.format("Expected the field `itemsIncluded` to be an array in the JSON string but got `%s`", jsonObj.get("itemsIncluded").toString()));
+      }
+      if (jsonObj.get("name") != null && !jsonObj.get("name").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
+      }
+      // validate the optional field `price`
+      if (jsonObj.getAsJsonObject("price") != null) {
+        Amount.validateJsonObject(jsonObj.getAsJsonObject("price"));
+      }
+  }
+
+  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
+    @SuppressWarnings("unchecked")
+    @Override
+    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
+       if (!TerminalProduct.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'TerminalProduct' and its subtypes
+       }
+       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
+       final TypeAdapter<TerminalProduct> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(TerminalProduct.class));
+
+       return (TypeAdapter<T>) new TypeAdapter<TerminalProduct>() {
+           @Override
+           public void write(JsonWriter out, TerminalProduct value) throws IOException {
+             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+             elementAdapter.write(out, obj);
+           }
+
+           @Override
+           public TerminalProduct read(JsonReader in) throws IOException {
+             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
+             validateJsonObject(jsonObj);
+             return thisAdapter.fromJsonTree(jsonObj);
+           }
+
+       }.nullSafe();
+    }
+  }
+
+ /**
+  * Create an instance of TerminalProduct given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of TerminalProduct
+  * @throws IOException if the JSON string is invalid with respect to TerminalProduct
+  */
+  public static TerminalProduct fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, TerminalProduct.class);
+  }
+
+ /**
+  * Convert an instance of TerminalProduct to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
+  }
 }
 

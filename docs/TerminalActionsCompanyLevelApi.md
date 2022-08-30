@@ -2,12 +2,12 @@
 
 All URIs are relative to *https://management-test.adyen.com/v1*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**getCompaniesCompanyIdAndroidApps**](TerminalActionsCompanyLevelApi.md#getCompaniesCompanyIdAndroidApps) | **GET** /companies/{companyId}/androidApps | Get a list of Android apps
-[**getCompaniesCompanyIdAndroidCertificates**](TerminalActionsCompanyLevelApi.md#getCompaniesCompanyIdAndroidCertificates) | **GET** /companies/{companyId}/androidCertificates | Get a list of Android certificates
-[**getCompaniesCompanyIdTerminalActions**](TerminalActionsCompanyLevelApi.md#getCompaniesCompanyIdTerminalActions) | **GET** /companies/{companyId}/terminalActions | Get a list of terminal actions
-[**getCompaniesCompanyIdTerminalActionsActionId**](TerminalActionsCompanyLevelApi.md#getCompaniesCompanyIdTerminalActionsActionId) | **GET** /companies/{companyId}/terminalActions/{actionId} | Get terminal action
+| Method | HTTP request | Description |
+|------------- | ------------- | -------------|
+| [**getCompaniesCompanyIdAndroidApps**](TerminalActionsCompanyLevelApi.md#getCompaniesCompanyIdAndroidApps) | **GET** /companies/{companyId}/androidApps | Get a list of Android apps |
+| [**getCompaniesCompanyIdAndroidCertificates**](TerminalActionsCompanyLevelApi.md#getCompaniesCompanyIdAndroidCertificates) | **GET** /companies/{companyId}/androidCertificates | Get a list of Android certificates |
+| [**getCompaniesCompanyIdTerminalActions**](TerminalActionsCompanyLevelApi.md#getCompaniesCompanyIdTerminalActions) | **GET** /companies/{companyId}/terminalActions | Get a list of terminal actions |
+| [**getCompaniesCompanyIdTerminalActionsActionId**](TerminalActionsCompanyLevelApi.md#getCompaniesCompanyIdTerminalActionsActionId) | **GET** /companies/{companyId}/terminalActions/{actionId} | Get terminal action |
 
 
 <a name="getCompaniesCompanyIdAndroidApps"></a>
@@ -64,11 +64,11 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **companyId** | **String**| The unique identifier of the company account. |
- **pageNumber** | **Integer**| The number of the page to fetch. | [optional]
- **pageSize** | **Integer**| The number of items to have on a page, maximum 100. The default is 20 items on a page. | [optional]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **companyId** | **String**| The unique identifier of the company account. | |
+| **pageNumber** | **Integer**| The number of the page to fetch. | [optional] |
+| **pageSize** | **Integer**| The number of items to have on a page, maximum 100. The default is 20 items on a page. | [optional] |
 
 ### Return type
 
@@ -86,12 +86,12 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | OK - the request has succeeded. |  -  |
-**400** | Bad Request - a problem reading or understanding the request. |  -  |
-**401** | Unauthorized - authentication required. |  -  |
-**403** | Forbidden - insufficient permissions to process the request. |  -  |
-**422** | Unprocessable Entity - a request validation error. |  -  |
-**500** | Internal Server Error - the server could not process the request. |  -  |
+| **200** | OK - the request has succeeded. |  -  |
+| **400** | Bad Request - a problem reading or understanding the request. |  -  |
+| **401** | Unauthorized - authentication required. |  -  |
+| **403** | Forbidden - insufficient permissions to process the request. |  -  |
+| **422** | Unprocessable Entity - a request validation error. |  -  |
+| **500** | Internal Server Error - the server could not process the request. |  -  |
 
 <a name="getCompaniesCompanyIdAndroidCertificates"></a>
 # **getCompaniesCompanyIdAndroidCertificates**
@@ -147,11 +147,11 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **companyId** | **String**| The unique identifier of the company account. |
- **pageNumber** | **Integer**| The number of the page to fetch. | [optional]
- **pageSize** | **Integer**| The number of items to have on a page, maximum 100. The default is 20 items on a page. | [optional]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **companyId** | **String**| The unique identifier of the company account. | |
+| **pageNumber** | **Integer**| The number of the page to fetch. | [optional] |
+| **pageSize** | **Integer**| The number of items to have on a page, maximum 100. The default is 20 items on a page. | [optional] |
 
 ### Return type
 
@@ -169,12 +169,12 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | OK - the request has succeeded. |  -  |
-**400** | Bad Request - a problem reading or understanding the request. |  -  |
-**401** | Unauthorized - authentication required. |  -  |
-**403** | Forbidden - insufficient permissions to process the request. |  -  |
-**422** | Unprocessable Entity - a request validation error. |  -  |
-**500** | Internal Server Error - the server could not process the request. |  -  |
+| **200** | OK - the request has succeeded. |  -  |
+| **400** | Bad Request - a problem reading or understanding the request. |  -  |
+| **401** | Unauthorized - authentication required. |  -  |
+| **403** | Forbidden - insufficient permissions to process the request. |  -  |
+| **422** | Unprocessable Entity - a request validation error. |  -  |
+| **500** | Internal Server Error - the server could not process the request. |  -  |
 
 <a name="getCompaniesCompanyIdTerminalActions"></a>
 # **getCompaniesCompanyIdTerminalActions**
@@ -232,13 +232,13 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **companyId** | **String**| The unique identifier of the company account. |
- **pageNumber** | **Integer**| The number of the page to fetch. | [optional]
- **pageSize** | **Integer**| The number of items to have on a page, maximum 100. The default is 20 items on a page. | [optional]
- **status** | **String**| Returns terminal actions with the specified status.  Allowed values: **pending**, **successful**, **failed**, **cancelled**, **tryLater**. | [optional]
- **type** | **String**| Returns terminal actions of the specified type.  Allowed values: **InstallAndroidApp**, **UninstallAndroidApp**, **InstallAndroidCertificate**, **UninstallAndroidCertificate**. | [optional]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **companyId** | **String**| The unique identifier of the company account. | |
+| **pageNumber** | **Integer**| The number of the page to fetch. | [optional] |
+| **pageSize** | **Integer**| The number of items to have on a page, maximum 100. The default is 20 items on a page. | [optional] |
+| **status** | **String**| Returns terminal actions with the specified status.  Allowed values: **pending**, **successful**, **failed**, **cancelled**, **tryLater**. | [optional] |
+| **type** | **String**| Returns terminal actions of the specified type.  Allowed values: **InstallAndroidApp**, **UninstallAndroidApp**, **InstallAndroidCertificate**, **UninstallAndroidCertificate**. | [optional] |
 
 ### Return type
 
@@ -256,12 +256,12 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | OK - the request has succeeded. |  -  |
-**400** | Bad Request - a problem reading or understanding the request. |  -  |
-**401** | Unauthorized - authentication required. |  -  |
-**403** | Forbidden - insufficient permissions to process the request. |  -  |
-**422** | Unprocessable Entity - a request validation error. |  -  |
-**500** | Internal Server Error - the server could not process the request. |  -  |
+| **200** | OK - the request has succeeded. |  -  |
+| **400** | Bad Request - a problem reading or understanding the request. |  -  |
+| **401** | Unauthorized - authentication required. |  -  |
+| **403** | Forbidden - insufficient permissions to process the request. |  -  |
+| **422** | Unprocessable Entity - a request validation error. |  -  |
+| **500** | Internal Server Error - the server could not process the request. |  -  |
 
 <a name="getCompaniesCompanyIdTerminalActionsActionId"></a>
 # **getCompaniesCompanyIdTerminalActionsActionId**
@@ -316,10 +316,10 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **companyId** | **String**| The unique identifier of the company account. |
- **actionId** | **String**| The unique identifier of the terminal action. |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **companyId** | **String**| The unique identifier of the company account. | |
+| **actionId** | **String**| The unique identifier of the terminal action. | |
 
 ### Return type
 
@@ -337,10 +337,10 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | OK - the request has succeeded. |  -  |
-**400** | Bad Request - a problem reading or understanding the request. |  -  |
-**401** | Unauthorized - authentication required. |  -  |
-**403** | Forbidden - insufficient permissions to process the request. |  -  |
-**422** | Unprocessable Entity - a request validation error. |  -  |
-**500** | Internal Server Error - the server could not process the request. |  -  |
+| **200** | OK - the request has succeeded. |  -  |
+| **400** | Bad Request - a problem reading or understanding the request. |  -  |
+| **401** | Unauthorized - authentication required. |  -  |
+| **403** | Forbidden - insufficient permissions to process the request. |  -  |
+| **422** | Unprocessable Entity - a request validation error. |  -  |
+| **500** | Internal Server Error - the server could not process the request. |  -  |
 

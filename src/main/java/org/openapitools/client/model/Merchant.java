@@ -28,10 +28,30 @@ import java.util.List;
 import org.openapitools.client.model.DataCenter;
 import org.openapitools.client.model.MerchantLinks;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonDeserializationContext;
+import com.google.gson.JsonDeserializer;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParseException;
+import com.google.gson.TypeAdapterFactory;
+import com.google.gson.reflect.TypeToken;
+
+import java.lang.reflect.Type;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
+
+import org.openapitools.client.JSON;
+
 /**
  * Merchant
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-08-30T16:56:39.721579+02:00[Europe/Amsterdam]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-08-30T15:05:30.841Z[Etc/UTC]")
 public class Merchant {
   public static final String SERIALIZED_NAME_LINKS = "_links";
   @SerializedName(SERIALIZED_NAME_LINKS)
@@ -169,7 +189,7 @@ public class Merchant {
 
   public Merchant addDataCentersItem(DataCenter dataCentersItem) {
     if (this.dataCenters == null) {
-      this.dataCenters = new ArrayList<DataCenter>();
+      this.dataCenters = new ArrayList<>();
     }
     this.dataCenters.add(dataCentersItem);
     return this;
@@ -422,6 +442,7 @@ public class Merchant {
   }
 
 
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -485,5 +506,155 @@ public class Merchant {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+  public static HashSet<String> openapiFields;
+  public static HashSet<String> openapiRequiredFields;
+
+  static {
+    // a set of all properties/fields (JSON key names)
+    openapiFields = new HashSet<String>();
+    openapiFields.add("_links");
+    openapiFields.add("captureDelay");
+    openapiFields.add("companyId");
+    openapiFields.add("dataCenters");
+    openapiFields.add("defaultShopperInteraction");
+    openapiFields.add("description");
+    openapiFields.add("id");
+    openapiFields.add("merchantCity");
+    openapiFields.add("name");
+    openapiFields.add("pricingPlan");
+    openapiFields.add("primarySettlementCurrency");
+    openapiFields.add("reference");
+    openapiFields.add("shopWebAddress");
+    openapiFields.add("status");
+
+    // a set of required properties/fields (JSON key names)
+    openapiRequiredFields = new HashSet<String>();
+  }
+
+ /**
+  * Validates the JSON Object and throws an exception if issues found
+  *
+  * @param jsonObj JSON Object
+  * @throws IOException if the JSON Object is invalid with respect to Merchant
+  */
+  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
+      if (jsonObj == null) {
+        if (Merchant.openapiRequiredFields.isEmpty()) {
+          return;
+        } else { // has required fields
+          throw new IllegalArgumentException(String.format("The required field(s) %s in Merchant is not found in the empty JSON string", Merchant.openapiRequiredFields.toString()));
+        }
+      }
+
+      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
+      // check to see if the JSON string contains additional fields
+      for (Entry<String, JsonElement> entry : entries) {
+        if (!Merchant.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Merchant` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
+        }
+      }
+      // validate the optional field `_links`
+      if (jsonObj.getAsJsonObject("_links") != null) {
+        MerchantLinks.validateJsonObject(jsonObj.getAsJsonObject("_links"));
+      }
+      if (jsonObj.get("captureDelay") != null && !jsonObj.get("captureDelay").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `captureDelay` to be a primitive type in the JSON string but got `%s`", jsonObj.get("captureDelay").toString()));
+      }
+      if (jsonObj.get("companyId") != null && !jsonObj.get("companyId").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `companyId` to be a primitive type in the JSON string but got `%s`", jsonObj.get("companyId").toString()));
+      }
+      JsonArray jsonArraydataCenters = jsonObj.getAsJsonArray("dataCenters");
+      if (jsonArraydataCenters != null) {
+        // ensure the json data is an array
+        if (!jsonObj.get("dataCenters").isJsonArray()) {
+          throw new IllegalArgumentException(String.format("Expected the field `dataCenters` to be an array in the JSON string but got `%s`", jsonObj.get("dataCenters").toString()));
+        }
+
+        // validate the optional field `dataCenters` (array)
+        for (int i = 0; i < jsonArraydataCenters.size(); i++) {
+          DataCenter.validateJsonObject(jsonArraydataCenters.get(i).getAsJsonObject());
+        };
+      }
+      if (jsonObj.get("defaultShopperInteraction") != null && !jsonObj.get("defaultShopperInteraction").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `defaultShopperInteraction` to be a primitive type in the JSON string but got `%s`", jsonObj.get("defaultShopperInteraction").toString()));
+      }
+      if (jsonObj.get("description") != null && !jsonObj.get("description").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("description").toString()));
+      }
+      if (jsonObj.get("id") != null && !jsonObj.get("id").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("id").toString()));
+      }
+      if (jsonObj.get("merchantCity") != null && !jsonObj.get("merchantCity").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `merchantCity` to be a primitive type in the JSON string but got `%s`", jsonObj.get("merchantCity").toString()));
+      }
+      if (jsonObj.get("name") != null && !jsonObj.get("name").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
+      }
+      if (jsonObj.get("pricingPlan") != null && !jsonObj.get("pricingPlan").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `pricingPlan` to be a primitive type in the JSON string but got `%s`", jsonObj.get("pricingPlan").toString()));
+      }
+      if (jsonObj.get("primarySettlementCurrency") != null && !jsonObj.get("primarySettlementCurrency").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `primarySettlementCurrency` to be a primitive type in the JSON string but got `%s`", jsonObj.get("primarySettlementCurrency").toString()));
+      }
+      if (jsonObj.get("reference") != null && !jsonObj.get("reference").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `reference` to be a primitive type in the JSON string but got `%s`", jsonObj.get("reference").toString()));
+      }
+      if (jsonObj.get("shopWebAddress") != null && !jsonObj.get("shopWebAddress").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `shopWebAddress` to be a primitive type in the JSON string but got `%s`", jsonObj.get("shopWebAddress").toString()));
+      }
+      if (jsonObj.get("status") != null && !jsonObj.get("status").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `status` to be a primitive type in the JSON string but got `%s`", jsonObj.get("status").toString()));
+      }
+  }
+
+  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
+    @SuppressWarnings("unchecked")
+    @Override
+    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
+       if (!Merchant.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'Merchant' and its subtypes
+       }
+       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
+       final TypeAdapter<Merchant> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(Merchant.class));
+
+       return (TypeAdapter<T>) new TypeAdapter<Merchant>() {
+           @Override
+           public void write(JsonWriter out, Merchant value) throws IOException {
+             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+             elementAdapter.write(out, obj);
+           }
+
+           @Override
+           public Merchant read(JsonReader in) throws IOException {
+             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
+             validateJsonObject(jsonObj);
+             return thisAdapter.fromJsonTree(jsonObj);
+           }
+
+       }.nullSafe();
+    }
+  }
+
+ /**
+  * Create an instance of Merchant given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of Merchant
+  * @throws IOException if the JSON string is invalid with respect to Merchant
+  */
+  public static Merchant fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, Merchant.class);
+  }
+
+ /**
+  * Convert an instance of Merchant to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
+  }
 }
 

@@ -24,10 +24,30 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonDeserializationContext;
+import com.google.gson.JsonDeserializer;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParseException;
+import com.google.gson.TypeAdapterFactory;
+import com.google.gson.reflect.TypeToken;
+
+import java.lang.reflect.Type;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
+
+import org.openapitools.client.JSON;
+
 /**
  * ReceiptPrinting
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-08-30T16:56:39.721579+02:00[Europe/Amsterdam]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-08-30T15:05:30.841Z[Etc/UTC]")
 public class ReceiptPrinting {
   public static final String SERIALIZED_NAME_MERCHANT_APPROVED = "merchantApproved";
   @SerializedName(SERIALIZED_NAME_MERCHANT_APPROVED)
@@ -464,6 +484,7 @@ public class ReceiptPrinting {
   }
 
 
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -531,5 +552,105 @@ public class ReceiptPrinting {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+  public static HashSet<String> openapiFields;
+  public static HashSet<String> openapiRequiredFields;
+
+  static {
+    // a set of all properties/fields (JSON key names)
+    openapiFields = new HashSet<String>();
+    openapiFields.add("merchantApproved");
+    openapiFields.add("merchantCancelled");
+    openapiFields.add("merchantCaptureApproved");
+    openapiFields.add("merchantCaptureRefused");
+    openapiFields.add("merchantRefundApproved");
+    openapiFields.add("merchantRefundRefused");
+    openapiFields.add("merchantRefused");
+    openapiFields.add("merchantVoid");
+    openapiFields.add("shopperApproved");
+    openapiFields.add("shopperCancelled");
+    openapiFields.add("shopperCaptureApproved");
+    openapiFields.add("shopperCaptureRefused");
+    openapiFields.add("shopperRefundApproved");
+    openapiFields.add("shopperRefundRefused");
+    openapiFields.add("shopperRefused");
+    openapiFields.add("shopperVoid");
+
+    // a set of required properties/fields (JSON key names)
+    openapiRequiredFields = new HashSet<String>();
+  }
+
+ /**
+  * Validates the JSON Object and throws an exception if issues found
+  *
+  * @param jsonObj JSON Object
+  * @throws IOException if the JSON Object is invalid with respect to ReceiptPrinting
+  */
+  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
+      if (jsonObj == null) {
+        if (ReceiptPrinting.openapiRequiredFields.isEmpty()) {
+          return;
+        } else { // has required fields
+          throw new IllegalArgumentException(String.format("The required field(s) %s in ReceiptPrinting is not found in the empty JSON string", ReceiptPrinting.openapiRequiredFields.toString()));
+        }
+      }
+
+      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
+      // check to see if the JSON string contains additional fields
+      for (Entry<String, JsonElement> entry : entries) {
+        if (!ReceiptPrinting.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `ReceiptPrinting` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
+        }
+      }
+  }
+
+  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
+    @SuppressWarnings("unchecked")
+    @Override
+    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
+       if (!ReceiptPrinting.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'ReceiptPrinting' and its subtypes
+       }
+       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
+       final TypeAdapter<ReceiptPrinting> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(ReceiptPrinting.class));
+
+       return (TypeAdapter<T>) new TypeAdapter<ReceiptPrinting>() {
+           @Override
+           public void write(JsonWriter out, ReceiptPrinting value) throws IOException {
+             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+             elementAdapter.write(out, obj);
+           }
+
+           @Override
+           public ReceiptPrinting read(JsonReader in) throws IOException {
+             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
+             validateJsonObject(jsonObj);
+             return thisAdapter.fromJsonTree(jsonObj);
+           }
+
+       }.nullSafe();
+    }
+  }
+
+ /**
+  * Create an instance of ReceiptPrinting given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of ReceiptPrinting
+  * @throws IOException if the JSON string is invalid with respect to ReceiptPrinting
+  */
+  public static ReceiptPrinting fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, ReceiptPrinting.class);
+  }
+
+ /**
+  * Convert an instance of ReceiptPrinting to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
+  }
 }
 

@@ -27,10 +27,30 @@ import java.util.ArrayList;
 import java.util.List;
 import org.openapitools.client.model.Url;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonDeserializationContext;
+import com.google.gson.JsonDeserializer;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParseException;
+import com.google.gson.TypeAdapterFactory;
+import com.google.gson.reflect.TypeToken;
+
+import java.lang.reflect.Type;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
+
+import org.openapitools.client.JSON;
+
 /**
  * EventUrl
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-08-30T16:56:39.721579+02:00[Europe/Amsterdam]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-08-30T15:05:30.841Z[Etc/UTC]")
 public class EventUrl {
   public static final String SERIALIZED_NAME_EVENT_LOCAL_URLS = "eventLocalUrls";
   @SerializedName(SERIALIZED_NAME_EVENT_LOCAL_URLS)
@@ -51,7 +71,7 @@ public class EventUrl {
 
   public EventUrl addEventLocalUrlsItem(Url eventLocalUrlsItem) {
     if (this.eventLocalUrls == null) {
-      this.eventLocalUrls = new ArrayList<Url>();
+      this.eventLocalUrls = new ArrayList<>();
     }
     this.eventLocalUrls.add(eventLocalUrlsItem);
     return this;
@@ -82,7 +102,7 @@ public class EventUrl {
 
   public EventUrl addEventPublicUrlsItem(Url eventPublicUrlsItem) {
     if (this.eventPublicUrls == null) {
-      this.eventPublicUrls = new ArrayList<Url>();
+      this.eventPublicUrls = new ArrayList<>();
     }
     this.eventPublicUrls.add(eventPublicUrlsItem);
     return this;
@@ -103,6 +123,7 @@ public class EventUrl {
   public void setEventPublicUrls(List<Url> eventPublicUrls) {
     this.eventPublicUrls = eventPublicUrls;
   }
+
 
 
   @Override
@@ -144,5 +165,115 @@ public class EventUrl {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+  public static HashSet<String> openapiFields;
+  public static HashSet<String> openapiRequiredFields;
+
+  static {
+    // a set of all properties/fields (JSON key names)
+    openapiFields = new HashSet<String>();
+    openapiFields.add("eventLocalUrls");
+    openapiFields.add("eventPublicUrls");
+
+    // a set of required properties/fields (JSON key names)
+    openapiRequiredFields = new HashSet<String>();
+  }
+
+ /**
+  * Validates the JSON Object and throws an exception if issues found
+  *
+  * @param jsonObj JSON Object
+  * @throws IOException if the JSON Object is invalid with respect to EventUrl
+  */
+  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
+      if (jsonObj == null) {
+        if (EventUrl.openapiRequiredFields.isEmpty()) {
+          return;
+        } else { // has required fields
+          throw new IllegalArgumentException(String.format("The required field(s) %s in EventUrl is not found in the empty JSON string", EventUrl.openapiRequiredFields.toString()));
+        }
+      }
+
+      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
+      // check to see if the JSON string contains additional fields
+      for (Entry<String, JsonElement> entry : entries) {
+        if (!EventUrl.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `EventUrl` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
+        }
+      }
+      JsonArray jsonArrayeventLocalUrls = jsonObj.getAsJsonArray("eventLocalUrls");
+      if (jsonArrayeventLocalUrls != null) {
+        // ensure the json data is an array
+        if (!jsonObj.get("eventLocalUrls").isJsonArray()) {
+          throw new IllegalArgumentException(String.format("Expected the field `eventLocalUrls` to be an array in the JSON string but got `%s`", jsonObj.get("eventLocalUrls").toString()));
+        }
+
+        // validate the optional field `eventLocalUrls` (array)
+        for (int i = 0; i < jsonArrayeventLocalUrls.size(); i++) {
+          Url.validateJsonObject(jsonArrayeventLocalUrls.get(i).getAsJsonObject());
+        };
+      }
+      JsonArray jsonArrayeventPublicUrls = jsonObj.getAsJsonArray("eventPublicUrls");
+      if (jsonArrayeventPublicUrls != null) {
+        // ensure the json data is an array
+        if (!jsonObj.get("eventPublicUrls").isJsonArray()) {
+          throw new IllegalArgumentException(String.format("Expected the field `eventPublicUrls` to be an array in the JSON string but got `%s`", jsonObj.get("eventPublicUrls").toString()));
+        }
+
+        // validate the optional field `eventPublicUrls` (array)
+        for (int i = 0; i < jsonArrayeventPublicUrls.size(); i++) {
+          Url.validateJsonObject(jsonArrayeventPublicUrls.get(i).getAsJsonObject());
+        };
+      }
+  }
+
+  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
+    @SuppressWarnings("unchecked")
+    @Override
+    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
+       if (!EventUrl.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'EventUrl' and its subtypes
+       }
+       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
+       final TypeAdapter<EventUrl> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(EventUrl.class));
+
+       return (TypeAdapter<T>) new TypeAdapter<EventUrl>() {
+           @Override
+           public void write(JsonWriter out, EventUrl value) throws IOException {
+             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+             elementAdapter.write(out, obj);
+           }
+
+           @Override
+           public EventUrl read(JsonReader in) throws IOException {
+             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
+             validateJsonObject(jsonObj);
+             return thisAdapter.fromJsonTree(jsonObj);
+           }
+
+       }.nullSafe();
+    }
+  }
+
+ /**
+  * Create an instance of EventUrl given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of EventUrl
+  * @throws IOException if the JSON string is invalid with respect to EventUrl
+  */
+  public static EventUrl fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, EventUrl.class);
+  }
+
+ /**
+  * Convert an instance of EventUrl to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
+  }
 }
 

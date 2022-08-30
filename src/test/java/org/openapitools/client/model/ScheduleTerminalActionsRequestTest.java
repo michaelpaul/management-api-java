@@ -23,15 +23,9 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import org.openapitools.client.model.InstallAndroidAppDetails;
-import org.openapitools.client.model.InstallAndroidCertificateDetails;
-import org.openapitools.client.model.ReleaseUpdateDetails;
-import org.openapitools.client.model.UninstallAndroidAppDetails;
-import org.openapitools.client.model.UninstallAndroidCertificateDetails;
-import org.openapitools.jackson.nullable.JsonNullable;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
+import org.openapitools.client.model.ScheduleTerminalActionsRequestActionDetails;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 
 /**

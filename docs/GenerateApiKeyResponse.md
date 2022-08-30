@@ -5,9 +5,9 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**apiKey** | **String** | The generated API key. | 
+| Name | Type | Description | Notes |
+|------------ | ------------- | ------------- | -------------|
+|**apiKey** | **String** | The generated API key. |  |
 
 
 

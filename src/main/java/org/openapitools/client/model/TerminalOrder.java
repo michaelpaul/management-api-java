@@ -29,10 +29,30 @@ import org.openapitools.client.model.BillingEntity;
 import org.openapitools.client.model.OrderItem;
 import org.openapitools.client.model.ShippingLocation;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonDeserializationContext;
+import com.google.gson.JsonDeserializer;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParseException;
+import com.google.gson.TypeAdapterFactory;
+import com.google.gson.reflect.TypeToken;
+
+import java.lang.reflect.Type;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
+
+import org.openapitools.client.JSON;
+
 /**
  * TerminalOrder
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-08-30T16:56:39.721579+02:00[Europe/Amsterdam]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-08-30T15:05:30.841Z[Etc/UTC]")
 public class TerminalOrder {
   public static final String SERIALIZED_NAME_BILLING_ENTITY = "billingEntity";
   @SerializedName(SERIALIZED_NAME_BILLING_ENTITY)
@@ -146,7 +166,7 @@ public class TerminalOrder {
 
   public TerminalOrder addItemsItem(OrderItem itemsItem) {
     if (this.items == null) {
-      this.items = new ArrayList<OrderItem>();
+      this.items = new ArrayList<>();
     }
     this.items.add(itemsItem);
     return this;
@@ -261,6 +281,7 @@ public class TerminalOrder {
   }
 
 
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -312,5 +333,132 @@ public class TerminalOrder {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+  public static HashSet<String> openapiFields;
+  public static HashSet<String> openapiRequiredFields;
+
+  static {
+    // a set of all properties/fields (JSON key names)
+    openapiFields = new HashSet<String>();
+    openapiFields.add("billingEntity");
+    openapiFields.add("customerOrderReference");
+    openapiFields.add("id");
+    openapiFields.add("items");
+    openapiFields.add("orderDate");
+    openapiFields.add("shippingLocation");
+    openapiFields.add("status");
+    openapiFields.add("trackingUrl");
+
+    // a set of required properties/fields (JSON key names)
+    openapiRequiredFields = new HashSet<String>();
+  }
+
+ /**
+  * Validates the JSON Object and throws an exception if issues found
+  *
+  * @param jsonObj JSON Object
+  * @throws IOException if the JSON Object is invalid with respect to TerminalOrder
+  */
+  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
+      if (jsonObj == null) {
+        if (TerminalOrder.openapiRequiredFields.isEmpty()) {
+          return;
+        } else { // has required fields
+          throw new IllegalArgumentException(String.format("The required field(s) %s in TerminalOrder is not found in the empty JSON string", TerminalOrder.openapiRequiredFields.toString()));
+        }
+      }
+
+      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
+      // check to see if the JSON string contains additional fields
+      for (Entry<String, JsonElement> entry : entries) {
+        if (!TerminalOrder.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `TerminalOrder` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
+        }
+      }
+      // validate the optional field `billingEntity`
+      if (jsonObj.getAsJsonObject("billingEntity") != null) {
+        BillingEntity.validateJsonObject(jsonObj.getAsJsonObject("billingEntity"));
+      }
+      if (jsonObj.get("customerOrderReference") != null && !jsonObj.get("customerOrderReference").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `customerOrderReference` to be a primitive type in the JSON string but got `%s`", jsonObj.get("customerOrderReference").toString()));
+      }
+      if (jsonObj.get("id") != null && !jsonObj.get("id").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("id").toString()));
+      }
+      JsonArray jsonArrayitems = jsonObj.getAsJsonArray("items");
+      if (jsonArrayitems != null) {
+        // ensure the json data is an array
+        if (!jsonObj.get("items").isJsonArray()) {
+          throw new IllegalArgumentException(String.format("Expected the field `items` to be an array in the JSON string but got `%s`", jsonObj.get("items").toString()));
+        }
+
+        // validate the optional field `items` (array)
+        for (int i = 0; i < jsonArrayitems.size(); i++) {
+          OrderItem.validateJsonObject(jsonArrayitems.get(i).getAsJsonObject());
+        };
+      }
+      if (jsonObj.get("orderDate") != null && !jsonObj.get("orderDate").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `orderDate` to be a primitive type in the JSON string but got `%s`", jsonObj.get("orderDate").toString()));
+      }
+      // validate the optional field `shippingLocation`
+      if (jsonObj.getAsJsonObject("shippingLocation") != null) {
+        ShippingLocation.validateJsonObject(jsonObj.getAsJsonObject("shippingLocation"));
+      }
+      if (jsonObj.get("status") != null && !jsonObj.get("status").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `status` to be a primitive type in the JSON string but got `%s`", jsonObj.get("status").toString()));
+      }
+      if (jsonObj.get("trackingUrl") != null && !jsonObj.get("trackingUrl").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `trackingUrl` to be a primitive type in the JSON string but got `%s`", jsonObj.get("trackingUrl").toString()));
+      }
+  }
+
+  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
+    @SuppressWarnings("unchecked")
+    @Override
+    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
+       if (!TerminalOrder.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'TerminalOrder' and its subtypes
+       }
+       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
+       final TypeAdapter<TerminalOrder> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(TerminalOrder.class));
+
+       return (TypeAdapter<T>) new TypeAdapter<TerminalOrder>() {
+           @Override
+           public void write(JsonWriter out, TerminalOrder value) throws IOException {
+             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+             elementAdapter.write(out, obj);
+           }
+
+           @Override
+           public TerminalOrder read(JsonReader in) throws IOException {
+             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
+             validateJsonObject(jsonObj);
+             return thisAdapter.fromJsonTree(jsonObj);
+           }
+
+       }.nullSafe();
+    }
+  }
+
+ /**
+  * Create an instance of TerminalOrder given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of TerminalOrder
+  * @throws IOException if the JSON string is invalid with respect to TerminalOrder
+  */
+  public static TerminalOrder fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, TerminalOrder.class);
+  }
+
+ /**
+  * Convert an instance of TerminalOrder to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
+  }
 }
 

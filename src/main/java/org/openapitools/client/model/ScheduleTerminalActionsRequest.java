@@ -25,21 +25,36 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import org.openapitools.client.model.InstallAndroidAppDetails;
-import org.openapitools.client.model.InstallAndroidCertificateDetails;
-import org.openapitools.client.model.ReleaseUpdateDetails;
-import org.openapitools.client.model.UninstallAndroidAppDetails;
-import org.openapitools.client.model.UninstallAndroidCertificateDetails;
-import org.openapitools.jackson.nullable.JsonNullable;
+import org.openapitools.client.model.ScheduleTerminalActionsRequestActionDetails;
+
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonDeserializationContext;
+import com.google.gson.JsonDeserializer;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParseException;
+import com.google.gson.TypeAdapterFactory;
+import com.google.gson.reflect.TypeToken;
+
+import java.lang.reflect.Type;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
+
+import org.openapitools.client.JSON;
 
 /**
  * ScheduleTerminalActionsRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-08-30T16:56:39.721579+02:00[Europe/Amsterdam]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-08-30T15:05:30.841Z[Etc/UTC]")
 public class ScheduleTerminalActionsRequest {
   public static final String SERIALIZED_NAME_ACTION_DETAILS = "actionDetails";
   @SerializedName(SERIALIZED_NAME_ACTION_DETAILS)
-  private OneOfInstallAndroidAppDetailsInstallAndroidCertificateDetailsReleaseUpdateDetailsUninstallAndroidAppDetailsUninstallAndroidCertificateDetails actionDetails;
+  private ScheduleTerminalActionsRequestActionDetails actionDetails;
 
   public static final String SERIALIZED_NAME_SCHEDULED_AT = "scheduledAt";
   @SerializedName(SERIALIZED_NAME_SCHEDULED_AT)
@@ -56,25 +71,25 @@ public class ScheduleTerminalActionsRequest {
   public ScheduleTerminalActionsRequest() { 
   }
 
-  public ScheduleTerminalActionsRequest actionDetails(OneOfInstallAndroidAppDetailsInstallAndroidCertificateDetailsReleaseUpdateDetailsUninstallAndroidAppDetailsUninstallAndroidCertificateDetails actionDetails) {
+  public ScheduleTerminalActionsRequest actionDetails(ScheduleTerminalActionsRequestActionDetails actionDetails) {
     
     this.actionDetails = actionDetails;
     return this;
   }
 
    /**
-   * Information about the action to take.
+   * Get actionDetails
    * @return actionDetails
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Information about the action to take.")
+  @ApiModelProperty(value = "")
 
-  public OneOfInstallAndroidAppDetailsInstallAndroidCertificateDetailsReleaseUpdateDetailsUninstallAndroidAppDetailsUninstallAndroidCertificateDetails getActionDetails() {
+  public ScheduleTerminalActionsRequestActionDetails getActionDetails() {
     return actionDetails;
   }
 
 
-  public void setActionDetails(OneOfInstallAndroidAppDetailsInstallAndroidCertificateDetailsReleaseUpdateDetailsUninstallAndroidAppDetailsUninstallAndroidCertificateDetails actionDetails) {
+  public void setActionDetails(ScheduleTerminalActionsRequestActionDetails actionDetails) {
     this.actionDetails = actionDetails;
   }
 
@@ -133,7 +148,7 @@ public class ScheduleTerminalActionsRequest {
 
   public ScheduleTerminalActionsRequest addTerminalIdsItem(String terminalIdsItem) {
     if (this.terminalIds == null) {
-      this.terminalIds = new ArrayList<String>();
+      this.terminalIds = new ArrayList<>();
     }
     this.terminalIds.add(terminalIdsItem);
     return this;
@@ -156,6 +171,7 @@ public class ScheduleTerminalActionsRequest {
   }
 
 
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -171,20 +187,9 @@ public class ScheduleTerminalActionsRequest {
         Objects.equals(this.terminalIds, scheduleTerminalActionsRequest.terminalIds);
   }
 
-  private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
-    return a == b || (a != null && b != null && a.isPresent() && b.isPresent() && Objects.deepEquals(a.get(), b.get()));
-  }
-
   @Override
   public int hashCode() {
     return Objects.hash(actionDetails, scheduledAt, storeId, terminalIds);
-  }
-
-  private static <T> int hashCodeNullable(JsonNullable<T> a) {
-    if (a == null) {
-      return 1;
-    }
-    return a.isPresent() ? Arrays.deepHashCode(new Object[]{a.get()}) : 31;
   }
 
   @Override
@@ -210,5 +215,107 @@ public class ScheduleTerminalActionsRequest {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+  public static HashSet<String> openapiFields;
+  public static HashSet<String> openapiRequiredFields;
+
+  static {
+    // a set of all properties/fields (JSON key names)
+    openapiFields = new HashSet<String>();
+    openapiFields.add("actionDetails");
+    openapiFields.add("scheduledAt");
+    openapiFields.add("storeId");
+    openapiFields.add("terminalIds");
+
+    // a set of required properties/fields (JSON key names)
+    openapiRequiredFields = new HashSet<String>();
+  }
+
+ /**
+  * Validates the JSON Object and throws an exception if issues found
+  *
+  * @param jsonObj JSON Object
+  * @throws IOException if the JSON Object is invalid with respect to ScheduleTerminalActionsRequest
+  */
+  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
+      if (jsonObj == null) {
+        if (ScheduleTerminalActionsRequest.openapiRequiredFields.isEmpty()) {
+          return;
+        } else { // has required fields
+          throw new IllegalArgumentException(String.format("The required field(s) %s in ScheduleTerminalActionsRequest is not found in the empty JSON string", ScheduleTerminalActionsRequest.openapiRequiredFields.toString()));
+        }
+      }
+
+      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
+      // check to see if the JSON string contains additional fields
+      for (Entry<String, JsonElement> entry : entries) {
+        if (!ScheduleTerminalActionsRequest.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `ScheduleTerminalActionsRequest` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
+        }
+      }
+      // validate the optional field `actionDetails`
+      if (jsonObj.getAsJsonObject("actionDetails") != null) {
+        ScheduleTerminalActionsRequestActionDetails.validateJsonObject(jsonObj.getAsJsonObject("actionDetails"));
+      }
+      if (jsonObj.get("scheduledAt") != null && !jsonObj.get("scheduledAt").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `scheduledAt` to be a primitive type in the JSON string but got `%s`", jsonObj.get("scheduledAt").toString()));
+      }
+      if (jsonObj.get("storeId") != null && !jsonObj.get("storeId").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `storeId` to be a primitive type in the JSON string but got `%s`", jsonObj.get("storeId").toString()));
+      }
+      // ensure the json data is an array
+      if (jsonObj.get("terminalIds") != null && !jsonObj.get("terminalIds").isJsonArray()) {
+        throw new IllegalArgumentException(String.format("Expected the field `terminalIds` to be an array in the JSON string but got `%s`", jsonObj.get("terminalIds").toString()));
+      }
+  }
+
+  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
+    @SuppressWarnings("unchecked")
+    @Override
+    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
+       if (!ScheduleTerminalActionsRequest.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'ScheduleTerminalActionsRequest' and its subtypes
+       }
+       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
+       final TypeAdapter<ScheduleTerminalActionsRequest> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(ScheduleTerminalActionsRequest.class));
+
+       return (TypeAdapter<T>) new TypeAdapter<ScheduleTerminalActionsRequest>() {
+           @Override
+           public void write(JsonWriter out, ScheduleTerminalActionsRequest value) throws IOException {
+             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+             elementAdapter.write(out, obj);
+           }
+
+           @Override
+           public ScheduleTerminalActionsRequest read(JsonReader in) throws IOException {
+             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
+             validateJsonObject(jsonObj);
+             return thisAdapter.fromJsonTree(jsonObj);
+           }
+
+       }.nullSafe();
+    }
+  }
+
+ /**
+  * Create an instance of ScheduleTerminalActionsRequest given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of ScheduleTerminalActionsRequest
+  * @throws IOException if the JSON string is invalid with respect to ScheduleTerminalActionsRequest
+  */
+  public static ScheduleTerminalActionsRequest fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, ScheduleTerminalActionsRequest.class);
+  }
+
+ /**
+  * Convert an instance of ScheduleTerminalActionsRequest to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
+  }
 }
 

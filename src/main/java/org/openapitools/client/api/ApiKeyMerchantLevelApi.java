@@ -35,6 +35,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import javax.ws.rs.core.GenericType;
 
 public class ApiKeyMerchantLevelApi {
     private ApiClient localVarApiClient;
@@ -94,7 +95,6 @@ public class ApiKeyMerchantLevelApi {
      */
     public okhttp3.Call postMerchantsMerchantIdApiCredentialsApiCredentialIdGenerateApiKeyCall(String merchantId, String apiCredentialId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 

@@ -2,18 +2,18 @@
 
 All URIs are relative to *https://management-test.adyen.com/v1*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**getCompaniesCompanyIdBillingEntities**](TerminalOrdersCompanyLevelApi.md#getCompaniesCompanyIdBillingEntities) | **GET** /companies/{companyId}/billingEntities | Get a list of billing entities
-[**getCompaniesCompanyIdShippingLocations**](TerminalOrdersCompanyLevelApi.md#getCompaniesCompanyIdShippingLocations) | **GET** /companies/{companyId}/shippingLocations | Get a list of shipping locations
-[**getCompaniesCompanyIdTerminalModels**](TerminalOrdersCompanyLevelApi.md#getCompaniesCompanyIdTerminalModels) | **GET** /companies/{companyId}/terminalModels | Get a list of terminal models
-[**getCompaniesCompanyIdTerminalOrders**](TerminalOrdersCompanyLevelApi.md#getCompaniesCompanyIdTerminalOrders) | **GET** /companies/{companyId}/terminalOrders | Get a list of orders
-[**getCompaniesCompanyIdTerminalOrdersOrderId**](TerminalOrdersCompanyLevelApi.md#getCompaniesCompanyIdTerminalOrdersOrderId) | **GET** /companies/{companyId}/terminalOrders/{orderId} | Get an order
-[**getCompaniesCompanyIdTerminalProducts**](TerminalOrdersCompanyLevelApi.md#getCompaniesCompanyIdTerminalProducts) | **GET** /companies/{companyId}/terminalProducts | Get a list of terminal products
-[**patchCompaniesCompanyIdTerminalOrdersOrderId**](TerminalOrdersCompanyLevelApi.md#patchCompaniesCompanyIdTerminalOrdersOrderId) | **PATCH** /companies/{companyId}/terminalOrders/{orderId} | Update an order
-[**postCompaniesCompanyIdShippingLocations**](TerminalOrdersCompanyLevelApi.md#postCompaniesCompanyIdShippingLocations) | **POST** /companies/{companyId}/shippingLocations | Create a shipping location
-[**postCompaniesCompanyIdTerminalOrders**](TerminalOrdersCompanyLevelApi.md#postCompaniesCompanyIdTerminalOrders) | **POST** /companies/{companyId}/terminalOrders | Create an order
-[**postCompaniesCompanyIdTerminalOrdersOrderIdCancel**](TerminalOrdersCompanyLevelApi.md#postCompaniesCompanyIdTerminalOrdersOrderIdCancel) | **POST** /companies/{companyId}/terminalOrders/{orderId}/cancel | Cancel an order
+| Method | HTTP request | Description |
+|------------- | ------------- | -------------|
+| [**getCompaniesCompanyIdBillingEntities**](TerminalOrdersCompanyLevelApi.md#getCompaniesCompanyIdBillingEntities) | **GET** /companies/{companyId}/billingEntities | Get a list of billing entities |
+| [**getCompaniesCompanyIdShippingLocations**](TerminalOrdersCompanyLevelApi.md#getCompaniesCompanyIdShippingLocations) | **GET** /companies/{companyId}/shippingLocations | Get a list of shipping locations |
+| [**getCompaniesCompanyIdTerminalModels**](TerminalOrdersCompanyLevelApi.md#getCompaniesCompanyIdTerminalModels) | **GET** /companies/{companyId}/terminalModels | Get a list of terminal models |
+| [**getCompaniesCompanyIdTerminalOrders**](TerminalOrdersCompanyLevelApi.md#getCompaniesCompanyIdTerminalOrders) | **GET** /companies/{companyId}/terminalOrders | Get a list of orders |
+| [**getCompaniesCompanyIdTerminalOrdersOrderId**](TerminalOrdersCompanyLevelApi.md#getCompaniesCompanyIdTerminalOrdersOrderId) | **GET** /companies/{companyId}/terminalOrders/{orderId} | Get an order |
+| [**getCompaniesCompanyIdTerminalProducts**](TerminalOrdersCompanyLevelApi.md#getCompaniesCompanyIdTerminalProducts) | **GET** /companies/{companyId}/terminalProducts | Get a list of terminal products |
+| [**patchCompaniesCompanyIdTerminalOrdersOrderId**](TerminalOrdersCompanyLevelApi.md#patchCompaniesCompanyIdTerminalOrdersOrderId) | **PATCH** /companies/{companyId}/terminalOrders/{orderId} | Update an order |
+| [**postCompaniesCompanyIdShippingLocations**](TerminalOrdersCompanyLevelApi.md#postCompaniesCompanyIdShippingLocations) | **POST** /companies/{companyId}/shippingLocations | Create a shipping location |
+| [**postCompaniesCompanyIdTerminalOrders**](TerminalOrdersCompanyLevelApi.md#postCompaniesCompanyIdTerminalOrders) | **POST** /companies/{companyId}/terminalOrders | Create an order |
+| [**postCompaniesCompanyIdTerminalOrdersOrderIdCancel**](TerminalOrdersCompanyLevelApi.md#postCompaniesCompanyIdTerminalOrdersOrderIdCancel) | **POST** /companies/{companyId}/terminalOrders/{orderId}/cancel | Cancel an order |
 
 
 <a name="getCompaniesCompanyIdBillingEntities"></a>
@@ -69,10 +69,10 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **companyId** | **String**| The unique identifier of the company account. |
- **name** | **String**| The name of the billing entity. | [optional]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **companyId** | **String**| The unique identifier of the company account. | |
+| **name** | **String**| The name of the billing entity. | [optional] |
 
 ### Return type
 
@@ -90,12 +90,12 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | OK - the request has succeeded. |  -  |
-**400** | Bad Request - a problem reading or understanding the request. |  -  |
-**401** | Unauthorized - authentication required. |  -  |
-**403** | Forbidden - insufficient permissions to process the request. |  -  |
-**422** | Unprocessable Entity - a request validation error. |  -  |
-**500** | Internal Server Error - the server could not process the request. |  -  |
+| **200** | OK - the request has succeeded. |  -  |
+| **400** | Bad Request - a problem reading or understanding the request. |  -  |
+| **401** | Unauthorized - authentication required. |  -  |
+| **403** | Forbidden - insufficient permissions to process the request. |  -  |
+| **422** | Unprocessable Entity - a request validation error. |  -  |
+| **500** | Internal Server Error - the server could not process the request. |  -  |
 
 <a name="getCompaniesCompanyIdShippingLocations"></a>
 # **getCompaniesCompanyIdShippingLocations**
@@ -152,12 +152,12 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **companyId** | **String**| The unique identifier of the company account. |
- **name** | **String**| The name of the shipping location. | [optional]
- **offset** | **Integer**| The number of locations to skip. | [optional]
- **limit** | **Integer**| The number of locations to return. | [optional]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **companyId** | **String**| The unique identifier of the company account. | |
+| **name** | **String**| The name of the shipping location. | [optional] |
+| **offset** | **Integer**| The number of locations to skip. | [optional] |
+| **limit** | **Integer**| The number of locations to return. | [optional] |
 
 ### Return type
 
@@ -175,12 +175,12 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | OK - the request has succeeded. |  -  |
-**400** | Bad Request - a problem reading or understanding the request. |  -  |
-**401** | Unauthorized - authentication required. |  -  |
-**403** | Forbidden - insufficient permissions to process the request. |  -  |
-**422** | Unprocessable Entity - a request validation error. |  -  |
-**500** | Internal Server Error - the server could not process the request. |  -  |
+| **200** | OK - the request has succeeded. |  -  |
+| **400** | Bad Request - a problem reading or understanding the request. |  -  |
+| **401** | Unauthorized - authentication required. |  -  |
+| **403** | Forbidden - insufficient permissions to process the request. |  -  |
+| **422** | Unprocessable Entity - a request validation error. |  -  |
+| **500** | Internal Server Error - the server could not process the request. |  -  |
 
 <a name="getCompaniesCompanyIdTerminalModels"></a>
 # **getCompaniesCompanyIdTerminalModels**
@@ -234,9 +234,9 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **companyId** | **String**| The unique identifier of the company account. |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **companyId** | **String**| The unique identifier of the company account. | |
 
 ### Return type
 
@@ -254,12 +254,12 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | OK - the request has succeeded. |  -  |
-**400** | Bad Request - a problem reading or understanding the request. |  -  |
-**401** | Unauthorized - authentication required. |  -  |
-**403** | Forbidden - insufficient permissions to process the request. |  -  |
-**422** | Unprocessable Entity - a request validation error. |  -  |
-**500** | Internal Server Error - the server could not process the request. |  -  |
+| **200** | OK - the request has succeeded. |  -  |
+| **400** | Bad Request - a problem reading or understanding the request. |  -  |
+| **401** | Unauthorized - authentication required. |  -  |
+| **403** | Forbidden - insufficient permissions to process the request. |  -  |
+| **422** | Unprocessable Entity - a request validation error. |  -  |
+| **500** | Internal Server Error - the server could not process the request. |  -  |
 
 <a name="getCompaniesCompanyIdTerminalOrders"></a>
 # **getCompaniesCompanyIdTerminalOrders**
@@ -317,13 +317,13 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **companyId** | **String**| The unique identifier of the company account. |
- **customerOrderReference** | **String**| Your purchase order number. | [optional]
- **status** | **String**| The order status. Possible values (not case-sensitive): Placed, Confirmed, Cancelled, Shipped, Delivered. | [optional]
- **offset** | **Integer**| The number of orders to skip. | [optional]
- **limit** | **Integer**| The number of orders to return. | [optional]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **companyId** | **String**| The unique identifier of the company account. | |
+| **customerOrderReference** | **String**| Your purchase order number. | [optional] |
+| **status** | **String**| The order status. Possible values (not case-sensitive): Placed, Confirmed, Cancelled, Shipped, Delivered. | [optional] |
+| **offset** | **Integer**| The number of orders to skip. | [optional] |
+| **limit** | **Integer**| The number of orders to return. | [optional] |
 
 ### Return type
 
@@ -341,12 +341,12 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | OK - the request has succeeded. |  -  |
-**400** | Bad Request - a problem reading or understanding the request. |  -  |
-**401** | Unauthorized - authentication required. |  -  |
-**403** | Forbidden - insufficient permissions to process the request. |  -  |
-**422** | Unprocessable Entity - a request validation error. |  -  |
-**500** | Internal Server Error - the server could not process the request. |  -  |
+| **200** | OK - the request has succeeded. |  -  |
+| **400** | Bad Request - a problem reading or understanding the request. |  -  |
+| **401** | Unauthorized - authentication required. |  -  |
+| **403** | Forbidden - insufficient permissions to process the request. |  -  |
+| **422** | Unprocessable Entity - a request validation error. |  -  |
+| **500** | Internal Server Error - the server could not process the request. |  -  |
 
 <a name="getCompaniesCompanyIdTerminalOrdersOrderId"></a>
 # **getCompaniesCompanyIdTerminalOrdersOrderId**
@@ -401,10 +401,10 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **companyId** | **String**| The unique identifier of the company account. |
- **orderId** | **String**| The unique identifier of the order. |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **companyId** | **String**| The unique identifier of the company account. | |
+| **orderId** | **String**| The unique identifier of the order. | |
 
 ### Return type
 
@@ -422,12 +422,12 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | OK - the request has succeeded. |  -  |
-**400** | Bad Request - a problem reading or understanding the request. |  -  |
-**401** | Unauthorized - authentication required. |  -  |
-**403** | Forbidden - insufficient permissions to process the request. |  -  |
-**422** | Unprocessable Entity - a request validation error. |  -  |
-**500** | Internal Server Error - the server could not process the request. |  -  |
+| **200** | OK - the request has succeeded. |  -  |
+| **400** | Bad Request - a problem reading or understanding the request. |  -  |
+| **401** | Unauthorized - authentication required. |  -  |
+| **403** | Forbidden - insufficient permissions to process the request. |  -  |
+| **422** | Unprocessable Entity - a request validation error. |  -  |
+| **500** | Internal Server Error - the server could not process the request. |  -  |
 
 <a name="getCompaniesCompanyIdTerminalProducts"></a>
 # **getCompaniesCompanyIdTerminalProducts**
@@ -485,13 +485,13 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **companyId** | **String**| The unique identifier of the company account. |
- **country** | **String**| The country to return products for, in [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) format. For example, **US** | [optional]
- **terminalModelId** | **String**| The terminal model to return products for. Use the ID returned in the [GET &#x60;/terminalModels&#x60;](https://docs.adyen.com/api-explorer/#/ManagementService/latest/get/terminalModels) response. For example, **Verifone.M400** | [optional]
- **offset** | **Integer**| The number of products to skip. | [optional]
- **limit** | **Integer**| The number of products to return. | [optional]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **companyId** | **String**| The unique identifier of the company account. | |
+| **country** | **String**| The country to return products for, in [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) format. For example, **US** | [optional] |
+| **terminalModelId** | **String**| The terminal model to return products for. Use the ID returned in the [GET &#x60;/terminalModels&#x60;](https://docs.adyen.com/api-explorer/#/ManagementService/latest/get/terminalModels) response. For example, **Verifone.M400** | [optional] |
+| **offset** | **Integer**| The number of products to skip. | [optional] |
+| **limit** | **Integer**| The number of products to return. | [optional] |
 
 ### Return type
 
@@ -509,12 +509,12 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | OK - the request has succeeded. |  -  |
-**400** | Bad Request - a problem reading or understanding the request. |  -  |
-**401** | Unauthorized - authentication required. |  -  |
-**403** | Forbidden - insufficient permissions to process the request. |  -  |
-**422** | Unprocessable Entity - a request validation error. |  -  |
-**500** | Internal Server Error - the server could not process the request. |  -  |
+| **200** | OK - the request has succeeded. |  -  |
+| **400** | Bad Request - a problem reading or understanding the request. |  -  |
+| **401** | Unauthorized - authentication required. |  -  |
+| **403** | Forbidden - insufficient permissions to process the request. |  -  |
+| **422** | Unprocessable Entity - a request validation error. |  -  |
+| **500** | Internal Server Error - the server could not process the request. |  -  |
 
 <a name="patchCompaniesCompanyIdTerminalOrdersOrderId"></a>
 # **patchCompaniesCompanyIdTerminalOrdersOrderId**
@@ -570,11 +570,11 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **companyId** | **String**| The unique identifier of the company account. |
- **orderId** | **String**| The unique identifier of the order. |
- **terminalOrderRequest** | [**TerminalOrderRequest**](TerminalOrderRequest.md)|  | [optional]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **companyId** | **String**| The unique identifier of the company account. | |
+| **orderId** | **String**| The unique identifier of the order. | |
+| **terminalOrderRequest** | [**TerminalOrderRequest**](TerminalOrderRequest.md)|  | [optional] |
 
 ### Return type
 
@@ -592,12 +592,12 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | OK - the request has succeeded. |  -  |
-**400** | Bad Request - a problem reading or understanding the request. |  -  |
-**401** | Unauthorized - authentication required. |  -  |
-**403** | Forbidden - insufficient permissions to process the request. |  -  |
-**422** | Unprocessable Entity - a request validation error. |  -  |
-**500** | Internal Server Error - the server could not process the request. |  -  |
+| **200** | OK - the request has succeeded. |  -  |
+| **400** | Bad Request - a problem reading or understanding the request. |  -  |
+| **401** | Unauthorized - authentication required. |  -  |
+| **403** | Forbidden - insufficient permissions to process the request. |  -  |
+| **422** | Unprocessable Entity - a request validation error. |  -  |
+| **500** | Internal Server Error - the server could not process the request. |  -  |
 
 <a name="postCompaniesCompanyIdShippingLocations"></a>
 # **postCompaniesCompanyIdShippingLocations**
@@ -652,10 +652,10 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **companyId** | **String**| The unique identifier of the company account. |
- **shippingLocation** | [**ShippingLocation**](ShippingLocation.md)|  | [optional]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **companyId** | **String**| The unique identifier of the company account. | |
+| **shippingLocation** | [**ShippingLocation**](ShippingLocation.md)|  | [optional] |
 
 ### Return type
 
@@ -673,12 +673,12 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | OK - the request has succeeded. |  -  |
-**400** | Bad Request - a problem reading or understanding the request. |  -  |
-**401** | Unauthorized - authentication required. |  -  |
-**403** | Forbidden - insufficient permissions to process the request. |  -  |
-**422** | Unprocessable Entity - a request validation error. |  -  |
-**500** | Internal Server Error - the server could not process the request. |  -  |
+| **200** | OK - the request has succeeded. |  -  |
+| **400** | Bad Request - a problem reading or understanding the request. |  -  |
+| **401** | Unauthorized - authentication required. |  -  |
+| **403** | Forbidden - insufficient permissions to process the request. |  -  |
+| **422** | Unprocessable Entity - a request validation error. |  -  |
+| **500** | Internal Server Error - the server could not process the request. |  -  |
 
 <a name="postCompaniesCompanyIdTerminalOrders"></a>
 # **postCompaniesCompanyIdTerminalOrders**
@@ -733,10 +733,10 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **companyId** | **String**| The unique identifier of the company account. |
- **terminalOrderRequest** | [**TerminalOrderRequest**](TerminalOrderRequest.md)|  | [optional]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **companyId** | **String**| The unique identifier of the company account. | |
+| **terminalOrderRequest** | [**TerminalOrderRequest**](TerminalOrderRequest.md)|  | [optional] |
 
 ### Return type
 
@@ -754,12 +754,12 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | OK - the request has succeeded. |  -  |
-**400** | Bad Request - a problem reading or understanding the request. |  -  |
-**401** | Unauthorized - authentication required. |  -  |
-**403** | Forbidden - insufficient permissions to process the request. |  -  |
-**422** | Unprocessable Entity - a request validation error. |  -  |
-**500** | Internal Server Error - the server could not process the request. |  -  |
+| **200** | OK - the request has succeeded. |  -  |
+| **400** | Bad Request - a problem reading or understanding the request. |  -  |
+| **401** | Unauthorized - authentication required. |  -  |
+| **403** | Forbidden - insufficient permissions to process the request. |  -  |
+| **422** | Unprocessable Entity - a request validation error. |  -  |
+| **500** | Internal Server Error - the server could not process the request. |  -  |
 
 <a name="postCompaniesCompanyIdTerminalOrdersOrderIdCancel"></a>
 # **postCompaniesCompanyIdTerminalOrdersOrderIdCancel**
@@ -814,10 +814,10 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **companyId** | **String**| The unique identifier of the company account. |
- **orderId** | **String**| The unique identifier of the order. |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **companyId** | **String**| The unique identifier of the company account. | |
+| **orderId** | **String**| The unique identifier of the order. | |
 
 ### Return type
 
@@ -835,10 +835,10 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | OK - the request has succeeded. |  -  |
-**400** | Bad Request - a problem reading or understanding the request. |  -  |
-**401** | Unauthorized - authentication required. |  -  |
-**403** | Forbidden - insufficient permissions to process the request. |  -  |
-**422** | Unprocessable Entity - a request validation error. |  -  |
-**500** | Internal Server Error - the server could not process the request. |  -  |
+| **200** | OK - the request has succeeded. |  -  |
+| **400** | Bad Request - a problem reading or understanding the request. |  -  |
+| **401** | Unauthorized - authentication required. |  -  |
+| **403** | Forbidden - insufficient permissions to process the request. |  -  |
+| **422** | Unprocessable Entity - a request validation error. |  -  |
+| **500** | Internal Server Error - the server could not process the request. |  -  |
 

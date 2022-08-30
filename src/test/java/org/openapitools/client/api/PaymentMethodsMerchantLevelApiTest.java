@@ -19,8 +19,8 @@ import org.openapitools.client.model.PaymentMethodResponse;
 import org.openapitools.client.model.PaymentMethodSetupInfo;
 import org.openapitools.client.model.RestServiceError;
 import org.openapitools.client.model.UpdatePaymentMethodInfo;
-import org.junit.Test;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -30,19 +30,17 @@ import java.util.Map;
 /**
  * API tests for PaymentMethodsMerchantLevelApi
  */
-@Ignore
+@Disabled
 public class PaymentMethodsMerchantLevelApiTest {
 
     private final PaymentMethodsMerchantLevelApi api = new PaymentMethodsMerchantLevelApi();
 
-    
     /**
      * Get all payment methods
      *
      * Returns details for all payment methods of the merchant account identified in the path.  To make this request, your API credential must have the following [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions): * Management API—Payment methods read 
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void getMerchantsMerchantIdPaymentMethodSettingsTest() throws ApiException {
@@ -51,57 +49,54 @@ public class PaymentMethodsMerchantLevelApiTest {
         String businessLineId = null;
         Integer pageSize = null;
         Integer pageNumber = null;
-                PaymentMethodResponse response = api.getMerchantsMerchantIdPaymentMethodSettings(merchantId, storeId, businessLineId, pageSize, pageNumber);
+        PaymentMethodResponse response = api.getMerchantsMerchantIdPaymentMethodSettings(merchantId, storeId, businessLineId, pageSize, pageNumber);
         // TODO: test validations
     }
-    
+
     /**
      * Get payment method details
      *
      * Returns details for the merchant account and the payment method identified in the path.  To make this request, your API credential must have the following [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions): * Management API—Payment methods read 
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void getMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdTest() throws ApiException {
         String merchantId = null;
         String paymentMethodId = null;
-                PaymentMethod response = api.getMerchantsMerchantIdPaymentMethodSettingsPaymentMethodId(merchantId, paymentMethodId);
+        PaymentMethod response = api.getMerchantsMerchantIdPaymentMethodSettingsPaymentMethodId(merchantId, paymentMethodId);
         // TODO: test validations
     }
-    
+
     /**
      * Update a payment method
      *
      * Updates payment method details for the merchant account and the payment method identified in the path.  To make this request, your API credential must have the following [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions): * Management API—Payment methods read and write 
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void patchMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdTest() throws ApiException {
         String merchantId = null;
         String paymentMethodId = null;
         UpdatePaymentMethodInfo updatePaymentMethodInfo = null;
-                PaymentMethod response = api.patchMerchantsMerchantIdPaymentMethodSettingsPaymentMethodId(merchantId, paymentMethodId, updatePaymentMethodInfo);
+        PaymentMethod response = api.patchMerchantsMerchantIdPaymentMethodSettingsPaymentMethodId(merchantId, paymentMethodId, updatePaymentMethodInfo);
         // TODO: test validations
     }
-    
+
     /**
      * Request a payment method
      *
      * Sends a request to add a new payment method to the merchant account identified in the path.  To make this request, your API credential must have the following [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions): * Management API—Payment methods read and write 
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void postMerchantsMerchantIdPaymentMethodSettingsTest() throws ApiException {
         String merchantId = null;
         PaymentMethodSetupInfo paymentMethodSetupInfo = null;
-                PaymentMethod response = api.postMerchantsMerchantIdPaymentMethodSettings(merchantId, paymentMethodSetupInfo);
+        PaymentMethod response = api.postMerchantsMerchantIdPaymentMethodSettings(merchantId, paymentMethodSetupInfo);
         // TODO: test validations
     }
-    
+
 }

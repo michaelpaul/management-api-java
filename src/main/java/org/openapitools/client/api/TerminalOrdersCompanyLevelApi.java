@@ -42,6 +42,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import javax.ws.rs.core.GenericType;
 
 public class TerminalOrdersCompanyLevelApi {
     private ApiClient localVarApiClient;
@@ -100,7 +101,6 @@ public class TerminalOrdersCompanyLevelApi {
      */
     public okhttp3.Call getCompaniesCompanyIdBillingEntitiesCall(String companyId, String name, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -258,7 +258,6 @@ public class TerminalOrdersCompanyLevelApi {
      */
     public okhttp3.Call getCompaniesCompanyIdShippingLocationsCall(String companyId, String name, Integer offset, Integer limit, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -427,7 +426,6 @@ public class TerminalOrdersCompanyLevelApi {
      */
     public okhttp3.Call getCompaniesCompanyIdTerminalModelsCall(String companyId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -579,7 +577,6 @@ public class TerminalOrdersCompanyLevelApi {
      */
     public okhttp3.Call getCompaniesCompanyIdTerminalOrdersCall(String companyId, String customerOrderReference, String status, Integer offset, Integer limit, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -756,7 +753,6 @@ public class TerminalOrdersCompanyLevelApi {
      */
     public okhttp3.Call getCompaniesCompanyIdTerminalOrdersOrderIdCall(String companyId, String orderId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -917,7 +913,6 @@ public class TerminalOrdersCompanyLevelApi {
      */
     public okhttp3.Call getCompaniesCompanyIdTerminalProductsCall(String companyId, String country, String terminalModelId, Integer offset, Integer limit, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -1095,7 +1090,6 @@ public class TerminalOrdersCompanyLevelApi {
      */
     public okhttp3.Call patchCompaniesCompanyIdTerminalOrdersOrderIdCall(String companyId, String orderId, TerminalOrderRequest terminalOrderRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -1256,7 +1250,6 @@ public class TerminalOrdersCompanyLevelApi {
      */
     public okhttp3.Call postCompaniesCompanyIdShippingLocationsCall(String companyId, ShippingLocation shippingLocation, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -1408,7 +1401,6 @@ public class TerminalOrdersCompanyLevelApi {
      */
     public okhttp3.Call postCompaniesCompanyIdTerminalOrdersCall(String companyId, TerminalOrderRequest terminalOrderRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -1560,7 +1552,6 @@ public class TerminalOrdersCompanyLevelApi {
      */
     public okhttp3.Call postCompaniesCompanyIdTerminalOrdersOrderIdCancelCall(String companyId, String orderId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 

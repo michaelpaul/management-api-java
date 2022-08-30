@@ -39,6 +39,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import javax.ws.rs.core.GenericType;
 
 public class AccountStoreLevelApi {
     private ApiClient localVarApiClient;
@@ -100,7 +101,6 @@ public class AccountStoreLevelApi {
      */
     public okhttp3.Call getMerchantsMerchantIdStoresCall(String merchantId, Integer pageNumber, Integer pageSize, String reference, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -274,7 +274,6 @@ public class AccountStoreLevelApi {
      */
     public okhttp3.Call getMerchantsMerchantIdStoresStoreIdCall(String merchantId, String storeId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -437,7 +436,6 @@ public class AccountStoreLevelApi {
      */
     public okhttp3.Call getStoresCall(Integer pageNumber, Integer pageSize, String reference, String merchantId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -604,7 +602,6 @@ public class AccountStoreLevelApi {
      */
     public okhttp3.Call getStoresStoreIdCall(String storeId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -755,7 +752,6 @@ public class AccountStoreLevelApi {
      */
     public okhttp3.Call patchMerchantsMerchantIdStoresStoreIdCall(String merchantId, String storeId, UpdateStoreRequest updateStoreRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -919,7 +915,6 @@ public class AccountStoreLevelApi {
      */
     public okhttp3.Call patchStoresStoreIdCall(String storeId, UpdateStoreRequest updateStoreRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -1072,7 +1067,6 @@ public class AccountStoreLevelApi {
      */
     public okhttp3.Call postMerchantsMerchantIdStoresCall(String merchantId, StoreCreationRequest storeCreationRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -1226,7 +1220,6 @@ public class AccountStoreLevelApi {
      */
     public okhttp3.Call postStoresCall(StoreCreationWithMerchantCodeRequest storeCreationWithMerchantCodeRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 

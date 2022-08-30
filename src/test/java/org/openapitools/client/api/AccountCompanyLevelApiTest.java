@@ -18,8 +18,8 @@ import org.openapitools.client.model.Company;
 import org.openapitools.client.model.ListCompanyResponse;
 import org.openapitools.client.model.ListMerchantResponse;
 import org.openapitools.client.model.RestServiceError;
-import org.junit.Test;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -29,58 +29,54 @@ import java.util.Map;
 /**
  * API tests for AccountCompanyLevelApi
  */
-@Ignore
+@Disabled
 public class AccountCompanyLevelApiTest {
 
     private final AccountCompanyLevelApi api = new AccountCompanyLevelApi();
 
-    
     /**
      * Get a list of company accounts
      *
      * Returns the list of company accounts that your API credential has access to. The list is grouped into pages as defined by the query parameters.  To make this request, your API credential must have the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):  * Management API—Account read
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void getCompaniesTest() throws ApiException {
         Integer pageNumber = null;
         Integer pageSize = null;
-                ListCompanyResponse response = api.getCompanies(pageNumber, pageSize);
+        ListCompanyResponse response = api.getCompanies(pageNumber, pageSize);
         // TODO: test validations
     }
-    
+
     /**
      * Get a company account
      *
      * Returns the company account specified in the path. Your API credential must have access to the company account.   To make this request, your API credential must have the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions): * Management API—Account read
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void getCompaniesCompanyIdTest() throws ApiException {
         String companyId = null;
-                Company response = api.getCompaniesCompanyId(companyId);
+        Company response = api.getCompaniesCompanyId(companyId);
         // TODO: test validations
     }
-    
+
     /**
      * Get a list of merchant accounts
      *
      * Returns the list of merchant accounts under the company account specified in the path. The list only includes merchant accounts that your API credential has access to. The list is grouped into pages as defined by the query parameters.   To make this request, your API credential must have the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions): * Management API—Account read
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void getCompaniesCompanyIdMerchantsTest() throws ApiException {
         String companyId = null;
         Integer pageNumber = null;
         Integer pageSize = null;
-                ListMerchantResponse response = api.getCompaniesCompanyIdMerchants(companyId, pageNumber, pageSize);
+        ListMerchantResponse response = api.getCompaniesCompanyIdMerchants(companyId, pageNumber, pageSize);
         // TODO: test validations
     }
-    
+
 }

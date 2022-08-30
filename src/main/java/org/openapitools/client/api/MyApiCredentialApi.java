@@ -38,6 +38,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import javax.ws.rs.core.GenericType;
 
 public class MyApiCredentialApi {
     private ApiClient localVarApiClient;
@@ -95,7 +96,6 @@ public class MyApiCredentialApi {
      */
     public okhttp3.Call deleteMeAllowedOriginsOriginIdCall(String originId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -238,7 +238,6 @@ public class MyApiCredentialApi {
      */
     public okhttp3.Call getMeCall(final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -376,7 +375,6 @@ public class MyApiCredentialApi {
      */
     public okhttp3.Call getMeAllowedOriginsCall(final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -515,7 +513,6 @@ public class MyApiCredentialApi {
      */
     public okhttp3.Call getMeAllowedOriginsOriginIdCall(String originId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -663,7 +660,6 @@ public class MyApiCredentialApi {
      */
     public okhttp3.Call postMeAllowedOriginsCall(CreateAllowedOriginRequest createAllowedOriginRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 

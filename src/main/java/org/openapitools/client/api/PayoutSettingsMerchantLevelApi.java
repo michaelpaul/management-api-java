@@ -38,6 +38,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import javax.ws.rs.core.GenericType;
 
 public class PayoutSettingsMerchantLevelApi {
     private ApiClient localVarApiClient;
@@ -97,7 +98,6 @@ public class PayoutSettingsMerchantLevelApi {
      */
     public okhttp3.Call deleteMerchantsMerchantIdPayoutSettingsPayoutSettingsIdCall(String merchantId, String payoutSettingsId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -258,7 +258,6 @@ public class PayoutSettingsMerchantLevelApi {
      */
     public okhttp3.Call getMerchantsMerchantIdPayoutSettingsCall(String merchantId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -411,7 +410,6 @@ public class PayoutSettingsMerchantLevelApi {
      */
     public okhttp3.Call getMerchantsMerchantIdPayoutSettingsPayoutSettingsIdCall(String merchantId, String payoutSettingsId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -574,7 +572,6 @@ public class PayoutSettingsMerchantLevelApi {
      */
     public okhttp3.Call patchMerchantsMerchantIdPayoutSettingsPayoutSettingsIdCall(String merchantId, String payoutSettingsId, UpdatePayoutSettingsRequest updatePayoutSettingsRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -739,7 +736,6 @@ public class PayoutSettingsMerchantLevelApi {
      */
     public okhttp3.Call postMerchantsMerchantIdPayoutSettingsCall(String merchantId, PayoutSettingsRequest payoutSettingsRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 

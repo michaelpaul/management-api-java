@@ -29,10 +29,30 @@ import org.openapitools.client.model.Address2;
 import org.openapitools.client.model.Links;
 import org.openapitools.client.model.StoreSplitConfiguration;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonDeserializationContext;
+import com.google.gson.JsonDeserializer;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParseException;
+import com.google.gson.TypeAdapterFactory;
+import com.google.gson.reflect.TypeToken;
+
+import java.lang.reflect.Type;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
+
+import org.openapitools.client.JSON;
+
 /**
  * Store
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-08-30T16:56:39.721579+02:00[Europe/Amsterdam]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-08-30T15:05:30.841Z[Etc/UTC]")
 public class Store {
   public static final String SERIALIZED_NAME_LINKS = "_links";
   @SerializedName(SERIALIZED_NAME_LINKS)
@@ -188,7 +208,7 @@ public class Store {
 
   public Store addBusinessLineIdsItem(String businessLineIdsItem) {
     if (this.businessLineIds == null) {
-      this.businessLineIds = new ArrayList<String>();
+      this.businessLineIds = new ArrayList<>();
     }
     this.businessLineIds.add(businessLineIdsItem);
     return this;
@@ -418,6 +438,7 @@ public class Store {
   }
 
 
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -477,5 +498,141 @@ public class Store {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+  public static HashSet<String> openapiFields;
+  public static HashSet<String> openapiRequiredFields;
+
+  static {
+    // a set of all properties/fields (JSON key names)
+    openapiFields = new HashSet<String>();
+    openapiFields.add("_links");
+    openapiFields.add("address");
+    openapiFields.add("businessLineIds");
+    openapiFields.add("description");
+    openapiFields.add("externalReferenceId");
+    openapiFields.add("id");
+    openapiFields.add("merchantId");
+    openapiFields.add("phoneNumber");
+    openapiFields.add("reference");
+    openapiFields.add("shopperStatement");
+    openapiFields.add("splitConfiguration");
+    openapiFields.add("status");
+
+    // a set of required properties/fields (JSON key names)
+    openapiRequiredFields = new HashSet<String>();
+  }
+
+ /**
+  * Validates the JSON Object and throws an exception if issues found
+  *
+  * @param jsonObj JSON Object
+  * @throws IOException if the JSON Object is invalid with respect to Store
+  */
+  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
+      if (jsonObj == null) {
+        if (Store.openapiRequiredFields.isEmpty()) {
+          return;
+        } else { // has required fields
+          throw new IllegalArgumentException(String.format("The required field(s) %s in Store is not found in the empty JSON string", Store.openapiRequiredFields.toString()));
+        }
+      }
+
+      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
+      // check to see if the JSON string contains additional fields
+      for (Entry<String, JsonElement> entry : entries) {
+        if (!Store.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Store` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
+        }
+      }
+      // validate the optional field `_links`
+      if (jsonObj.getAsJsonObject("_links") != null) {
+        Links.validateJsonObject(jsonObj.getAsJsonObject("_links"));
+      }
+      // validate the optional field `address`
+      if (jsonObj.getAsJsonObject("address") != null) {
+        Address2.validateJsonObject(jsonObj.getAsJsonObject("address"));
+      }
+      // ensure the json data is an array
+      if (jsonObj.get("businessLineIds") != null && !jsonObj.get("businessLineIds").isJsonArray()) {
+        throw new IllegalArgumentException(String.format("Expected the field `businessLineIds` to be an array in the JSON string but got `%s`", jsonObj.get("businessLineIds").toString()));
+      }
+      if (jsonObj.get("description") != null && !jsonObj.get("description").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("description").toString()));
+      }
+      if (jsonObj.get("externalReferenceId") != null && !jsonObj.get("externalReferenceId").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `externalReferenceId` to be a primitive type in the JSON string but got `%s`", jsonObj.get("externalReferenceId").toString()));
+      }
+      if (jsonObj.get("id") != null && !jsonObj.get("id").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("id").toString()));
+      }
+      if (jsonObj.get("merchantId") != null && !jsonObj.get("merchantId").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `merchantId` to be a primitive type in the JSON string but got `%s`", jsonObj.get("merchantId").toString()));
+      }
+      if (jsonObj.get("phoneNumber") != null && !jsonObj.get("phoneNumber").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `phoneNumber` to be a primitive type in the JSON string but got `%s`", jsonObj.get("phoneNumber").toString()));
+      }
+      if (jsonObj.get("reference") != null && !jsonObj.get("reference").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `reference` to be a primitive type in the JSON string but got `%s`", jsonObj.get("reference").toString()));
+      }
+      if (jsonObj.get("shopperStatement") != null && !jsonObj.get("shopperStatement").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `shopperStatement` to be a primitive type in the JSON string but got `%s`", jsonObj.get("shopperStatement").toString()));
+      }
+      // validate the optional field `splitConfiguration`
+      if (jsonObj.getAsJsonObject("splitConfiguration") != null) {
+        StoreSplitConfiguration.validateJsonObject(jsonObj.getAsJsonObject("splitConfiguration"));
+      }
+      if (jsonObj.get("status") != null && !jsonObj.get("status").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `status` to be a primitive type in the JSON string but got `%s`", jsonObj.get("status").toString()));
+      }
+  }
+
+  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
+    @SuppressWarnings("unchecked")
+    @Override
+    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
+       if (!Store.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'Store' and its subtypes
+       }
+       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
+       final TypeAdapter<Store> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(Store.class));
+
+       return (TypeAdapter<T>) new TypeAdapter<Store>() {
+           @Override
+           public void write(JsonWriter out, Store value) throws IOException {
+             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+             elementAdapter.write(out, obj);
+           }
+
+           @Override
+           public Store read(JsonReader in) throws IOException {
+             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
+             validateJsonObject(jsonObj);
+             return thisAdapter.fromJsonTree(jsonObj);
+           }
+
+       }.nullSafe();
+    }
+  }
+
+ /**
+  * Create an instance of Store given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of Store
+  * @throws IOException if the JSON string is invalid with respect to Store
+  */
+  public static Store fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, Store.class);
+  }
+
+ /**
+  * Convert an instance of Store to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
+  }
 }
 

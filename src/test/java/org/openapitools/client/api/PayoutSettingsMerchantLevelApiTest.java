@@ -19,8 +19,8 @@ import org.openapitools.client.model.PayoutSettingsRequest;
 import org.openapitools.client.model.PayoutSettingsResponse;
 import org.openapitools.client.model.RestServiceError;
 import org.openapitools.client.model.UpdatePayoutSettingsRequest;
-import org.junit.Test;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -30,90 +30,84 @@ import java.util.Map;
 /**
  * API tests for PayoutSettingsMerchantLevelApi
  */
-@Ignore
+@Disabled
 public class PayoutSettingsMerchantLevelApiTest {
 
     private final PayoutSettingsMerchantLevelApi api = new PayoutSettingsMerchantLevelApi();
 
-    
     /**
      * Delete a payout setting
      *
      * Deletes the payout setting identified in the path.  Use this endpoint if your integration requires it, such as Adyen for Platforms Manage. Your Adyen contact will set up your access.  To make this request, your API credential must have the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):  * Management API—Payout account settings read and write
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void deleteMerchantsMerchantIdPayoutSettingsPayoutSettingsIdTest() throws ApiException {
         String merchantId = null;
         String payoutSettingsId = null;
-                Object response = api.deleteMerchantsMerchantIdPayoutSettingsPayoutSettingsId(merchantId, payoutSettingsId);
+        Object response = api.deleteMerchantsMerchantIdPayoutSettingsPayoutSettingsId(merchantId, payoutSettingsId);
         // TODO: test validations
     }
-    
+
     /**
      * Get a list of payout settings
      *
      * Returns the list of payout settings for the merchant account identified in the path.  Use this endpoint if your integration requires it, such as Adyen for Platforms Manage. Your Adyen contact will set up your access.  To make this request, your API credential must have the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions): * Management API—Payout account settings read
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void getMerchantsMerchantIdPayoutSettingsTest() throws ApiException {
         String merchantId = null;
-                PayoutSettingsResponse response = api.getMerchantsMerchantIdPayoutSettings(merchantId);
+        PayoutSettingsResponse response = api.getMerchantsMerchantIdPayoutSettings(merchantId);
         // TODO: test validations
     }
-    
+
     /**
      * Get a payout setting
      *
      * Returns the payout setting identified in the path.  Use this endpoint if your integration requires it, such as Adyen for Platforms Manage. Your Adyen contact will set up your access.  To make this request, your API credential must have the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions): * Management API—Payout account settings read
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void getMerchantsMerchantIdPayoutSettingsPayoutSettingsIdTest() throws ApiException {
         String merchantId = null;
         String payoutSettingsId = null;
-                PayoutSettings response = api.getMerchantsMerchantIdPayoutSettingsPayoutSettingsId(merchantId, payoutSettingsId);
+        PayoutSettings response = api.getMerchantsMerchantIdPayoutSettingsPayoutSettingsId(merchantId, payoutSettingsId);
         // TODO: test validations
     }
-    
+
     /**
      * Update a payout setting
      *
      * Updates the payout setting identified in the path. You can enable or disable the payout setting.  Use this endpoint if your integration requires it, such as Adyen for Platforms Manage. Your Adyen contact will set up your access.  To make this request, your API credential must have the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):  * Management API—Payout account settings read and write
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void patchMerchantsMerchantIdPayoutSettingsPayoutSettingsIdTest() throws ApiException {
         String merchantId = null;
         String payoutSettingsId = null;
         UpdatePayoutSettingsRequest updatePayoutSettingsRequest = null;
-                PayoutSettings response = api.patchMerchantsMerchantIdPayoutSettingsPayoutSettingsId(merchantId, payoutSettingsId, updatePayoutSettingsRequest);
+        PayoutSettings response = api.patchMerchantsMerchantIdPayoutSettingsPayoutSettingsId(merchantId, payoutSettingsId, updatePayoutSettingsRequest);
         // TODO: test validations
     }
-    
+
     /**
      * Add a payout setting
      *
      * Sends a request to add a payout setting for the merchant account specified in the path. A payout setting links the merchant account to the [transfer instrument](https://docs.adyen.com/api-explorer/#/legalentity/latest/post/transferInstruments) that contains the details of the payout bank account. Adyen verifies the bank account before allowing and enabling the payout setting.  If you&#39;re accepting payments in multiple currencies, you may add multiple payout settings for the merchant account.  Use this endpoint if your integration requires it, such as Adyen for Platforms Manage. Your Adyen contact will set up your access.  To make this request, your API credential must have the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):  * Management API—Payout account settings read and write
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void postMerchantsMerchantIdPayoutSettingsTest() throws ApiException {
         String merchantId = null;
         PayoutSettingsRequest payoutSettingsRequest = null;
-                PayoutSettings response = api.postMerchantsMerchantIdPayoutSettings(merchantId, payoutSettingsRequest);
+        PayoutSettings response = api.postMerchantsMerchantIdPayoutSettings(merchantId, payoutSettingsRequest);
         // TODO: test validations
     }
-    
+
 }

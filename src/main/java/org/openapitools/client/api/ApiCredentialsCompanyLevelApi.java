@@ -39,6 +39,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import javax.ws.rs.core.GenericType;
 
 public class ApiCredentialsCompanyLevelApi {
     private ApiClient localVarApiClient;
@@ -98,7 +99,6 @@ public class ApiCredentialsCompanyLevelApi {
      */
     public okhttp3.Call getCompaniesCompanyIdApiCredentialsCall(String companyId, Integer pageNumber, Integer pageSize, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -261,7 +261,6 @@ public class ApiCredentialsCompanyLevelApi {
      */
     public okhttp3.Call getCompaniesCompanyIdApiCredentialsApiCredentialIdCall(String companyId, String apiCredentialId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -420,7 +419,6 @@ public class ApiCredentialsCompanyLevelApi {
      */
     public okhttp3.Call patchCompaniesCompanyIdApiCredentialsApiCredentialIdCall(String companyId, String apiCredentialId, UpdateCompanyApiCredentialRequest updateCompanyApiCredentialRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -581,7 +579,6 @@ public class ApiCredentialsCompanyLevelApi {
      */
     public okhttp3.Call postCompaniesCompanyIdApiCredentialsCall(String companyId, CreateCompanyApiCredentialRequest createCompanyApiCredentialRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 

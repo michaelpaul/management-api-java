@@ -36,9 +36,8 @@ import org.openapitools.client.model.Signature;
 import org.openapitools.client.model.Surcharge;
 import org.openapitools.client.model.Timeouts;
 import org.openapitools.client.model.WifiProfiles;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 
 /**

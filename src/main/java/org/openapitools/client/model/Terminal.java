@@ -23,12 +23,32 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import org.threeten.bp.OffsetDateTime;
+import java.time.OffsetDateTime;
+
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonDeserializationContext;
+import com.google.gson.JsonDeserializer;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParseException;
+import com.google.gson.TypeAdapterFactory;
+import com.google.gson.reflect.TypeToken;
+
+import java.lang.reflect.Type;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
+
+import org.openapitools.client.JSON;
 
 /**
  * Terminal
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-08-30T16:56:39.721579+02:00[Europe/Amsterdam]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-08-30T15:05:30.841Z[Etc/UTC]")
 public class Terminal {
   public static final String SERIALIZED_NAME_ASSIGNED = "assigned";
   @SerializedName(SERIALIZED_NAME_ASSIGNED)
@@ -627,6 +647,7 @@ public class Terminal {
   }
 
 
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -706,5 +727,168 @@ public class Terminal {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+  public static HashSet<String> openapiFields;
+  public static HashSet<String> openapiRequiredFields;
+
+  static {
+    // a set of all properties/fields (JSON key names)
+    openapiFields = new HashSet<String>();
+    openapiFields.add("assigned");
+    openapiFields.add("bluetoothIp");
+    openapiFields.add("bluetoothMac");
+    openapiFields.add("city");
+    openapiFields.add("companyAccount");
+    openapiFields.add("countryCode");
+    openapiFields.add("deviceModel");
+    openapiFields.add("ethernetIp");
+    openapiFields.add("ethernetMac");
+    openapiFields.add("firmwareVersion");
+    openapiFields.add("iccid");
+    openapiFields.add("id");
+    openapiFields.add("lastActivityDateTime");
+    openapiFields.add("lastTransactionDateTime");
+    openapiFields.add("linkNegotiation");
+    openapiFields.add("serialNumber");
+    openapiFields.add("simStatus");
+    openapiFields.add("status");
+    openapiFields.add("storeStatus");
+    openapiFields.add("wifiIp");
+    openapiFields.add("wifiMac");
+    openapiFields.add("wifiSsid");
+
+    // a set of required properties/fields (JSON key names)
+    openapiRequiredFields = new HashSet<String>();
+  }
+
+ /**
+  * Validates the JSON Object and throws an exception if issues found
+  *
+  * @param jsonObj JSON Object
+  * @throws IOException if the JSON Object is invalid with respect to Terminal
+  */
+  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
+      if (jsonObj == null) {
+        if (Terminal.openapiRequiredFields.isEmpty()) {
+          return;
+        } else { // has required fields
+          throw new IllegalArgumentException(String.format("The required field(s) %s in Terminal is not found in the empty JSON string", Terminal.openapiRequiredFields.toString()));
+        }
+      }
+
+      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
+      // check to see if the JSON string contains additional fields
+      for (Entry<String, JsonElement> entry : entries) {
+        if (!Terminal.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Terminal` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
+        }
+      }
+      if (jsonObj.get("bluetoothIp") != null && !jsonObj.get("bluetoothIp").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `bluetoothIp` to be a primitive type in the JSON string but got `%s`", jsonObj.get("bluetoothIp").toString()));
+      }
+      if (jsonObj.get("bluetoothMac") != null && !jsonObj.get("bluetoothMac").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `bluetoothMac` to be a primitive type in the JSON string but got `%s`", jsonObj.get("bluetoothMac").toString()));
+      }
+      if (jsonObj.get("city") != null && !jsonObj.get("city").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `city` to be a primitive type in the JSON string but got `%s`", jsonObj.get("city").toString()));
+      }
+      if (jsonObj.get("companyAccount") != null && !jsonObj.get("companyAccount").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `companyAccount` to be a primitive type in the JSON string but got `%s`", jsonObj.get("companyAccount").toString()));
+      }
+      if (jsonObj.get("countryCode") != null && !jsonObj.get("countryCode").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `countryCode` to be a primitive type in the JSON string but got `%s`", jsonObj.get("countryCode").toString()));
+      }
+      if (jsonObj.get("deviceModel") != null && !jsonObj.get("deviceModel").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `deviceModel` to be a primitive type in the JSON string but got `%s`", jsonObj.get("deviceModel").toString()));
+      }
+      if (jsonObj.get("ethernetIp") != null && !jsonObj.get("ethernetIp").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `ethernetIp` to be a primitive type in the JSON string but got `%s`", jsonObj.get("ethernetIp").toString()));
+      }
+      if (jsonObj.get("ethernetMac") != null && !jsonObj.get("ethernetMac").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `ethernetMac` to be a primitive type in the JSON string but got `%s`", jsonObj.get("ethernetMac").toString()));
+      }
+      if (jsonObj.get("firmwareVersion") != null && !jsonObj.get("firmwareVersion").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `firmwareVersion` to be a primitive type in the JSON string but got `%s`", jsonObj.get("firmwareVersion").toString()));
+      }
+      if (jsonObj.get("iccid") != null && !jsonObj.get("iccid").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `iccid` to be a primitive type in the JSON string but got `%s`", jsonObj.get("iccid").toString()));
+      }
+      if (jsonObj.get("id") != null && !jsonObj.get("id").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("id").toString()));
+      }
+      if (jsonObj.get("linkNegotiation") != null && !jsonObj.get("linkNegotiation").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `linkNegotiation` to be a primitive type in the JSON string but got `%s`", jsonObj.get("linkNegotiation").toString()));
+      }
+      if (jsonObj.get("serialNumber") != null && !jsonObj.get("serialNumber").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `serialNumber` to be a primitive type in the JSON string but got `%s`", jsonObj.get("serialNumber").toString()));
+      }
+      if (jsonObj.get("simStatus") != null && !jsonObj.get("simStatus").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `simStatus` to be a primitive type in the JSON string but got `%s`", jsonObj.get("simStatus").toString()));
+      }
+      if (jsonObj.get("status") != null && !jsonObj.get("status").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `status` to be a primitive type in the JSON string but got `%s`", jsonObj.get("status").toString()));
+      }
+      if (jsonObj.get("storeStatus") != null && !jsonObj.get("storeStatus").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `storeStatus` to be a primitive type in the JSON string but got `%s`", jsonObj.get("storeStatus").toString()));
+      }
+      if (jsonObj.get("wifiIp") != null && !jsonObj.get("wifiIp").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `wifiIp` to be a primitive type in the JSON string but got `%s`", jsonObj.get("wifiIp").toString()));
+      }
+      if (jsonObj.get("wifiMac") != null && !jsonObj.get("wifiMac").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `wifiMac` to be a primitive type in the JSON string but got `%s`", jsonObj.get("wifiMac").toString()));
+      }
+      if (jsonObj.get("wifiSsid") != null && !jsonObj.get("wifiSsid").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `wifiSsid` to be a primitive type in the JSON string but got `%s`", jsonObj.get("wifiSsid").toString()));
+      }
+  }
+
+  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
+    @SuppressWarnings("unchecked")
+    @Override
+    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
+       if (!Terminal.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'Terminal' and its subtypes
+       }
+       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
+       final TypeAdapter<Terminal> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(Terminal.class));
+
+       return (TypeAdapter<T>) new TypeAdapter<Terminal>() {
+           @Override
+           public void write(JsonWriter out, Terminal value) throws IOException {
+             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+             elementAdapter.write(out, obj);
+           }
+
+           @Override
+           public Terminal read(JsonReader in) throws IOException {
+             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
+             validateJsonObject(jsonObj);
+             return thisAdapter.fromJsonTree(jsonObj);
+           }
+
+       }.nullSafe();
+    }
+  }
+
+ /**
+  * Create an instance of Terminal given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of Terminal
+  * @throws IOException if the JSON string is invalid with respect to Terminal
+  */
+  public static Terminal fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, Terminal.class);
+  }
+
+ /**
+  * Convert an instance of Terminal to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
+  }
 }
 

@@ -37,6 +37,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import javax.ws.rs.core.GenericType;
 
 public class AccountCompanyLevelApi {
     private ApiClient localVarApiClient;
@@ -95,7 +96,6 @@ public class AccountCompanyLevelApi {
      */
     public okhttp3.Call getCompaniesCall(Integer pageNumber, Integer pageSize, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -248,7 +248,6 @@ public class AccountCompanyLevelApi {
      */
     public okhttp3.Call getCompaniesCompanyIdCall(String companyId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -398,7 +397,6 @@ public class AccountCompanyLevelApi {
      */
     public okhttp3.Call getCompaniesCompanyIdMerchantsCall(String companyId, Integer pageNumber, Integer pageSize, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 

@@ -2,7 +2,7 @@
 
 Management API
 - API version: 1
-  - Build date: 2022-08-30T16:56:39.721579+02:00[Europe/Amsterdam]
+  - Build date: 2022-08-30T15:05:30.841Z[Etc/UTC]
 
 Configure and manage your Adyen company and merchant accounts, stores, and payment terminals.
 ## Authentication
@@ -25,7 +25,7 @@ https://management-test.adyen.com/v1/companies/{companyId}/webhooks
 ## Requirements
 
 Building the API client library requires:
-1. Java 1.7+
+1. Java 1.8+
 2. Maven (3.8.3+)/Gradle (7.2+)
 
 ## Installation
@@ -357,6 +357,7 @@ Class | Method | HTTP request | Description
  - [RequestActivationResponse](docs/RequestActivationResponse.md)
  - [RestServiceError](docs/RestServiceError.md)
  - [ScheduleTerminalActionsRequest](docs/ScheduleTerminalActionsRequest.md)
+ - [ScheduleTerminalActionsRequestActionDetails](docs/ScheduleTerminalActionsRequestActionDetails.md)
  - [ScheduleTerminalActionsResponse](docs/ScheduleTerminalActionsResponse.md)
  - [Settings](docs/Settings.md)
  - [ShippingLocation](docs/ShippingLocation.md)

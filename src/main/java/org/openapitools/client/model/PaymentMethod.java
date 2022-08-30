@@ -34,10 +34,30 @@ import org.openapitools.client.model.PayPalInfo;
 import org.openapitools.client.model.SofortInfo;
 import org.openapitools.client.model.SwishInfo;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonDeserializationContext;
+import com.google.gson.JsonDeserializer;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParseException;
+import com.google.gson.TypeAdapterFactory;
+import com.google.gson.reflect.TypeToken;
+
+import java.lang.reflect.Type;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
+
+import org.openapitools.client.JSON;
+
 /**
  * PaymentMethod
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-08-30T16:56:39.721579+02:00[Europe/Amsterdam]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-08-30T15:05:30.841Z[Etc/UTC]")
 public class PaymentMethod {
   public static final String SERIALIZED_NAME_APPLE_PAY = "applePay";
   @SerializedName(SERIALIZED_NAME_APPLE_PAY)
@@ -202,7 +222,7 @@ public class PaymentMethod {
 
   public PaymentMethod addCountriesItem(String countriesItem) {
     if (this.countries == null) {
-      this.countries = new ArrayList<String>();
+      this.countries = new ArrayList<>();
     }
     this.countries.add(countriesItem);
     return this;
@@ -233,7 +253,7 @@ public class PaymentMethod {
 
   public PaymentMethod addCurrenciesItem(String currenciesItem) {
     if (this.currencies == null) {
-      this.currencies = new ArrayList<String>();
+      this.currencies = new ArrayList<>();
     }
     this.currencies.add(currenciesItem);
     return this;
@@ -463,6 +483,7 @@ public class PaymentMethod {
   }
 
 
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -528,5 +549,164 @@ public class PaymentMethod {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+  public static HashSet<String> openapiFields;
+  public static HashSet<String> openapiRequiredFields;
+
+  static {
+    // a set of all properties/fields (JSON key names)
+    openapiFields = new HashSet<String>();
+    openapiFields.add("applePay");
+    openapiFields.add("bcmc");
+    openapiFields.add("businessLineId");
+    openapiFields.add("cartesBancaires");
+    openapiFields.add("countries");
+    openapiFields.add("currencies");
+    openapiFields.add("enabled");
+    openapiFields.add("giroPay");
+    openapiFields.add("id");
+    openapiFields.add("klarna");
+    openapiFields.add("paypal");
+    openapiFields.add("sofort");
+    openapiFields.add("storeId");
+    openapiFields.add("swish");
+    openapiFields.add("type");
+
+    // a set of required properties/fields (JSON key names)
+    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields.add("id");
+  }
+
+ /**
+  * Validates the JSON Object and throws an exception if issues found
+  *
+  * @param jsonObj JSON Object
+  * @throws IOException if the JSON Object is invalid with respect to PaymentMethod
+  */
+  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
+      if (jsonObj == null) {
+        if (PaymentMethod.openapiRequiredFields.isEmpty()) {
+          return;
+        } else { // has required fields
+          throw new IllegalArgumentException(String.format("The required field(s) %s in PaymentMethod is not found in the empty JSON string", PaymentMethod.openapiRequiredFields.toString()));
+        }
+      }
+
+      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
+      // check to see if the JSON string contains additional fields
+      for (Entry<String, JsonElement> entry : entries) {
+        if (!PaymentMethod.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `PaymentMethod` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
+        }
+      }
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : PaymentMethod.openapiRequiredFields) {
+        if (jsonObj.get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
+        }
+      }
+      // validate the optional field `applePay`
+      if (jsonObj.getAsJsonObject("applePay") != null) {
+        ApplePayInfo.validateJsonObject(jsonObj.getAsJsonObject("applePay"));
+      }
+      // validate the optional field `bcmc`
+      if (jsonObj.getAsJsonObject("bcmc") != null) {
+        BcmcInfo.validateJsonObject(jsonObj.getAsJsonObject("bcmc"));
+      }
+      if (jsonObj.get("businessLineId") != null && !jsonObj.get("businessLineId").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `businessLineId` to be a primitive type in the JSON string but got `%s`", jsonObj.get("businessLineId").toString()));
+      }
+      // validate the optional field `cartesBancaires`
+      if (jsonObj.getAsJsonObject("cartesBancaires") != null) {
+        CartesBancairesInfo.validateJsonObject(jsonObj.getAsJsonObject("cartesBancaires"));
+      }
+      // ensure the json data is an array
+      if (jsonObj.get("countries") != null && !jsonObj.get("countries").isJsonArray()) {
+        throw new IllegalArgumentException(String.format("Expected the field `countries` to be an array in the JSON string but got `%s`", jsonObj.get("countries").toString()));
+      }
+      // ensure the json data is an array
+      if (jsonObj.get("currencies") != null && !jsonObj.get("currencies").isJsonArray()) {
+        throw new IllegalArgumentException(String.format("Expected the field `currencies` to be an array in the JSON string but got `%s`", jsonObj.get("currencies").toString()));
+      }
+      // validate the optional field `giroPay`
+      if (jsonObj.getAsJsonObject("giroPay") != null) {
+        GiroPayInfo.validateJsonObject(jsonObj.getAsJsonObject("giroPay"));
+      }
+      if (jsonObj.get("id") != null && !jsonObj.get("id").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("id").toString()));
+      }
+      // validate the optional field `klarna`
+      if (jsonObj.getAsJsonObject("klarna") != null) {
+        KlarnaInfo.validateJsonObject(jsonObj.getAsJsonObject("klarna"));
+      }
+      // validate the optional field `paypal`
+      if (jsonObj.getAsJsonObject("paypal") != null) {
+        PayPalInfo.validateJsonObject(jsonObj.getAsJsonObject("paypal"));
+      }
+      // validate the optional field `sofort`
+      if (jsonObj.getAsJsonObject("sofort") != null) {
+        SofortInfo.validateJsonObject(jsonObj.getAsJsonObject("sofort"));
+      }
+      if (jsonObj.get("storeId") != null && !jsonObj.get("storeId").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `storeId` to be a primitive type in the JSON string but got `%s`", jsonObj.get("storeId").toString()));
+      }
+      // validate the optional field `swish`
+      if (jsonObj.getAsJsonObject("swish") != null) {
+        SwishInfo.validateJsonObject(jsonObj.getAsJsonObject("swish"));
+      }
+      if (jsonObj.get("type") != null && !jsonObj.get("type").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("type").toString()));
+      }
+  }
+
+  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
+    @SuppressWarnings("unchecked")
+    @Override
+    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
+       if (!PaymentMethod.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'PaymentMethod' and its subtypes
+       }
+       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
+       final TypeAdapter<PaymentMethod> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(PaymentMethod.class));
+
+       return (TypeAdapter<T>) new TypeAdapter<PaymentMethod>() {
+           @Override
+           public void write(JsonWriter out, PaymentMethod value) throws IOException {
+             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+             elementAdapter.write(out, obj);
+           }
+
+           @Override
+           public PaymentMethod read(JsonReader in) throws IOException {
+             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
+             validateJsonObject(jsonObj);
+             return thisAdapter.fromJsonTree(jsonObj);
+           }
+
+       }.nullSafe();
+    }
+  }
+
+ /**
+  * Create an instance of PaymentMethod given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of PaymentMethod
+  * @throws IOException if the JSON string is invalid with respect to PaymentMethod
+  */
+  public static PaymentMethod fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, PaymentMethod.class);
+  }
+
+ /**
+  * Convert an instance of PaymentMethod to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
+  }
 }
 

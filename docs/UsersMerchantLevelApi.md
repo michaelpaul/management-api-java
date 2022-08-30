@@ -2,12 +2,12 @@
 
 All URIs are relative to *https://management-test.adyen.com/v1*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**getMerchantsMerchantIdUsers**](UsersMerchantLevelApi.md#getMerchantsMerchantIdUsers) | **GET** /merchants/{merchantId}/users | Get a list of users
-[**getMerchantsMerchantIdUsersUserId**](UsersMerchantLevelApi.md#getMerchantsMerchantIdUsersUserId) | **GET** /merchants/{merchantId}/users/{userId} | Get user details
-[**patchMerchantsMerchantIdUsersUserId**](UsersMerchantLevelApi.md#patchMerchantsMerchantIdUsersUserId) | **PATCH** /merchants/{merchantId}/users/{userId} | Update a user
-[**postMerchantsMerchantIdUsers**](UsersMerchantLevelApi.md#postMerchantsMerchantIdUsers) | **POST** /merchants/{merchantId}/users | Create a new user
+| Method | HTTP request | Description |
+|------------- | ------------- | -------------|
+| [**getMerchantsMerchantIdUsers**](UsersMerchantLevelApi.md#getMerchantsMerchantIdUsers) | **GET** /merchants/{merchantId}/users | Get a list of users |
+| [**getMerchantsMerchantIdUsersUserId**](UsersMerchantLevelApi.md#getMerchantsMerchantIdUsersUserId) | **GET** /merchants/{merchantId}/users/{userId} | Get user details |
+| [**patchMerchantsMerchantIdUsersUserId**](UsersMerchantLevelApi.md#patchMerchantsMerchantIdUsersUserId) | **PATCH** /merchants/{merchantId}/users/{userId} | Update a user |
+| [**postMerchantsMerchantIdUsers**](UsersMerchantLevelApi.md#postMerchantsMerchantIdUsers) | **POST** /merchants/{merchantId}/users | Create a new user |
 
 
 <a name="getMerchantsMerchantIdUsers"></a>
@@ -64,11 +64,11 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **merchantId** | **String**| Unique identifier of the merchant. |
- **pageNumber** | **Integer**| The number of the page to fetch. | [optional]
- **pageSize** | **Integer**| The number of items to have on a page. Maximum value is **100**. The default is **10** items on a page. | [optional]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **merchantId** | **String**| Unique identifier of the merchant. | |
+| **pageNumber** | **Integer**| The number of the page to fetch. | [optional] |
+| **pageSize** | **Integer**| The number of items to have on a page. Maximum value is **100**. The default is **10** items on a page. | [optional] |
 
 ### Return type
 
@@ -86,13 +86,13 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | OK - the request has succeeded. |  -  |
-**204** | No Content - the request has been successfully processed, but there is no additional content. |  -  |
-**400** | Bad Request - a problem reading or understanding the request. |  -  |
-**401** | Unauthorized - authentication required. |  -  |
-**403** | Forbidden - insufficient permissions to process the request. |  -  |
-**422** | Unprocessable Entity - a request validation error. |  -  |
-**500** | Internal Server Error - the server could not process the request. |  -  |
+| **200** | OK - the request has succeeded. |  -  |
+| **204** | No Content - the request has been successfully processed, but there is no additional content. |  -  |
+| **400** | Bad Request - a problem reading or understanding the request. |  -  |
+| **401** | Unauthorized - authentication required. |  -  |
+| **403** | Forbidden - insufficient permissions to process the request. |  -  |
+| **422** | Unprocessable Entity - a request validation error. |  -  |
+| **500** | Internal Server Error - the server could not process the request. |  -  |
 
 <a name="getMerchantsMerchantIdUsersUserId"></a>
 # **getMerchantsMerchantIdUsersUserId**
@@ -147,10 +147,10 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **merchantId** | **String**| Unique identifier of the merchant. |
- **userId** | **String**| Unique identifier of the user. |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **merchantId** | **String**| Unique identifier of the merchant. | |
+| **userId** | **String**| Unique identifier of the user. | |
 
 ### Return type
 
@@ -168,13 +168,13 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | OK - the request has succeeded. |  -  |
-**204** | No Content - the request has been successfully processed, but there is no additional content. |  -  |
-**400** | Bad Request - a problem reading or understanding the request. |  -  |
-**401** | Unauthorized - authentication required. |  -  |
-**403** | Forbidden - insufficient permissions to process the request. |  -  |
-**422** | Unprocessable Entity - a request validation error. |  -  |
-**500** | Internal Server Error - the server could not process the request. |  -  |
+| **200** | OK - the request has succeeded. |  -  |
+| **204** | No Content - the request has been successfully processed, but there is no additional content. |  -  |
+| **400** | Bad Request - a problem reading or understanding the request. |  -  |
+| **401** | Unauthorized - authentication required. |  -  |
+| **403** | Forbidden - insufficient permissions to process the request. |  -  |
+| **422** | Unprocessable Entity - a request validation error. |  -  |
+| **500** | Internal Server Error - the server could not process the request. |  -  |
 
 <a name="patchMerchantsMerchantIdUsersUserId"></a>
 # **patchMerchantsMerchantIdUsersUserId**
@@ -230,11 +230,11 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **merchantId** | **String**| Unique identifier of the merchant. |
- **userId** | **String**| Unique identifier of the user. |
- **updateMerchantUserRequest** | [**UpdateMerchantUserRequest**](UpdateMerchantUserRequest.md)|  | [optional]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **merchantId** | **String**| Unique identifier of the merchant. | |
+| **userId** | **String**| Unique identifier of the user. | |
+| **updateMerchantUserRequest** | [**UpdateMerchantUserRequest**](UpdateMerchantUserRequest.md)|  | [optional] |
 
 ### Return type
 
@@ -252,13 +252,13 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | OK - the request has succeeded. |  -  |
-**204** | No Content - the request has been successfully processed, but there is no additional content. |  -  |
-**400** | Bad Request - a problem reading or understanding the request. |  -  |
-**401** | Unauthorized - authentication required. |  -  |
-**403** | Forbidden - insufficient permissions to process the request. |  -  |
-**422** | Unprocessable Entity - a request validation error. |  -  |
-**500** | Internal Server Error - the server could not process the request. |  -  |
+| **200** | OK - the request has succeeded. |  -  |
+| **204** | No Content - the request has been successfully processed, but there is no additional content. |  -  |
+| **400** | Bad Request - a problem reading or understanding the request. |  -  |
+| **401** | Unauthorized - authentication required. |  -  |
+| **403** | Forbidden - insufficient permissions to process the request. |  -  |
+| **422** | Unprocessable Entity - a request validation error. |  -  |
+| **500** | Internal Server Error - the server could not process the request. |  -  |
 
 <a name="postMerchantsMerchantIdUsers"></a>
 # **postMerchantsMerchantIdUsers**
@@ -313,10 +313,10 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **merchantId** | **String**| Unique identifier of the merchant. |
- **createMerchantUserRequest** | [**CreateMerchantUserRequest**](CreateMerchantUserRequest.md)|  | [optional]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **merchantId** | **String**| Unique identifier of the merchant. | |
+| **createMerchantUserRequest** | [**CreateMerchantUserRequest**](CreateMerchantUserRequest.md)|  | [optional] |
 
 ### Return type
 
@@ -334,11 +334,11 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | OK - the request has succeeded. |  -  |
-**204** | No Content - the request has been successfully processed, but there is no additional content. |  -  |
-**400** | Bad Request - a problem reading or understanding the request. |  -  |
-**401** | Unauthorized - authentication required. |  -  |
-**403** | Forbidden - insufficient permissions to process the request. |  -  |
-**422** | Unprocessable Entity - a request validation error. |  -  |
-**500** | Internal Server Error - the server could not process the request. |  -  |
+| **200** | OK - the request has succeeded. |  -  |
+| **204** | No Content - the request has been successfully processed, but there is no additional content. |  -  |
+| **400** | Bad Request - a problem reading or understanding the request. |  -  |
+| **401** | Unauthorized - authentication required. |  -  |
+| **403** | Forbidden - insufficient permissions to process the request. |  -  |
+| **422** | Unprocessable Entity - a request validation error. |  -  |
+| **500** | Internal Server Error - the server could not process the request. |  -  |
 

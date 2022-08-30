@@ -42,6 +42,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import javax.ws.rs.core.GenericType;
 
 public class TerminalOrdersMerchantLevelApi {
     private ApiClient localVarApiClient;
@@ -101,7 +102,6 @@ public class TerminalOrdersMerchantLevelApi {
      */
     public okhttp3.Call getMerchantsMerchantIdBillingEntitiesCall(String merchantId, String name, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -263,7 +263,6 @@ public class TerminalOrdersMerchantLevelApi {
      */
     public okhttp3.Call getMerchantsMerchantIdShippingLocationsCall(String merchantId, String name, Integer offset, Integer limit, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -436,7 +435,6 @@ public class TerminalOrdersMerchantLevelApi {
      */
     public okhttp3.Call getMerchantsMerchantIdTerminalModelsCall(String merchantId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -592,7 +590,6 @@ public class TerminalOrdersMerchantLevelApi {
      */
     public okhttp3.Call getMerchantsMerchantIdTerminalOrdersCall(String merchantId, String customerOrderReference, String status, Integer offset, Integer limit, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -773,7 +770,6 @@ public class TerminalOrdersMerchantLevelApi {
      */
     public okhttp3.Call getMerchantsMerchantIdTerminalOrdersOrderIdCall(String merchantId, String orderId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -938,7 +934,6 @@ public class TerminalOrdersMerchantLevelApi {
      */
     public okhttp3.Call getMerchantsMerchantIdTerminalProductsCall(String merchantId, String country, String terminalModelId, Integer offset, Integer limit, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -1120,7 +1115,6 @@ public class TerminalOrdersMerchantLevelApi {
      */
     public okhttp3.Call patchMerchantsMerchantIdTerminalOrdersOrderIdCall(String merchantId, String orderId, TerminalOrderRequest terminalOrderRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -1285,7 +1279,6 @@ public class TerminalOrdersMerchantLevelApi {
      */
     public okhttp3.Call postMerchantsMerchantIdShippingLocationsCall(String merchantId, ShippingLocation shippingLocation, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -1441,7 +1434,6 @@ public class TerminalOrdersMerchantLevelApi {
      */
     public okhttp3.Call postMerchantsMerchantIdTerminalOrdersCall(String merchantId, TerminalOrderRequest terminalOrderRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -1597,7 +1589,6 @@ public class TerminalOrdersMerchantLevelApi {
      */
     public okhttp3.Call postMerchantsMerchantIdTerminalOrdersOrderIdCancelCall(String merchantId, String orderId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 

@@ -17,8 +17,8 @@ import org.openapitools.client.ApiException;
 import org.openapitools.client.model.AllowedOrigin;
 import org.openapitools.client.model.AllowedOriginsResponse;
 import org.openapitools.client.model.RestServiceError;
-import org.junit.Test;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -28,77 +28,72 @@ import java.util.Map;
 /**
  * API tests for AllowedOriginsCompanyLevelApi
  */
-@Ignore
+@Disabled
 public class AllowedOriginsCompanyLevelApiTest {
 
     private final AllowedOriginsCompanyLevelApi api = new AllowedOriginsCompanyLevelApi();
 
-    
     /**
      * Delete an allowed origin
      *
      * Removes the [allowed origin](https://docs.adyen.com/development-resources/client-side-authentication#allowed-origins) identified in the path. As soon as an allowed origin is removed, we no longer accept client-side requests from that domain.  To make this request, your API credential must have the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions): * Management API—API credentials read and write
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void deleteCompaniesCompanyIdApiCredentialsApiCredentialIdAllowedOriginsOriginIdTest() throws ApiException {
         String companyId = null;
         String apiCredentialId = null;
         String originId = null;
-                api.deleteCompaniesCompanyIdApiCredentialsApiCredentialIdAllowedOriginsOriginId(companyId, apiCredentialId, originId);
+        api.deleteCompaniesCompanyIdApiCredentialsApiCredentialIdAllowedOriginsOriginId(companyId, apiCredentialId, originId);
         // TODO: test validations
     }
-    
+
     /**
      * Get a list of allowed origins
      *
      * Returns the list of [allowed origins](https://docs.adyen.com/development-resources/client-side-authentication#allowed-origins) for the API credential identified in the path.  To make this request, your API credential must have the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions): * Management API—API credentials read and write
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void getCompaniesCompanyIdApiCredentialsApiCredentialIdAllowedOriginsTest() throws ApiException {
         String companyId = null;
         String apiCredentialId = null;
-                AllowedOriginsResponse response = api.getCompaniesCompanyIdApiCredentialsApiCredentialIdAllowedOrigins(companyId, apiCredentialId);
+        AllowedOriginsResponse response = api.getCompaniesCompanyIdApiCredentialsApiCredentialIdAllowedOrigins(companyId, apiCredentialId);
         // TODO: test validations
     }
-    
+
     /**
      * Get an allowed origin
      *
      * Returns the [allowed origin](https://docs.adyen.com/development-resources/client-side-authentication#allowed-origins) identified in the path.  To make this request, your API credential must have the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions): * Management API—API credentials read and write
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void getCompaniesCompanyIdApiCredentialsApiCredentialIdAllowedOriginsOriginIdTest() throws ApiException {
         String companyId = null;
         String apiCredentialId = null;
         String originId = null;
-                AllowedOrigin response = api.getCompaniesCompanyIdApiCredentialsApiCredentialIdAllowedOriginsOriginId(companyId, apiCredentialId, originId);
+        AllowedOrigin response = api.getCompaniesCompanyIdApiCredentialsApiCredentialIdAllowedOriginsOriginId(companyId, apiCredentialId, originId);
         // TODO: test validations
     }
-    
+
     /**
      * Create an allowed origin
      *
      * Adds a new [allowed origin](https://docs.adyen.com/development-resources/client-side-authentication#allowed-origins) to the API credential&#39;s list of allowed origins.  To make this request, your API credential must have the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions): * Management API—API credentials read and write
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void postCompaniesCompanyIdApiCredentialsApiCredentialIdAllowedOriginsTest() throws ApiException {
         String companyId = null;
         String apiCredentialId = null;
         AllowedOrigin allowedOrigin = null;
-                AllowedOriginsResponse response = api.postCompaniesCompanyIdApiCredentialsApiCredentialIdAllowedOrigins(companyId, apiCredentialId, allowedOrigin);
+        AllowedOriginsResponse response = api.postCompaniesCompanyIdApiCredentialsApiCredentialIdAllowedOrigins(companyId, apiCredentialId, allowedOrigin);
         // TODO: test validations
     }
-    
+
 }

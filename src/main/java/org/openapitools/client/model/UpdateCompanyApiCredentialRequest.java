@@ -26,10 +26,30 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonDeserializationContext;
+import com.google.gson.JsonDeserializer;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParseException;
+import com.google.gson.TypeAdapterFactory;
+import com.google.gson.reflect.TypeToken;
+
+import java.lang.reflect.Type;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
+
+import org.openapitools.client.JSON;
+
 /**
  * UpdateCompanyApiCredentialRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-08-30T16:56:39.721579+02:00[Europe/Amsterdam]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-08-30T15:05:30.841Z[Etc/UTC]")
 public class UpdateCompanyApiCredentialRequest {
   public static final String SERIALIZED_NAME_ACTIVE = "active";
   @SerializedName(SERIALIZED_NAME_ACTIVE)
@@ -85,7 +105,7 @@ public class UpdateCompanyApiCredentialRequest {
 
   public UpdateCompanyApiCredentialRequest addAllowedOriginsItem(String allowedOriginsItem) {
     if (this.allowedOrigins == null) {
-      this.allowedOrigins = new ArrayList<String>();
+      this.allowedOrigins = new ArrayList<>();
     }
     this.allowedOrigins.add(allowedOriginsItem);
     return this;
@@ -116,7 +136,7 @@ public class UpdateCompanyApiCredentialRequest {
 
   public UpdateCompanyApiCredentialRequest addAssociatedMerchantAccountsItem(String associatedMerchantAccountsItem) {
     if (this.associatedMerchantAccounts == null) {
-      this.associatedMerchantAccounts = new ArrayList<String>();
+      this.associatedMerchantAccounts = new ArrayList<>();
     }
     this.associatedMerchantAccounts.add(associatedMerchantAccountsItem);
     return this;
@@ -170,7 +190,7 @@ public class UpdateCompanyApiCredentialRequest {
 
   public UpdateCompanyApiCredentialRequest addRolesItem(String rolesItem) {
     if (this.roles == null) {
-      this.roles = new ArrayList<String>();
+      this.roles = new ArrayList<>();
     }
     this.roles.add(rolesItem);
     return this;
@@ -191,6 +211,7 @@ public class UpdateCompanyApiCredentialRequest {
   public void setRoles(List<String> roles) {
     this.roles = roles;
   }
+
 
 
   @Override
@@ -238,5 +259,109 @@ public class UpdateCompanyApiCredentialRequest {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+  public static HashSet<String> openapiFields;
+  public static HashSet<String> openapiRequiredFields;
+
+  static {
+    // a set of all properties/fields (JSON key names)
+    openapiFields = new HashSet<String>();
+    openapiFields.add("active");
+    openapiFields.add("allowedOrigins");
+    openapiFields.add("associatedMerchantAccounts");
+    openapiFields.add("description");
+    openapiFields.add("roles");
+
+    // a set of required properties/fields (JSON key names)
+    openapiRequiredFields = new HashSet<String>();
+  }
+
+ /**
+  * Validates the JSON Object and throws an exception if issues found
+  *
+  * @param jsonObj JSON Object
+  * @throws IOException if the JSON Object is invalid with respect to UpdateCompanyApiCredentialRequest
+  */
+  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
+      if (jsonObj == null) {
+        if (UpdateCompanyApiCredentialRequest.openapiRequiredFields.isEmpty()) {
+          return;
+        } else { // has required fields
+          throw new IllegalArgumentException(String.format("The required field(s) %s in UpdateCompanyApiCredentialRequest is not found in the empty JSON string", UpdateCompanyApiCredentialRequest.openapiRequiredFields.toString()));
+        }
+      }
+
+      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
+      // check to see if the JSON string contains additional fields
+      for (Entry<String, JsonElement> entry : entries) {
+        if (!UpdateCompanyApiCredentialRequest.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `UpdateCompanyApiCredentialRequest` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
+        }
+      }
+      // ensure the json data is an array
+      if (jsonObj.get("allowedOrigins") != null && !jsonObj.get("allowedOrigins").isJsonArray()) {
+        throw new IllegalArgumentException(String.format("Expected the field `allowedOrigins` to be an array in the JSON string but got `%s`", jsonObj.get("allowedOrigins").toString()));
+      }
+      // ensure the json data is an array
+      if (jsonObj.get("associatedMerchantAccounts") != null && !jsonObj.get("associatedMerchantAccounts").isJsonArray()) {
+        throw new IllegalArgumentException(String.format("Expected the field `associatedMerchantAccounts` to be an array in the JSON string but got `%s`", jsonObj.get("associatedMerchantAccounts").toString()));
+      }
+      if (jsonObj.get("description") != null && !jsonObj.get("description").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("description").toString()));
+      }
+      // ensure the json data is an array
+      if (jsonObj.get("roles") != null && !jsonObj.get("roles").isJsonArray()) {
+        throw new IllegalArgumentException(String.format("Expected the field `roles` to be an array in the JSON string but got `%s`", jsonObj.get("roles").toString()));
+      }
+  }
+
+  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
+    @SuppressWarnings("unchecked")
+    @Override
+    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
+       if (!UpdateCompanyApiCredentialRequest.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'UpdateCompanyApiCredentialRequest' and its subtypes
+       }
+       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
+       final TypeAdapter<UpdateCompanyApiCredentialRequest> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(UpdateCompanyApiCredentialRequest.class));
+
+       return (TypeAdapter<T>) new TypeAdapter<UpdateCompanyApiCredentialRequest>() {
+           @Override
+           public void write(JsonWriter out, UpdateCompanyApiCredentialRequest value) throws IOException {
+             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+             elementAdapter.write(out, obj);
+           }
+
+           @Override
+           public UpdateCompanyApiCredentialRequest read(JsonReader in) throws IOException {
+             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
+             validateJsonObject(jsonObj);
+             return thisAdapter.fromJsonTree(jsonObj);
+           }
+
+       }.nullSafe();
+    }
+  }
+
+ /**
+  * Create an instance of UpdateCompanyApiCredentialRequest given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of UpdateCompanyApiCredentialRequest
+  * @throws IOException if the JSON string is invalid with respect to UpdateCompanyApiCredentialRequest
+  */
+  public static UpdateCompanyApiCredentialRequest fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, UpdateCompanyApiCredentialRequest.class);
+  }
+
+ /**
+  * Convert an instance of UpdateCompanyApiCredentialRequest to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
+  }
 }
 

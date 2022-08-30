@@ -36,6 +36,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import javax.ws.rs.core.GenericType;
 
 public class TerminalSettingsTerminalLevelApi {
     private ApiClient localVarApiClient;
@@ -93,7 +94,6 @@ public class TerminalSettingsTerminalLevelApi {
      */
     public okhttp3.Call getTerminalsTerminalIdTerminalLogosCall(String terminalId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -241,7 +241,6 @@ public class TerminalSettingsTerminalLevelApi {
      */
     public okhttp3.Call getTerminalsTerminalIdTerminalSettingsCall(String terminalId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -390,7 +389,6 @@ public class TerminalSettingsTerminalLevelApi {
      */
     public okhttp3.Call patchTerminalsTerminalIdTerminalLogosCall(String terminalId, Logo logo, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -542,7 +540,6 @@ public class TerminalSettingsTerminalLevelApi {
      */
     public okhttp3.Call patchTerminalsTerminalIdTerminalSettingsCall(String terminalId, TerminalSettings terminalSettings, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 

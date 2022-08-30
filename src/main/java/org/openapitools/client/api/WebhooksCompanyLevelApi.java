@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import javax.ws.rs.core.GenericType;
 
 public class WebhooksCompanyLevelApi {
     private ApiClient localVarApiClient;
@@ -99,7 +100,6 @@ public class WebhooksCompanyLevelApi {
      */
     public okhttp3.Call deleteCompaniesCompanyIdWebhooksWebhookIdCall(String companyId, String webhookId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -254,7 +254,6 @@ public class WebhooksCompanyLevelApi {
      */
     public okhttp3.Call getCompaniesCompanyIdWebhooksCall(String companyId, Integer pageNumber, Integer pageSize, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -417,7 +416,6 @@ public class WebhooksCompanyLevelApi {
      */
     public okhttp3.Call getCompaniesCompanyIdWebhooksWebhookIdCall(String companyId, String webhookId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -576,7 +574,6 @@ public class WebhooksCompanyLevelApi {
      */
     public okhttp3.Call patchCompaniesCompanyIdWebhooksWebhookIdCall(String companyId, String webhookId, UpdateCompanyWebhookRequest updateCompanyWebhookRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -737,7 +734,6 @@ public class WebhooksCompanyLevelApi {
      */
     public okhttp3.Call postCompaniesCompanyIdWebhooksCall(String companyId, CreateCompanyWebhookRequest createCompanyWebhookRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -889,7 +885,6 @@ public class WebhooksCompanyLevelApi {
      */
     public okhttp3.Call postCompaniesCompanyIdWebhooksWebhookIdGenerateHmacCall(String companyId, String webhookId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -1048,7 +1043,6 @@ public class WebhooksCompanyLevelApi {
      */
     public okhttp3.Call postCompaniesCompanyIdWebhooksWebhookIdTestCall(String companyId, String webhookId, TestCompanyWebhookRequest testCompanyWebhookRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 

@@ -17,8 +17,8 @@ import org.openapitools.client.ApiException;
 import org.openapitools.client.model.Logo;
 import org.openapitools.client.model.RestServiceError;
 import org.openapitools.client.model.TerminalSettings;
-import org.junit.Test;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -28,72 +28,67 @@ import java.util.Map;
 /**
  * API tests for TerminalSettingsTerminalLevelApi
  */
-@Ignore
+@Disabled
 public class TerminalSettingsTerminalLevelApiTest {
 
     private final TerminalSettingsTerminalLevelApi api = new TerminalSettingsTerminalLevelApi();
 
-    
     /**
      * Get the terminal logo
      *
      * Returns the logo that is configured for the payment terminal identified in the path. The logo is returned as a Base64-encoded string. You need to Base64-decode the string to get the actual image file.  To make this request, your API credential must have one of the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions): * Management API—Terminal settings read * Management API—Terminal settings read and write
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void getTerminalsTerminalIdTerminalLogosTest() throws ApiException {
         String terminalId = null;
-                Logo response = api.getTerminalsTerminalIdTerminalLogos(terminalId);
+        Logo response = api.getTerminalsTerminalIdTerminalLogos(terminalId);
         // TODO: test validations
     }
-    
+
     /**
      * Get terminal settings
      *
      * Returns the settings that are configured for the payment terminal identified in the path.  To make this request, your API credential must have one of the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions): * Management API—Terminal settings read * Management API—Terminal settings read and write
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void getTerminalsTerminalIdTerminalSettingsTest() throws ApiException {
         String terminalId = null;
-                TerminalSettings response = api.getTerminalsTerminalIdTerminalSettings(terminalId);
+        TerminalSettings response = api.getTerminalsTerminalIdTerminalSettings(terminalId);
         // TODO: test validations
     }
-    
+
     /**
      * Update the logo
      *
      * Updates the logo for the payment terminal identified in the path.  * To change the logo, specify the image file as a Base64-encoded string. * To restore the logo inherited from a higher level (store, merchant account, or company account), specify an empty logo value.  To make this request, your API credential must have the following [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions): * Management API—Terminal settings read and write
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void patchTerminalsTerminalIdTerminalLogosTest() throws ApiException {
         String terminalId = null;
         Logo logo = null;
-                Logo response = api.patchTerminalsTerminalIdTerminalLogos(terminalId, logo);
+        Logo response = api.patchTerminalsTerminalIdTerminalLogos(terminalId, logo);
         // TODO: test validations
     }
-    
+
     /**
      * Update terminal settings
      *
      * Updates the settings that are configured for the payment terminal identified in the path.  * To change a parameter value, include the full object that contains the parameter, even if you don&#39;t want to change all parameters in the object. * To restore a parameter value inherited from a higher level, include the full object that contains the parameter, and specify an empty value for the parameter or omit the parameter. * Objects that are not included in the request are not updated.  To make this request, your API credential must have the following [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions): * Management API—Terminal settings read and write
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void patchTerminalsTerminalIdTerminalSettingsTest() throws ApiException {
         String terminalId = null;
         TerminalSettings terminalSettings = null;
-                TerminalSettings response = api.patchTerminalsTerminalIdTerminalSettings(terminalId, terminalSettings);
+        TerminalSettings response = api.patchTerminalsTerminalIdTerminalSettings(terminalId, terminalSettings);
         // TODO: test validations
     }
-    
+
 }

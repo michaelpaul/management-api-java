@@ -38,6 +38,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import javax.ws.rs.core.GenericType;
 
 public class TerminalActionsCompanyLevelApi {
     private ApiClient localVarApiClient;
@@ -97,7 +98,6 @@ public class TerminalActionsCompanyLevelApi {
      */
     public okhttp3.Call getCompaniesCompanyIdAndroidAppsCall(String companyId, Integer pageNumber, Integer pageSize, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -261,7 +261,6 @@ public class TerminalActionsCompanyLevelApi {
      */
     public okhttp3.Call getCompaniesCompanyIdAndroidCertificatesCall(String companyId, Integer pageNumber, Integer pageSize, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -427,7 +426,6 @@ public class TerminalActionsCompanyLevelApi {
      */
     public okhttp3.Call getCompaniesCompanyIdTerminalActionsCall(String companyId, Integer pageNumber, Integer pageSize, String status, String type, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -604,7 +602,6 @@ public class TerminalActionsCompanyLevelApi {
      */
     public okhttp3.Call getCompaniesCompanyIdTerminalActionsActionIdCall(String companyId, String actionId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 

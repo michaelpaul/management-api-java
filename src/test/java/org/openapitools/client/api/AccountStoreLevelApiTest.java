@@ -20,8 +20,8 @@ import org.openapitools.client.model.Store;
 import org.openapitools.client.model.StoreCreationRequest;
 import org.openapitools.client.model.StoreCreationWithMerchantCodeRequest;
 import org.openapitools.client.model.UpdateStoreRequest;
-import org.junit.Test;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -31,19 +31,17 @@ import java.util.Map;
 /**
  * API tests for AccountStoreLevelApi
  */
-@Ignore
+@Disabled
 public class AccountStoreLevelApiTest {
 
     private final AccountStoreLevelApi api = new AccountStoreLevelApi();
 
-    
     /**
      * Get a list of stores
      *
      * Returns a list of stores for the merchant account identified in the path. The list is grouped into pages as defined by the query parameters.  To make this request, your API credential must have one of the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions): * Management API—Stores read * Management API—Stores read and write
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void getMerchantsMerchantIdStoresTest() throws ApiException {
@@ -51,33 +49,31 @@ public class AccountStoreLevelApiTest {
         Integer pageNumber = null;
         Integer pageSize = null;
         String reference = null;
-                ListStoresResponse response = api.getMerchantsMerchantIdStores(merchantId, pageNumber, pageSize, reference);
+        ListStoresResponse response = api.getMerchantsMerchantIdStores(merchantId, pageNumber, pageSize, reference);
         // TODO: test validations
     }
-    
+
     /**
      * Get a store
      *
      * Returns the details of the store identified in the path.  To make this request, your API credential must have one of the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions): * Management API—Stores read * Management API—Stores read and write
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void getMerchantsMerchantIdStoresStoreIdTest() throws ApiException {
         String merchantId = null;
         String storeId = null;
-                Store response = api.getMerchantsMerchantIdStoresStoreId(merchantId, storeId);
+        Store response = api.getMerchantsMerchantIdStoresStoreId(merchantId, storeId);
         // TODO: test validations
     }
-    
+
     /**
      * Get a list of stores
      *
      * Returns a list of stores. The list is grouped into pages as defined by the query parameters.  To make this request, your API credential must have one of the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions): * Management API—Stores read * Management API—Stores read and write
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void getStoresTest() throws ApiException {
@@ -85,87 +81,82 @@ public class AccountStoreLevelApiTest {
         Integer pageSize = null;
         String reference = null;
         String merchantId = null;
-                ListStoresResponse response = api.getStores(pageNumber, pageSize, reference, merchantId);
+        ListStoresResponse response = api.getStores(pageNumber, pageSize, reference, merchantId);
         // TODO: test validations
     }
-    
+
     /**
      * Get a store
      *
      * Returns the details of the store identified in the path.  To make this request, your API credential must have one of the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions): * Management API—Stores read * Management API—Stores read and write
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void getStoresStoreIdTest() throws ApiException {
         String storeId = null;
-                Store response = api.getStoresStoreId(storeId);
+        Store response = api.getStoresStoreId(storeId);
         // TODO: test validations
     }
-    
+
     /**
      * Update a store
      *
      * Updates the store identified in the path. You can only update some store parameters.  To make this request, your API credential must have the following [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions): * Management API—Stores read and write
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void patchMerchantsMerchantIdStoresStoreIdTest() throws ApiException {
         String merchantId = null;
         String storeId = null;
         UpdateStoreRequest updateStoreRequest = null;
-                Store response = api.patchMerchantsMerchantIdStoresStoreId(merchantId, storeId, updateStoreRequest);
+        Store response = api.patchMerchantsMerchantIdStoresStoreId(merchantId, storeId, updateStoreRequest);
         // TODO: test validations
     }
-    
+
     /**
      * Update a store
      *
      * Updates the store identified in the path. You can only update some store parameters.  To make this request, your API credential must have the following [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions): * Management API—Stores read and write
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void patchStoresStoreIdTest() throws ApiException {
         String storeId = null;
         UpdateStoreRequest updateStoreRequest = null;
-                Store response = api.patchStoresStoreId(storeId, updateStoreRequest);
+        Store response = api.patchStoresStoreId(storeId, updateStoreRequest);
         // TODO: test validations
     }
-    
+
     /**
      * Create a store
      *
      * Creates a store for the merchant account identified in the path.  To make this request, your API credential must have the following [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions): * Management API—Stores read and write
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void postMerchantsMerchantIdStoresTest() throws ApiException {
         String merchantId = null;
         StoreCreationRequest storeCreationRequest = null;
-                Store response = api.postMerchantsMerchantIdStores(merchantId, storeCreationRequest);
+        Store response = api.postMerchantsMerchantIdStores(merchantId, storeCreationRequest);
         // TODO: test validations
     }
-    
+
     /**
      * Create a store
      *
      * Creates a store for the merchant account specified in the request.  To make this request, your API credential must have the following [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions): * Management API—Stores read and write
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void postStoresTest() throws ApiException {
         StoreCreationWithMerchantCodeRequest storeCreationWithMerchantCodeRequest = null;
-                Store response = api.postStores(storeCreationWithMerchantCodeRequest);
+        Store response = api.postStores(storeCreationWithMerchantCodeRequest);
         // TODO: test validations
     }
-    
+
 }

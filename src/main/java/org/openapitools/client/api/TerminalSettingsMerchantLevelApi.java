@@ -36,6 +36,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import javax.ws.rs.core.GenericType;
 
 public class TerminalSettingsMerchantLevelApi {
     private ApiClient localVarApiClient;
@@ -95,7 +96,6 @@ public class TerminalSettingsMerchantLevelApi {
      */
     public okhttp3.Call getMerchantsMerchantIdTerminalLogosCall(String merchantId, String model, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -254,7 +254,6 @@ public class TerminalSettingsMerchantLevelApi {
      */
     public okhttp3.Call getMerchantsMerchantIdTerminalSettingsCall(String merchantId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -408,7 +407,6 @@ public class TerminalSettingsMerchantLevelApi {
      */
     public okhttp3.Call patchMerchantsMerchantIdTerminalLogosCall(String merchantId, String model, Logo logo, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -571,7 +569,6 @@ public class TerminalSettingsMerchantLevelApi {
      */
     public okhttp3.Call patchMerchantsMerchantIdTerminalSettingsCall(String merchantId, TerminalSettings terminalSettings, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 

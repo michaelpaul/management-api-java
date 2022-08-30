@@ -25,10 +25,30 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import org.openapitools.client.model.LinksElement;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonDeserializationContext;
+import com.google.gson.JsonDeserializer;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParseException;
+import com.google.gson.TypeAdapterFactory;
+import com.google.gson.reflect.TypeToken;
+
+import java.lang.reflect.Type;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
+
+import org.openapitools.client.JSON;
+
 /**
  * ApiCredentialLinks
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-08-30T16:56:39.721579+02:00[Europe/Amsterdam]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-08-30T15:05:30.841Z[Etc/UTC]")
 public class ApiCredentialLinks {
   public static final String SERIALIZED_NAME_ALLOWED_ORIGINS = "allowedOrigins";
   @SerializedName(SERIALIZED_NAME_ALLOWED_ORIGINS)
@@ -195,6 +215,7 @@ public class ApiCredentialLinks {
   }
 
 
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -242,5 +263,127 @@ public class ApiCredentialLinks {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+  public static HashSet<String> openapiFields;
+  public static HashSet<String> openapiRequiredFields;
+
+  static {
+    // a set of all properties/fields (JSON key names)
+    openapiFields = new HashSet<String>();
+    openapiFields.add("allowedOrigins");
+    openapiFields.add("company");
+    openapiFields.add("generateApiKey");
+    openapiFields.add("generateClientKey");
+    openapiFields.add("merchant");
+    openapiFields.add("self");
+
+    // a set of required properties/fields (JSON key names)
+    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields.add("self");
+  }
+
+ /**
+  * Validates the JSON Object and throws an exception if issues found
+  *
+  * @param jsonObj JSON Object
+  * @throws IOException if the JSON Object is invalid with respect to ApiCredentialLinks
+  */
+  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
+      if (jsonObj == null) {
+        if (ApiCredentialLinks.openapiRequiredFields.isEmpty()) {
+          return;
+        } else { // has required fields
+          throw new IllegalArgumentException(String.format("The required field(s) %s in ApiCredentialLinks is not found in the empty JSON string", ApiCredentialLinks.openapiRequiredFields.toString()));
+        }
+      }
+
+      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
+      // check to see if the JSON string contains additional fields
+      for (Entry<String, JsonElement> entry : entries) {
+        if (!ApiCredentialLinks.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `ApiCredentialLinks` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
+        }
+      }
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : ApiCredentialLinks.openapiRequiredFields) {
+        if (jsonObj.get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
+        }
+      }
+      // validate the optional field `allowedOrigins`
+      if (jsonObj.getAsJsonObject("allowedOrigins") != null) {
+        LinksElement.validateJsonObject(jsonObj.getAsJsonObject("allowedOrigins"));
+      }
+      // validate the optional field `company`
+      if (jsonObj.getAsJsonObject("company") != null) {
+        LinksElement.validateJsonObject(jsonObj.getAsJsonObject("company"));
+      }
+      // validate the optional field `generateApiKey`
+      if (jsonObj.getAsJsonObject("generateApiKey") != null) {
+        LinksElement.validateJsonObject(jsonObj.getAsJsonObject("generateApiKey"));
+      }
+      // validate the optional field `generateClientKey`
+      if (jsonObj.getAsJsonObject("generateClientKey") != null) {
+        LinksElement.validateJsonObject(jsonObj.getAsJsonObject("generateClientKey"));
+      }
+      // validate the optional field `merchant`
+      if (jsonObj.getAsJsonObject("merchant") != null) {
+        LinksElement.validateJsonObject(jsonObj.getAsJsonObject("merchant"));
+      }
+      // validate the optional field `self`
+      if (jsonObj.getAsJsonObject("self") != null) {
+        LinksElement.validateJsonObject(jsonObj.getAsJsonObject("self"));
+      }
+  }
+
+  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
+    @SuppressWarnings("unchecked")
+    @Override
+    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
+       if (!ApiCredentialLinks.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'ApiCredentialLinks' and its subtypes
+       }
+       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
+       final TypeAdapter<ApiCredentialLinks> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(ApiCredentialLinks.class));
+
+       return (TypeAdapter<T>) new TypeAdapter<ApiCredentialLinks>() {
+           @Override
+           public void write(JsonWriter out, ApiCredentialLinks value) throws IOException {
+             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+             elementAdapter.write(out, obj);
+           }
+
+           @Override
+           public ApiCredentialLinks read(JsonReader in) throws IOException {
+             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
+             validateJsonObject(jsonObj);
+             return thisAdapter.fromJsonTree(jsonObj);
+           }
+
+       }.nullSafe();
+    }
+  }
+
+ /**
+  * Create an instance of ApiCredentialLinks given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of ApiCredentialLinks
+  * @throws IOException if the JSON string is invalid with respect to ApiCredentialLinks
+  */
+  public static ApiCredentialLinks fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, ApiCredentialLinks.class);
+  }
+
+ /**
+  * Convert an instance of ApiCredentialLinks to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
+  }
 }
 

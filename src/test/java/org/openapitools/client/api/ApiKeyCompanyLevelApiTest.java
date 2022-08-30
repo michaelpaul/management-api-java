@@ -16,8 +16,8 @@ package org.openapitools.client.api;
 import org.openapitools.client.ApiException;
 import org.openapitools.client.model.GenerateApiKeyResponse;
 import org.openapitools.client.model.RestServiceError;
-import org.junit.Test;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -27,26 +27,24 @@ import java.util.Map;
 /**
  * API tests for ApiKeyCompanyLevelApi
  */
-@Ignore
+@Disabled
 public class ApiKeyCompanyLevelApiTest {
 
     private final ApiKeyCompanyLevelApi api = new ApiKeyCompanyLevelApi();
 
-    
     /**
      * Generate new API key
      *
      * Returns a new API key for the API credential. You can use the new API key a few minutes after generating it. The old API key stops working 24 hours after generating a new one.  To make this request, your API credential must have the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions): * Management API—API credentials read and write
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void postCompaniesCompanyIdApiCredentialsApiCredentialIdGenerateApiKeyTest() throws ApiException {
         String companyId = null;
         String apiCredentialId = null;
-                GenerateApiKeyResponse response = api.postCompaniesCompanyIdApiCredentialsApiCredentialIdGenerateApiKey(companyId, apiCredentialId);
+        GenerateApiKeyResponse response = api.postCompaniesCompanyIdApiCredentialsApiCredentialIdGenerateApiKey(companyId, apiCredentialId);
         // TODO: test validations
     }
-    
+
 }

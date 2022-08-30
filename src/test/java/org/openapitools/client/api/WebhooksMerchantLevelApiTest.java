@@ -22,8 +22,8 @@ import org.openapitools.client.model.TestWebhookRequest;
 import org.openapitools.client.model.TestWebhookResponse;
 import org.openapitools.client.model.UpdateMerchantWebhookRequest;
 import org.openapitools.client.model.Webhook;
-import org.junit.Test;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -33,125 +33,117 @@ import java.util.Map;
 /**
  * API tests for WebhooksMerchantLevelApi
  */
-@Ignore
+@Disabled
 public class WebhooksMerchantLevelApiTest {
 
     private final WebhooksMerchantLevelApi api = new WebhooksMerchantLevelApi();
 
-    
     /**
      * Remove a webhook
      *
      * Remove the configuration for the webhook identified in the path.  To make this request, your API credential must have the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions): * Management API—Webhooks read and write
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void deleteMerchantsMerchantIdWebhooksWebhookIdTest() throws ApiException {
         String merchantId = null;
         String webhookId = null;
-                api.deleteMerchantsMerchantIdWebhooksWebhookId(merchantId, webhookId);
+        api.deleteMerchantsMerchantIdWebhooksWebhookId(merchantId, webhookId);
         // TODO: test validations
     }
-    
+
     /**
      * List all webhooks
      *
      * Lists all webhook configurations for the merchant account.  To make this request, your API credential must have one of the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions): * Management API—Webhooks read * Management API—Webhooks read and write
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void getMerchantsMerchantIdWebhooksTest() throws ApiException {
         String merchantId = null;
         Integer pageNumber = null;
         Integer pageSize = null;
-                ListWebhooksResponse response = api.getMerchantsMerchantIdWebhooks(merchantId, pageNumber, pageSize);
+        ListWebhooksResponse response = api.getMerchantsMerchantIdWebhooks(merchantId, pageNumber, pageSize);
         // TODO: test validations
     }
-    
+
     /**
      * Get a webhook
      *
      * Returns the configuration for the webhook identified in the path.  To make this request, your API credential must have one of the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions): * Management API—Webhooks read * Management API—Webhooks read and write
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void getMerchantsMerchantIdWebhooksWebhookIdTest() throws ApiException {
         String merchantId = null;
         String webhookId = null;
-                Webhook response = api.getMerchantsMerchantIdWebhooksWebhookId(merchantId, webhookId);
+        Webhook response = api.getMerchantsMerchantIdWebhooksWebhookId(merchantId, webhookId);
         // TODO: test validations
     }
-    
+
     /**
      * Update a webhook
      *
      * Make changes to the configuration of the webhook identified in the path. The request contains the new values you want to have in the webhook configuration. The response contains the full configuration for the webhook, which includes the new values from the request.  To make this request, your API credential must have the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions): * Management API—Webhooks read and write
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void patchMerchantsMerchantIdWebhooksWebhookIdTest() throws ApiException {
         String merchantId = null;
         String webhookId = null;
         UpdateMerchantWebhookRequest updateMerchantWebhookRequest = null;
-                Webhook response = api.patchMerchantsMerchantIdWebhooksWebhookId(merchantId, webhookId, updateMerchantWebhookRequest);
+        Webhook response = api.patchMerchantsMerchantIdWebhooksWebhookId(merchantId, webhookId, updateMerchantWebhookRequest);
         // TODO: test validations
     }
-    
+
     /**
      * Set up a webhook
      *
      * Subscribe to receive webhook notifications about events related to your merchant account. You can add basic authentication to make sure the data is secure.  To make this request, your API credential must have the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions): * Management API—Webhooks read and write
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void postMerchantsMerchantIdWebhooksTest() throws ApiException {
         String merchantId = null;
         CreateMerchantWebhookRequest createMerchantWebhookRequest = null;
-                Webhook response = api.postMerchantsMerchantIdWebhooks(merchantId, createMerchantWebhookRequest);
+        Webhook response = api.postMerchantsMerchantIdWebhooks(merchantId, createMerchantWebhookRequest);
         // TODO: test validations
     }
-    
+
     /**
      * Generate an HMAC key
      *
      * Returns an [HMAC key](https://en.wikipedia.org/wiki/HMAC) for the webhook identified in the path. This key allows you to check the integrity and the origin of the notifications you receive.By creating an HMAC key, you start receiving [HMAC-signed notifications](https://docs.adyen.com/development-resources/webhooks/verify-hmac-signatures#enable-hmac-signatures) from Adyen. Find out more about how to [verify HMAC signatures](https://docs.adyen.com/development-resources/webhooks/verify-hmac-signatures).  To make this request, your API credential must have the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions): * Management API—Webhooks read and write
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void postMerchantsMerchantIdWebhooksWebhookIdGenerateHmacTest() throws ApiException {
         String merchantId = null;
         String webhookId = null;
-                GenerateHmacKeyResponse response = api.postMerchantsMerchantIdWebhooksWebhookIdGenerateHmac(merchantId, webhookId);
+        GenerateHmacKeyResponse response = api.postMerchantsMerchantIdWebhooksWebhookIdGenerateHmac(merchantId, webhookId);
         // TODO: test validations
     }
-    
+
     /**
      * Test a webhook
      *
      * Sends sample notifications to test if the webhook is set up correctly.  We send four test notifications for each event code you choose. They cover success and failure scenarios for the hard-coded currencies EUR and GBP, regardless of the currencies configured in the merchant accounts. For custom notifications, we only send the specified custom notification.  The response describes the result of the test. The &#x60;status&#x60; field tells you if the test was successful or not. You can use the other fields to troubleshoot unsuccessful tests.  To make this request, your API credential must have the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions): * Management API—Webhooks read and write
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void postMerchantsMerchantIdWebhooksWebhookIdTestTest() throws ApiException {
         String merchantId = null;
         String webhookId = null;
         TestWebhookRequest testWebhookRequest = null;
-                TestWebhookResponse response = api.postMerchantsMerchantIdWebhooksWebhookIdTest(merchantId, webhookId, testWebhookRequest);
+        TestWebhookResponse response = api.postMerchantsMerchantIdWebhooksWebhookIdTest(merchantId, webhookId, testWebhookRequest);
         // TODO: test validations
     }
-    
+
 }

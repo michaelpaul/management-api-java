@@ -2,12 +2,12 @@
 
 All URIs are relative to *https://management-test.adyen.com/v1*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**getTerminalsTerminalIdTerminalLogos**](TerminalSettingsTerminalLevelApi.md#getTerminalsTerminalIdTerminalLogos) | **GET** /terminals/{terminalId}/terminalLogos | Get the terminal logo
-[**getTerminalsTerminalIdTerminalSettings**](TerminalSettingsTerminalLevelApi.md#getTerminalsTerminalIdTerminalSettings) | **GET** /terminals/{terminalId}/terminalSettings | Get terminal settings
-[**patchTerminalsTerminalIdTerminalLogos**](TerminalSettingsTerminalLevelApi.md#patchTerminalsTerminalIdTerminalLogos) | **PATCH** /terminals/{terminalId}/terminalLogos | Update the logo
-[**patchTerminalsTerminalIdTerminalSettings**](TerminalSettingsTerminalLevelApi.md#patchTerminalsTerminalIdTerminalSettings) | **PATCH** /terminals/{terminalId}/terminalSettings | Update terminal settings
+| Method | HTTP request | Description |
+|------------- | ------------- | -------------|
+| [**getTerminalsTerminalIdTerminalLogos**](TerminalSettingsTerminalLevelApi.md#getTerminalsTerminalIdTerminalLogos) | **GET** /terminals/{terminalId}/terminalLogos | Get the terminal logo |
+| [**getTerminalsTerminalIdTerminalSettings**](TerminalSettingsTerminalLevelApi.md#getTerminalsTerminalIdTerminalSettings) | **GET** /terminals/{terminalId}/terminalSettings | Get terminal settings |
+| [**patchTerminalsTerminalIdTerminalLogos**](TerminalSettingsTerminalLevelApi.md#patchTerminalsTerminalIdTerminalLogos) | **PATCH** /terminals/{terminalId}/terminalLogos | Update the logo |
+| [**patchTerminalsTerminalIdTerminalSettings**](TerminalSettingsTerminalLevelApi.md#patchTerminalsTerminalIdTerminalSettings) | **PATCH** /terminals/{terminalId}/terminalSettings | Update terminal settings |
 
 
 <a name="getTerminalsTerminalIdTerminalLogos"></a>
@@ -62,9 +62,9 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **terminalId** | **String**| The unique identifier of the payment terminal. |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **terminalId** | **String**| The unique identifier of the payment terminal. | |
 
 ### Return type
 
@@ -82,12 +82,12 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | OK - the request has succeeded. |  -  |
-**400** | Bad Request - a problem reading or understanding the request. |  -  |
-**401** | Unauthorized - authentication required. |  -  |
-**403** | Forbidden - insufficient permissions to process the request. |  -  |
-**422** | Unprocessable Entity - a request validation error. |  -  |
-**500** | Internal Server Error - the server could not process the request. |  -  |
+| **200** | OK - the request has succeeded. |  -  |
+| **400** | Bad Request - a problem reading or understanding the request. |  -  |
+| **401** | Unauthorized - authentication required. |  -  |
+| **403** | Forbidden - insufficient permissions to process the request. |  -  |
+| **422** | Unprocessable Entity - a request validation error. |  -  |
+| **500** | Internal Server Error - the server could not process the request. |  -  |
 
 <a name="getTerminalsTerminalIdTerminalSettings"></a>
 # **getTerminalsTerminalIdTerminalSettings**
@@ -141,9 +141,9 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **terminalId** | **String**| The unique identifier of the payment terminal. |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **terminalId** | **String**| The unique identifier of the payment terminal. | |
 
 ### Return type
 
@@ -161,12 +161,12 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | OK - the request has succeeded. |  -  |
-**400** | Bad Request - a problem reading or understanding the request. |  -  |
-**401** | Unauthorized - authentication required. |  -  |
-**403** | Forbidden - insufficient permissions to process the request. |  -  |
-**422** | Unprocessable Entity - a request validation error. |  -  |
-**500** | Internal Server Error - the server could not process the request. |  -  |
+| **200** | OK - the request has succeeded. |  -  |
+| **400** | Bad Request - a problem reading or understanding the request. |  -  |
+| **401** | Unauthorized - authentication required. |  -  |
+| **403** | Forbidden - insufficient permissions to process the request. |  -  |
+| **422** | Unprocessable Entity - a request validation error. |  -  |
+| **500** | Internal Server Error - the server could not process the request. |  -  |
 
 <a name="patchTerminalsTerminalIdTerminalLogos"></a>
 # **patchTerminalsTerminalIdTerminalLogos**
@@ -221,10 +221,10 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **terminalId** | **String**| The unique identifier of the payment terminal. |
- **logo** | [**Logo**](Logo.md)|  | [optional]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **terminalId** | **String**| The unique identifier of the payment terminal. | |
+| **logo** | [**Logo**](Logo.md)|  | [optional] |
 
 ### Return type
 
@@ -242,12 +242,12 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | OK - the request has succeeded. |  -  |
-**400** | Bad Request - a problem reading or understanding the request. |  -  |
-**401** | Unauthorized - authentication required. |  -  |
-**403** | Forbidden - insufficient permissions to process the request. |  -  |
-**422** | Unprocessable Entity - a request validation error. |  -  |
-**500** | Internal Server Error - the server could not process the request. |  -  |
+| **200** | OK - the request has succeeded. |  -  |
+| **400** | Bad Request - a problem reading or understanding the request. |  -  |
+| **401** | Unauthorized - authentication required. |  -  |
+| **403** | Forbidden - insufficient permissions to process the request. |  -  |
+| **422** | Unprocessable Entity - a request validation error. |  -  |
+| **500** | Internal Server Error - the server could not process the request. |  -  |
 
 <a name="patchTerminalsTerminalIdTerminalSettings"></a>
 # **patchTerminalsTerminalIdTerminalSettings**
@@ -302,10 +302,10 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **terminalId** | **String**| The unique identifier of the payment terminal. |
- **terminalSettings** | [**TerminalSettings**](TerminalSettings.md)|  | [optional]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **terminalId** | **String**| The unique identifier of the payment terminal. | |
+| **terminalSettings** | [**TerminalSettings**](TerminalSettings.md)|  | [optional] |
 
 ### Return type
 
@@ -323,10 +323,10 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | OK - the request has succeeded. |  -  |
-**400** | Bad Request - a problem reading or understanding the request. |  -  |
-**401** | Unauthorized - authentication required. |  -  |
-**403** | Forbidden - insufficient permissions to process the request. |  -  |
-**422** | Unprocessable Entity - a request validation error. |  -  |
-**500** | Internal Server Error - the server could not process the request. |  -  |
+| **200** | OK - the request has succeeded. |  -  |
+| **400** | Bad Request - a problem reading or understanding the request. |  -  |
+| **401** | Unauthorized - authentication required. |  -  |
+| **403** | Forbidden - insufficient permissions to process the request. |  -  |
+| **422** | Unprocessable Entity - a request validation error. |  -  |
+| **500** | Internal Server Error - the server could not process the request. |  -  |
 

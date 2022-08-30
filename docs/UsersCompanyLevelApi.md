@@ -2,12 +2,12 @@
 
 All URIs are relative to *https://management-test.adyen.com/v1*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**getCompaniesCompanyIdUsers**](UsersCompanyLevelApi.md#getCompaniesCompanyIdUsers) | **GET** /companies/{companyId}/users | Get a list of users
-[**getCompaniesCompanyIdUsersUserId**](UsersCompanyLevelApi.md#getCompaniesCompanyIdUsersUserId) | **GET** /companies/{companyId}/users/{userId} | Get user details
-[**patchCompaniesCompanyIdUsersUserId**](UsersCompanyLevelApi.md#patchCompaniesCompanyIdUsersUserId) | **PATCH** /companies/{companyId}/users/{userId} | Update user details
-[**postCompaniesCompanyIdUsers**](UsersCompanyLevelApi.md#postCompaniesCompanyIdUsers) | **POST** /companies/{companyId}/users | Create a new user
+| Method | HTTP request | Description |
+|------------- | ------------- | -------------|
+| [**getCompaniesCompanyIdUsers**](UsersCompanyLevelApi.md#getCompaniesCompanyIdUsers) | **GET** /companies/{companyId}/users | Get a list of users |
+| [**getCompaniesCompanyIdUsersUserId**](UsersCompanyLevelApi.md#getCompaniesCompanyIdUsersUserId) | **GET** /companies/{companyId}/users/{userId} | Get user details |
+| [**patchCompaniesCompanyIdUsersUserId**](UsersCompanyLevelApi.md#patchCompaniesCompanyIdUsersUserId) | **PATCH** /companies/{companyId}/users/{userId} | Update user details |
+| [**postCompaniesCompanyIdUsers**](UsersCompanyLevelApi.md#postCompaniesCompanyIdUsers) | **POST** /companies/{companyId}/users | Create a new user |
 
 
 <a name="getCompaniesCompanyIdUsers"></a>
@@ -64,11 +64,11 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **companyId** | **String**| The unique identifier of the company account. |
- **pageNumber** | **Integer**| The number of the page to return. | [optional]
- **pageSize** | **Integer**| The number of items to have on a page. Maximum value is **100**. The default is **10** items on a page. | [optional]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **companyId** | **String**| The unique identifier of the company account. | |
+| **pageNumber** | **Integer**| The number of the page to return. | [optional] |
+| **pageSize** | **Integer**| The number of items to have on a page. Maximum value is **100**. The default is **10** items on a page. | [optional] |
 
 ### Return type
 
@@ -86,12 +86,12 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | OK - the request has succeeded. |  -  |
-**400** | Bad Request - a problem reading or understanding the request. |  -  |
-**401** | Unauthorized - authentication required. |  -  |
-**403** | Forbidden - insufficient permissions to process the request. |  -  |
-**422** | Unprocessable Entity - a request validation error. |  -  |
-**500** | Internal Server Error - the server could not process the request. |  -  |
+| **200** | OK - the request has succeeded. |  -  |
+| **400** | Bad Request - a problem reading or understanding the request. |  -  |
+| **401** | Unauthorized - authentication required. |  -  |
+| **403** | Forbidden - insufficient permissions to process the request. |  -  |
+| **422** | Unprocessable Entity - a request validation error. |  -  |
+| **500** | Internal Server Error - the server could not process the request. |  -  |
 
 <a name="getCompaniesCompanyIdUsersUserId"></a>
 # **getCompaniesCompanyIdUsersUserId**
@@ -146,10 +146,10 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **companyId** | **String**| The unique identifier of the company account. |
- **userId** | **String**| The unique identifier of the user. |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **companyId** | **String**| The unique identifier of the company account. | |
+| **userId** | **String**| The unique identifier of the user. | |
 
 ### Return type
 
@@ -167,12 +167,12 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | OK - the request has succeeded. |  -  |
-**400** | Bad Request - a problem reading or understanding the request. |  -  |
-**401** | Unauthorized - authentication required. |  -  |
-**403** | Forbidden - insufficient permissions to process the request. |  -  |
-**422** | Unprocessable Entity - a request validation error. |  -  |
-**500** | Internal Server Error - the server could not process the request. |  -  |
+| **200** | OK - the request has succeeded. |  -  |
+| **400** | Bad Request - a problem reading or understanding the request. |  -  |
+| **401** | Unauthorized - authentication required. |  -  |
+| **403** | Forbidden - insufficient permissions to process the request. |  -  |
+| **422** | Unprocessable Entity - a request validation error. |  -  |
+| **500** | Internal Server Error - the server could not process the request. |  -  |
 
 <a name="patchCompaniesCompanyIdUsersUserId"></a>
 # **patchCompaniesCompanyIdUsersUserId**
@@ -228,11 +228,11 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **companyId** | **String**| The unique identifier of the company account. |
- **userId** | **String**| The unique identifier of the user. |
- **updateCompanyUserRequest** | [**UpdateCompanyUserRequest**](UpdateCompanyUserRequest.md)|  | [optional]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **companyId** | **String**| The unique identifier of the company account. | |
+| **userId** | **String**| The unique identifier of the user. | |
+| **updateCompanyUserRequest** | [**UpdateCompanyUserRequest**](UpdateCompanyUserRequest.md)|  | [optional] |
 
 ### Return type
 
@@ -250,12 +250,12 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | OK - the request has succeeded. |  -  |
-**400** | Bad Request - a problem reading or understanding the request. |  -  |
-**401** | Unauthorized - authentication required. |  -  |
-**403** | Forbidden - insufficient permissions to process the request. |  -  |
-**422** | Unprocessable Entity - a request validation error. |  -  |
-**500** | Internal Server Error - the server could not process the request. |  -  |
+| **200** | OK - the request has succeeded. |  -  |
+| **400** | Bad Request - a problem reading or understanding the request. |  -  |
+| **401** | Unauthorized - authentication required. |  -  |
+| **403** | Forbidden - insufficient permissions to process the request. |  -  |
+| **422** | Unprocessable Entity - a request validation error. |  -  |
+| **500** | Internal Server Error - the server could not process the request. |  -  |
 
 <a name="postCompaniesCompanyIdUsers"></a>
 # **postCompaniesCompanyIdUsers**
@@ -310,10 +310,10 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **companyId** | **String**| The unique identifier of the company account. |
- **createCompanyUserRequest** | [**CreateCompanyUserRequest**](CreateCompanyUserRequest.md)|  | [optional]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **companyId** | **String**| The unique identifier of the company account. | |
+| **createCompanyUserRequest** | [**CreateCompanyUserRequest**](CreateCompanyUserRequest.md)|  | [optional] |
 
 ### Return type
 
@@ -331,10 +331,10 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | OK - the request has succeeded. |  -  |
-**400** | Bad Request - a problem reading or understanding the request. |  -  |
-**401** | Unauthorized - authentication required. |  -  |
-**403** | Forbidden - insufficient permissions to process the request. |  -  |
-**422** | Unprocessable Entity - a request validation error. |  -  |
-**500** | Internal Server Error - the server could not process the request. |  -  |
+| **200** | OK - the request has succeeded. |  -  |
+| **400** | Bad Request - a problem reading or understanding the request. |  -  |
+| **401** | Unauthorized - authentication required. |  -  |
+| **403** | Forbidden - insufficient permissions to process the request. |  -  |
+| **422** | Unprocessable Entity - a request validation error. |  -  |
+| **500** | Internal Server Error - the server could not process the request. |  -  |
 

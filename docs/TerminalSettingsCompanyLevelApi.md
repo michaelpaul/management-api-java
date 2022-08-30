@@ -2,12 +2,12 @@
 
 All URIs are relative to *https://management-test.adyen.com/v1*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**getCompaniesCompanyIdTerminalLogos**](TerminalSettingsCompanyLevelApi.md#getCompaniesCompanyIdTerminalLogos) | **GET** /companies/{companyId}/terminalLogos | Get the terminal logo
-[**getCompaniesCompanyIdTerminalSettings**](TerminalSettingsCompanyLevelApi.md#getCompaniesCompanyIdTerminalSettings) | **GET** /companies/{companyId}/terminalSettings | Get terminal settings
-[**patchCompaniesCompanyIdTerminalLogos**](TerminalSettingsCompanyLevelApi.md#patchCompaniesCompanyIdTerminalLogos) | **PATCH** /companies/{companyId}/terminalLogos | Update the terminal logo
-[**patchCompaniesCompanyIdTerminalSettings**](TerminalSettingsCompanyLevelApi.md#patchCompaniesCompanyIdTerminalSettings) | **PATCH** /companies/{companyId}/terminalSettings | Update terminal settings
+| Method | HTTP request | Description |
+|------------- | ------------- | -------------|
+| [**getCompaniesCompanyIdTerminalLogos**](TerminalSettingsCompanyLevelApi.md#getCompaniesCompanyIdTerminalLogos) | **GET** /companies/{companyId}/terminalLogos | Get the terminal logo |
+| [**getCompaniesCompanyIdTerminalSettings**](TerminalSettingsCompanyLevelApi.md#getCompaniesCompanyIdTerminalSettings) | **GET** /companies/{companyId}/terminalSettings | Get terminal settings |
+| [**patchCompaniesCompanyIdTerminalLogos**](TerminalSettingsCompanyLevelApi.md#patchCompaniesCompanyIdTerminalLogos) | **PATCH** /companies/{companyId}/terminalLogos | Update the terminal logo |
+| [**patchCompaniesCompanyIdTerminalSettings**](TerminalSettingsCompanyLevelApi.md#patchCompaniesCompanyIdTerminalSettings) | **PATCH** /companies/{companyId}/terminalSettings | Update terminal settings |
 
 
 <a name="getCompaniesCompanyIdTerminalLogos"></a>
@@ -63,10 +63,10 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **companyId** | **String**| The unique identifier of the company account. |
- **model** | **String**| The terminal model. Possible values: E355, VX675WIFIBT, VX680, VX690, VX700, VX820, M400, MX925, P400Plus, UX300, UX410, V200cPlus, V240mPlus, V400cPlus, V400m, e280, e285, e285p, S1E, S1EL, S1F2, S1L, S1U, S7T. | [optional]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **companyId** | **String**| The unique identifier of the company account. | |
+| **model** | **String**| The terminal model. Possible values: E355, VX675WIFIBT, VX680, VX690, VX700, VX820, M400, MX925, P400Plus, UX300, UX410, V200cPlus, V240mPlus, V400cPlus, V400m, e280, e285, e285p, S1E, S1EL, S1F2, S1L, S1U, S7T. | [optional] |
 
 ### Return type
 
@@ -84,12 +84,12 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | OK - the request has succeeded. |  -  |
-**400** | Bad Request - a problem reading or understanding the request. |  -  |
-**401** | Unauthorized - authentication required. |  -  |
-**403** | Forbidden - insufficient permissions to process the request. |  -  |
-**422** | Unprocessable Entity - a request validation error. |  -  |
-**500** | Internal Server Error - the server could not process the request. |  -  |
+| **200** | OK - the request has succeeded. |  -  |
+| **400** | Bad Request - a problem reading or understanding the request. |  -  |
+| **401** | Unauthorized - authentication required. |  -  |
+| **403** | Forbidden - insufficient permissions to process the request. |  -  |
+| **422** | Unprocessable Entity - a request validation error. |  -  |
+| **500** | Internal Server Error - the server could not process the request. |  -  |
 
 <a name="getCompaniesCompanyIdTerminalSettings"></a>
 # **getCompaniesCompanyIdTerminalSettings**
@@ -143,9 +143,9 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **companyId** | **String**| The unique identifier of the company account. |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **companyId** | **String**| The unique identifier of the company account. | |
 
 ### Return type
 
@@ -163,12 +163,12 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | OK - the request has succeeded. |  -  |
-**400** | Bad Request - a problem reading or understanding the request. |  -  |
-**401** | Unauthorized - authentication required. |  -  |
-**403** | Forbidden - insufficient permissions to process the request. |  -  |
-**422** | Unprocessable Entity - a request validation error. |  -  |
-**500** | Internal Server Error - the server could not process the request. |  -  |
+| **200** | OK - the request has succeeded. |  -  |
+| **400** | Bad Request - a problem reading or understanding the request. |  -  |
+| **401** | Unauthorized - authentication required. |  -  |
+| **403** | Forbidden - insufficient permissions to process the request. |  -  |
+| **422** | Unprocessable Entity - a request validation error. |  -  |
+| **500** | Internal Server Error - the server could not process the request. |  -  |
 
 <a name="patchCompaniesCompanyIdTerminalLogos"></a>
 # **patchCompaniesCompanyIdTerminalLogos**
@@ -224,11 +224,11 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **companyId** | **String**| The unique identifier of the company account. |
- **model** | **String**| The terminal model. Possible values: E355, VX675WIFIBT, VX680, VX690, VX700, VX820, M400, MX925, P400Plus, UX300, UX410, V200cPlus, V240mPlus, V400cPlus, V400m, e280, e285, e285p, S1E, S1EL, S1F2, S1L, S1U, S7T. | [optional]
- **logo** | [**Logo**](Logo.md)|  | [optional]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **companyId** | **String**| The unique identifier of the company account. | |
+| **model** | **String**| The terminal model. Possible values: E355, VX675WIFIBT, VX680, VX690, VX700, VX820, M400, MX925, P400Plus, UX300, UX410, V200cPlus, V240mPlus, V400cPlus, V400m, e280, e285, e285p, S1E, S1EL, S1F2, S1L, S1U, S7T. | [optional] |
+| **logo** | [**Logo**](Logo.md)|  | [optional] |
 
 ### Return type
 
@@ -246,12 +246,12 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | OK - the request has succeeded. |  -  |
-**400** | Bad Request - a problem reading or understanding the request. |  -  |
-**401** | Unauthorized - authentication required. |  -  |
-**403** | Forbidden - insufficient permissions to process the request. |  -  |
-**422** | Unprocessable Entity - a request validation error. |  -  |
-**500** | Internal Server Error - the server could not process the request. |  -  |
+| **200** | OK - the request has succeeded. |  -  |
+| **400** | Bad Request - a problem reading or understanding the request. |  -  |
+| **401** | Unauthorized - authentication required. |  -  |
+| **403** | Forbidden - insufficient permissions to process the request. |  -  |
+| **422** | Unprocessable Entity - a request validation error. |  -  |
+| **500** | Internal Server Error - the server could not process the request. |  -  |
 
 <a name="patchCompaniesCompanyIdTerminalSettings"></a>
 # **patchCompaniesCompanyIdTerminalSettings**
@@ -306,10 +306,10 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **companyId** | **String**| The unique identifier of the company account. |
- **terminalSettings** | [**TerminalSettings**](TerminalSettings.md)|  | [optional]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **companyId** | **String**| The unique identifier of the company account. | |
+| **terminalSettings** | [**TerminalSettings**](TerminalSettings.md)|  | [optional] |
 
 ### Return type
 
@@ -327,10 +327,10 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | OK - the request has succeeded. |  -  |
-**400** | Bad Request - a problem reading or understanding the request. |  -  |
-**401** | Unauthorized - authentication required. |  -  |
-**403** | Forbidden - insufficient permissions to process the request. |  -  |
-**422** | Unprocessable Entity - a request validation error. |  -  |
-**500** | Internal Server Error - the server could not process the request. |  -  |
+| **200** | OK - the request has succeeded. |  -  |
+| **400** | Bad Request - a problem reading or understanding the request. |  -  |
+| **401** | Unauthorized - authentication required. |  -  |
+| **403** | Forbidden - insufficient permissions to process the request. |  -  |
+| **422** | Unprocessable Entity - a request validation error. |  -  |
+| **500** | Internal Server Error - the server could not process the request. |  -  |
 

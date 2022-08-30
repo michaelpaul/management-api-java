@@ -23,8 +23,8 @@ import org.openapitools.client.model.TerminalOrder;
 import org.openapitools.client.model.TerminalOrderRequest;
 import org.openapitools.client.model.TerminalOrdersResponse;
 import org.openapitools.client.model.TerminalProductsResponse;
-import org.junit.Test;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -34,35 +34,32 @@ import java.util.Map;
 /**
  * API tests for TerminalOrdersCompanyLevelApi
  */
-@Ignore
+@Disabled
 public class TerminalOrdersCompanyLevelApiTest {
 
     private final TerminalOrdersCompanyLevelApi api = new TerminalOrdersCompanyLevelApi();
 
-    
     /**
      * Get a list of billing entities
      *
      * Returns the billing entities of the company identified in the path and all merchant accounts belonging to the company. A billing entity is a legal entity where we charge orders to. An order for terminal products must contain the ID of a billing entity.  To make this request, your API credential must have one of the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions): * Management API—Terminal ordering read * Management API—Terminal ordering read and write
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void getCompaniesCompanyIdBillingEntitiesTest() throws ApiException {
         String companyId = null;
         String name = null;
-                BillingEntitiesResponse response = api.getCompaniesCompanyIdBillingEntities(companyId, name);
+        BillingEntitiesResponse response = api.getCompaniesCompanyIdBillingEntities(companyId, name);
         // TODO: test validations
     }
-    
+
     /**
      * Get a list of shipping locations
      *
      * Returns the shipping locations for the company identified in the path and all merchant accounts belonging to the company. A shipping location includes the address where orders can be delivered, and an ID which you need to specify when ordering terminal products.  To make this request, your API credential must have one of the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions): * Management API—Terminal ordering read * Management API—Terminal ordering read and write
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void getCompaniesCompanyIdShippingLocationsTest() throws ApiException {
@@ -70,32 +67,30 @@ public class TerminalOrdersCompanyLevelApiTest {
         String name = null;
         Integer offset = null;
         Integer limit = null;
-                ShippingLocationsResponse response = api.getCompaniesCompanyIdShippingLocations(companyId, name, offset, limit);
+        ShippingLocationsResponse response = api.getCompaniesCompanyIdShippingLocations(companyId, name, offset, limit);
         // TODO: test validations
     }
-    
+
     /**
      * Get a list of terminal models
      *
      * Returns a list of payment terminal models that the company identified in the path has access to. The response includes the terminal model ID, which can be used as a query parameter when getting a list of terminals or a list of products for ordering.  To make this request, your API credential must have one of the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions): * Management API—Terminal ordering read * Management API—Terminal ordering read and write
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void getCompaniesCompanyIdTerminalModelsTest() throws ApiException {
         String companyId = null;
-                TerminalModelsResponse response = api.getCompaniesCompanyIdTerminalModels(companyId);
+        TerminalModelsResponse response = api.getCompaniesCompanyIdTerminalModels(companyId);
         // TODO: test validations
     }
-    
+
     /**
      * Get a list of orders
      *
      * Returns a lists of terminal products orders for the company identified in the path. To filter the list, use one or more of the query parameters.  To make this request, your API credential must have one of the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions): * Management API—Terminal ordering read * Management API—Terminal ordering read and write
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void getCompaniesCompanyIdTerminalOrdersTest() throws ApiException {
@@ -104,33 +99,31 @@ public class TerminalOrdersCompanyLevelApiTest {
         String status = null;
         Integer offset = null;
         Integer limit = null;
-                TerminalOrdersResponse response = api.getCompaniesCompanyIdTerminalOrders(companyId, customerOrderReference, status, offset, limit);
+        TerminalOrdersResponse response = api.getCompaniesCompanyIdTerminalOrders(companyId, customerOrderReference, status, offset, limit);
         // TODO: test validations
     }
-    
+
     /**
      * Get an order
      *
      * Returns the details of the terminal products order identified in the path.  To make this request, your API credential must have one of the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions): * Management API—Terminal ordering read * Management API—Terminal ordering read and write
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void getCompaniesCompanyIdTerminalOrdersOrderIdTest() throws ApiException {
         String companyId = null;
         String orderId = null;
-                TerminalOrder response = api.getCompaniesCompanyIdTerminalOrdersOrderId(companyId, orderId);
+        TerminalOrder response = api.getCompaniesCompanyIdTerminalOrdersOrderId(companyId, orderId);
         // TODO: test validations
     }
-    
+
     /**
      * Get a list of terminal products
      *
      * Returns a list of payment terminal packages and parts that the company identified in the path has access to.  To filter the list, use one or more of the query parameters. The &#x60;country&#x60; query parameter is required.  To make this request, your API credential must have one of the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions): * Management API—Terminal ordering read * Management API—Terminal ordering read and write
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void getCompaniesCompanyIdTerminalProductsTest() throws ApiException {
@@ -139,73 +132,69 @@ public class TerminalOrdersCompanyLevelApiTest {
         String terminalModelId = null;
         Integer offset = null;
         Integer limit = null;
-                TerminalProductsResponse response = api.getCompaniesCompanyIdTerminalProducts(companyId, country, terminalModelId, offset, limit);
+        TerminalProductsResponse response = api.getCompaniesCompanyIdTerminalProducts(companyId, country, terminalModelId, offset, limit);
         // TODO: test validations
     }
-    
+
     /**
      * Update an order
      *
      * Updates the terminal products order identified in the path. Updating is only possible while the order has the status **Placed**.  The request body only needs to contain what you want to change.  However, to update the products in the &#x60;items&#x60; array, you must provide the entire array. For example, if the array has three items:  To remove one item, the array must include the remaining two items. Or to add one item, the array must include all four items.  To make this request, your API credential must have the following [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions): * Management API—Terminal ordering read and write
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void patchCompaniesCompanyIdTerminalOrdersOrderIdTest() throws ApiException {
         String companyId = null;
         String orderId = null;
         TerminalOrderRequest terminalOrderRequest = null;
-                TerminalOrder response = api.patchCompaniesCompanyIdTerminalOrdersOrderId(companyId, orderId, terminalOrderRequest);
+        TerminalOrder response = api.patchCompaniesCompanyIdTerminalOrdersOrderId(companyId, orderId, terminalOrderRequest);
         // TODO: test validations
     }
-    
+
     /**
      * Create a shipping location
      *
      * Creates a shipping location for the company identified in the path. A shipping location defines an address where orders can be delivered.  To make this request, your API credential must have the following [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions): * Management API—Terminal ordering read and write
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void postCompaniesCompanyIdShippingLocationsTest() throws ApiException {
         String companyId = null;
         ShippingLocation shippingLocation = null;
-                ShippingLocation response = api.postCompaniesCompanyIdShippingLocations(companyId, shippingLocation);
+        ShippingLocation response = api.postCompaniesCompanyIdShippingLocations(companyId, shippingLocation);
         // TODO: test validations
     }
-    
+
     /**
      * Create an order
      *
      * Creates an order for payment terminal products for the company identified in the path.  To make this request, your API credential must have the following [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions): * Management API—Terminal ordering read and write
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void postCompaniesCompanyIdTerminalOrdersTest() throws ApiException {
         String companyId = null;
         TerminalOrderRequest terminalOrderRequest = null;
-                TerminalOrder response = api.postCompaniesCompanyIdTerminalOrders(companyId, terminalOrderRequest);
+        TerminalOrder response = api.postCompaniesCompanyIdTerminalOrders(companyId, terminalOrderRequest);
         // TODO: test validations
     }
-    
+
     /**
      * Cancel an order
      *
      * Cancels the terminal products order identified in the path. Cancelling is only possible while the order has the status **Placed**. To cancel an order, make a POST call without a request body. The response returns the full order details, but with the status changed to **Cancelled**.  To make this request, your API credential must have the following [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions): * Management API—Terminal ordering read and write
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void postCompaniesCompanyIdTerminalOrdersOrderIdCancelTest() throws ApiException {
         String companyId = null;
         String orderId = null;
-                TerminalOrder response = api.postCompaniesCompanyIdTerminalOrdersOrderIdCancel(companyId, orderId);
+        TerminalOrder response = api.postCompaniesCompanyIdTerminalOrdersOrderIdCancel(companyId, orderId);
         // TODO: test validations
     }
-    
+
 }

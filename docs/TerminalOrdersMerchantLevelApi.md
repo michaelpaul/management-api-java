@@ -2,18 +2,18 @@
 
 All URIs are relative to *https://management-test.adyen.com/v1*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**getMerchantsMerchantIdBillingEntities**](TerminalOrdersMerchantLevelApi.md#getMerchantsMerchantIdBillingEntities) | **GET** /merchants/{merchantId}/billingEntities | Get a list of billing entities
-[**getMerchantsMerchantIdShippingLocations**](TerminalOrdersMerchantLevelApi.md#getMerchantsMerchantIdShippingLocations) | **GET** /merchants/{merchantId}/shippingLocations | Get a list of shipping locations
-[**getMerchantsMerchantIdTerminalModels**](TerminalOrdersMerchantLevelApi.md#getMerchantsMerchantIdTerminalModels) | **GET** /merchants/{merchantId}/terminalModels | Get a list of terminal models
-[**getMerchantsMerchantIdTerminalOrders**](TerminalOrdersMerchantLevelApi.md#getMerchantsMerchantIdTerminalOrders) | **GET** /merchants/{merchantId}/terminalOrders | Get a list of orders
-[**getMerchantsMerchantIdTerminalOrdersOrderId**](TerminalOrdersMerchantLevelApi.md#getMerchantsMerchantIdTerminalOrdersOrderId) | **GET** /merchants/{merchantId}/terminalOrders/{orderId} | Get an order
-[**getMerchantsMerchantIdTerminalProducts**](TerminalOrdersMerchantLevelApi.md#getMerchantsMerchantIdTerminalProducts) | **GET** /merchants/{merchantId}/terminalProducts | Get a list of terminal products
-[**patchMerchantsMerchantIdTerminalOrdersOrderId**](TerminalOrdersMerchantLevelApi.md#patchMerchantsMerchantIdTerminalOrdersOrderId) | **PATCH** /merchants/{merchantId}/terminalOrders/{orderId} | Update an order
-[**postMerchantsMerchantIdShippingLocations**](TerminalOrdersMerchantLevelApi.md#postMerchantsMerchantIdShippingLocations) | **POST** /merchants/{merchantId}/shippingLocations | Create a shipping location
-[**postMerchantsMerchantIdTerminalOrders**](TerminalOrdersMerchantLevelApi.md#postMerchantsMerchantIdTerminalOrders) | **POST** /merchants/{merchantId}/terminalOrders | Create an order
-[**postMerchantsMerchantIdTerminalOrdersOrderIdCancel**](TerminalOrdersMerchantLevelApi.md#postMerchantsMerchantIdTerminalOrdersOrderIdCancel) | **POST** /merchants/{merchantId}/terminalOrders/{orderId}/cancel | Cancel an order
+| Method | HTTP request | Description |
+|------------- | ------------- | -------------|
+| [**getMerchantsMerchantIdBillingEntities**](TerminalOrdersMerchantLevelApi.md#getMerchantsMerchantIdBillingEntities) | **GET** /merchants/{merchantId}/billingEntities | Get a list of billing entities |
+| [**getMerchantsMerchantIdShippingLocations**](TerminalOrdersMerchantLevelApi.md#getMerchantsMerchantIdShippingLocations) | **GET** /merchants/{merchantId}/shippingLocations | Get a list of shipping locations |
+| [**getMerchantsMerchantIdTerminalModels**](TerminalOrdersMerchantLevelApi.md#getMerchantsMerchantIdTerminalModels) | **GET** /merchants/{merchantId}/terminalModels | Get a list of terminal models |
+| [**getMerchantsMerchantIdTerminalOrders**](TerminalOrdersMerchantLevelApi.md#getMerchantsMerchantIdTerminalOrders) | **GET** /merchants/{merchantId}/terminalOrders | Get a list of orders |
+| [**getMerchantsMerchantIdTerminalOrdersOrderId**](TerminalOrdersMerchantLevelApi.md#getMerchantsMerchantIdTerminalOrdersOrderId) | **GET** /merchants/{merchantId}/terminalOrders/{orderId} | Get an order |
+| [**getMerchantsMerchantIdTerminalProducts**](TerminalOrdersMerchantLevelApi.md#getMerchantsMerchantIdTerminalProducts) | **GET** /merchants/{merchantId}/terminalProducts | Get a list of terminal products |
+| [**patchMerchantsMerchantIdTerminalOrdersOrderId**](TerminalOrdersMerchantLevelApi.md#patchMerchantsMerchantIdTerminalOrdersOrderId) | **PATCH** /merchants/{merchantId}/terminalOrders/{orderId} | Update an order |
+| [**postMerchantsMerchantIdShippingLocations**](TerminalOrdersMerchantLevelApi.md#postMerchantsMerchantIdShippingLocations) | **POST** /merchants/{merchantId}/shippingLocations | Create a shipping location |
+| [**postMerchantsMerchantIdTerminalOrders**](TerminalOrdersMerchantLevelApi.md#postMerchantsMerchantIdTerminalOrders) | **POST** /merchants/{merchantId}/terminalOrders | Create an order |
+| [**postMerchantsMerchantIdTerminalOrdersOrderIdCancel**](TerminalOrdersMerchantLevelApi.md#postMerchantsMerchantIdTerminalOrdersOrderIdCancel) | **POST** /merchants/{merchantId}/terminalOrders/{orderId}/cancel | Cancel an order |
 
 
 <a name="getMerchantsMerchantIdBillingEntities"></a>
@@ -69,10 +69,10 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **merchantId** | **String**| The unique identifier of the merchant account. |
- **name** | **String**| The name of the billing entity. | [optional]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **merchantId** | **String**| The unique identifier of the merchant account. | |
+| **name** | **String**| The name of the billing entity. | [optional] |
 
 ### Return type
 
@@ -90,13 +90,13 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | OK - the request has succeeded. |  -  |
-**204** | No Content - the request has been successfully processed, but there is no additional content. |  -  |
-**400** | Bad Request - a problem reading or understanding the request. |  -  |
-**401** | Unauthorized - authentication required. |  -  |
-**403** | Forbidden - insufficient permissions to process the request. |  -  |
-**422** | Unprocessable Entity - a request validation error. |  -  |
-**500** | Internal Server Error - the server could not process the request. |  -  |
+| **200** | OK - the request has succeeded. |  -  |
+| **204** | No Content - the request has been successfully processed, but there is no additional content. |  -  |
+| **400** | Bad Request - a problem reading or understanding the request. |  -  |
+| **401** | Unauthorized - authentication required. |  -  |
+| **403** | Forbidden - insufficient permissions to process the request. |  -  |
+| **422** | Unprocessable Entity - a request validation error. |  -  |
+| **500** | Internal Server Error - the server could not process the request. |  -  |
 
 <a name="getMerchantsMerchantIdShippingLocations"></a>
 # **getMerchantsMerchantIdShippingLocations**
@@ -153,12 +153,12 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **merchantId** | **String**| The unique identifier of the merchant account. |
- **name** | **String**| The name of the shipping location. | [optional]
- **offset** | **Integer**| The number of locations to skip. | [optional]
- **limit** | **Integer**| The number of locations to return. | [optional]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **merchantId** | **String**| The unique identifier of the merchant account. | |
+| **name** | **String**| The name of the shipping location. | [optional] |
+| **offset** | **Integer**| The number of locations to skip. | [optional] |
+| **limit** | **Integer**| The number of locations to return. | [optional] |
 
 ### Return type
 
@@ -176,13 +176,13 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | OK - the request has succeeded. |  -  |
-**204** | No Content - the request has been successfully processed, but there is no additional content. |  -  |
-**400** | Bad Request - a problem reading or understanding the request. |  -  |
-**401** | Unauthorized - authentication required. |  -  |
-**403** | Forbidden - insufficient permissions to process the request. |  -  |
-**422** | Unprocessable Entity - a request validation error. |  -  |
-**500** | Internal Server Error - the server could not process the request. |  -  |
+| **200** | OK - the request has succeeded. |  -  |
+| **204** | No Content - the request has been successfully processed, but there is no additional content. |  -  |
+| **400** | Bad Request - a problem reading or understanding the request. |  -  |
+| **401** | Unauthorized - authentication required. |  -  |
+| **403** | Forbidden - insufficient permissions to process the request. |  -  |
+| **422** | Unprocessable Entity - a request validation error. |  -  |
+| **500** | Internal Server Error - the server could not process the request. |  -  |
 
 <a name="getMerchantsMerchantIdTerminalModels"></a>
 # **getMerchantsMerchantIdTerminalModels**
@@ -236,9 +236,9 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **merchantId** | **String**| The unique identifier of the merchant account. |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **merchantId** | **String**| The unique identifier of the merchant account. | |
 
 ### Return type
 
@@ -256,13 +256,13 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | OK - the request has succeeded. |  -  |
-**204** | No Content - the request has been successfully processed, but there is no additional content. |  -  |
-**400** | Bad Request - a problem reading or understanding the request. |  -  |
-**401** | Unauthorized - authentication required. |  -  |
-**403** | Forbidden - insufficient permissions to process the request. |  -  |
-**422** | Unprocessable Entity - a request validation error. |  -  |
-**500** | Internal Server Error - the server could not process the request. |  -  |
+| **200** | OK - the request has succeeded. |  -  |
+| **204** | No Content - the request has been successfully processed, but there is no additional content. |  -  |
+| **400** | Bad Request - a problem reading or understanding the request. |  -  |
+| **401** | Unauthorized - authentication required. |  -  |
+| **403** | Forbidden - insufficient permissions to process the request. |  -  |
+| **422** | Unprocessable Entity - a request validation error. |  -  |
+| **500** | Internal Server Error - the server could not process the request. |  -  |
 
 <a name="getMerchantsMerchantIdTerminalOrders"></a>
 # **getMerchantsMerchantIdTerminalOrders**
@@ -320,13 +320,13 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **merchantId** | **String**|  |
- **customerOrderReference** | **String**| Your purchase order number. | [optional]
- **status** | **String**| The order status. Possible values (not case-sensitive): Placed, Confirmed, Cancelled, Shipped, Delivered. | [optional]
- **offset** | **Integer**| The number of orders to skip. | [optional]
- **limit** | **Integer**| The number of orders to return. | [optional]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **merchantId** | **String**|  | |
+| **customerOrderReference** | **String**| Your purchase order number. | [optional] |
+| **status** | **String**| The order status. Possible values (not case-sensitive): Placed, Confirmed, Cancelled, Shipped, Delivered. | [optional] |
+| **offset** | **Integer**| The number of orders to skip. | [optional] |
+| **limit** | **Integer**| The number of orders to return. | [optional] |
 
 ### Return type
 
@@ -344,13 +344,13 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | OK - the request has succeeded. |  -  |
-**204** | No Content - the request has been successfully processed, but there is no additional content. |  -  |
-**400** | Bad Request - a problem reading or understanding the request. |  -  |
-**401** | Unauthorized - authentication required. |  -  |
-**403** | Forbidden - insufficient permissions to process the request. |  -  |
-**422** | Unprocessable Entity - a request validation error. |  -  |
-**500** | Internal Server Error - the server could not process the request. |  -  |
+| **200** | OK - the request has succeeded. |  -  |
+| **204** | No Content - the request has been successfully processed, but there is no additional content. |  -  |
+| **400** | Bad Request - a problem reading or understanding the request. |  -  |
+| **401** | Unauthorized - authentication required. |  -  |
+| **403** | Forbidden - insufficient permissions to process the request. |  -  |
+| **422** | Unprocessable Entity - a request validation error. |  -  |
+| **500** | Internal Server Error - the server could not process the request. |  -  |
 
 <a name="getMerchantsMerchantIdTerminalOrdersOrderId"></a>
 # **getMerchantsMerchantIdTerminalOrdersOrderId**
@@ -405,10 +405,10 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **merchantId** | **String**| The unique identifier of the merchant account. |
- **orderId** | **String**| The unique identifier of the order. |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **merchantId** | **String**| The unique identifier of the merchant account. | |
+| **orderId** | **String**| The unique identifier of the order. | |
 
 ### Return type
 
@@ -426,13 +426,13 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | OK - the request has succeeded. |  -  |
-**204** | No Content - the request has been successfully processed, but there is no additional content. |  -  |
-**400** | Bad Request - a problem reading or understanding the request. |  -  |
-**401** | Unauthorized - authentication required. |  -  |
-**403** | Forbidden - insufficient permissions to process the request. |  -  |
-**422** | Unprocessable Entity - a request validation error. |  -  |
-**500** | Internal Server Error - the server could not process the request. |  -  |
+| **200** | OK - the request has succeeded. |  -  |
+| **204** | No Content - the request has been successfully processed, but there is no additional content. |  -  |
+| **400** | Bad Request - a problem reading or understanding the request. |  -  |
+| **401** | Unauthorized - authentication required. |  -  |
+| **403** | Forbidden - insufficient permissions to process the request. |  -  |
+| **422** | Unprocessable Entity - a request validation error. |  -  |
+| **500** | Internal Server Error - the server could not process the request. |  -  |
 
 <a name="getMerchantsMerchantIdTerminalProducts"></a>
 # **getMerchantsMerchantIdTerminalProducts**
@@ -490,13 +490,13 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **merchantId** | **String**| The unique identifier of the merchant account. |
- **country** | **String**| The country to return products for, in [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) format. For example, **US** | [optional]
- **terminalModelId** | **String**| The terminal model to return products for. Use the ID returned in the [GET &#x60;/terminalModels&#x60;](https://docs.adyen.com/api-explorer/#/ManagementService/latest/get/terminalModels) response. For example, **Verifone.M400** | [optional]
- **offset** | **Integer**| The number of products to skip. | [optional]
- **limit** | **Integer**| The number of products to return. | [optional]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **merchantId** | **String**| The unique identifier of the merchant account. | |
+| **country** | **String**| The country to return products for, in [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) format. For example, **US** | [optional] |
+| **terminalModelId** | **String**| The terminal model to return products for. Use the ID returned in the [GET &#x60;/terminalModels&#x60;](https://docs.adyen.com/api-explorer/#/ManagementService/latest/get/terminalModels) response. For example, **Verifone.M400** | [optional] |
+| **offset** | **Integer**| The number of products to skip. | [optional] |
+| **limit** | **Integer**| The number of products to return. | [optional] |
 
 ### Return type
 
@@ -514,13 +514,13 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | OK - the request has succeeded. |  -  |
-**204** | No Content - the request has been successfully processed, but there is no additional content. |  -  |
-**400** | Bad Request - a problem reading or understanding the request. |  -  |
-**401** | Unauthorized - authentication required. |  -  |
-**403** | Forbidden - insufficient permissions to process the request. |  -  |
-**422** | Unprocessable Entity - a request validation error. |  -  |
-**500** | Internal Server Error - the server could not process the request. |  -  |
+| **200** | OK - the request has succeeded. |  -  |
+| **204** | No Content - the request has been successfully processed, but there is no additional content. |  -  |
+| **400** | Bad Request - a problem reading or understanding the request. |  -  |
+| **401** | Unauthorized - authentication required. |  -  |
+| **403** | Forbidden - insufficient permissions to process the request. |  -  |
+| **422** | Unprocessable Entity - a request validation error. |  -  |
+| **500** | Internal Server Error - the server could not process the request. |  -  |
 
 <a name="patchMerchantsMerchantIdTerminalOrdersOrderId"></a>
 # **patchMerchantsMerchantIdTerminalOrdersOrderId**
@@ -576,11 +576,11 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **merchantId** | **String**| The unique identifier of the merchant account. |
- **orderId** | **String**| The unique identifier of the order. |
- **terminalOrderRequest** | [**TerminalOrderRequest**](TerminalOrderRequest.md)|  | [optional]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **merchantId** | **String**| The unique identifier of the merchant account. | |
+| **orderId** | **String**| The unique identifier of the order. | |
+| **terminalOrderRequest** | [**TerminalOrderRequest**](TerminalOrderRequest.md)|  | [optional] |
 
 ### Return type
 
@@ -598,13 +598,13 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | OK - the request has succeeded. |  -  |
-**204** | No Content - the request has been successfully processed, but there is no additional content. |  -  |
-**400** | Bad Request - a problem reading or understanding the request. |  -  |
-**401** | Unauthorized - authentication required. |  -  |
-**403** | Forbidden - insufficient permissions to process the request. |  -  |
-**422** | Unprocessable Entity - a request validation error. |  -  |
-**500** | Internal Server Error - the server could not process the request. |  -  |
+| **200** | OK - the request has succeeded. |  -  |
+| **204** | No Content - the request has been successfully processed, but there is no additional content. |  -  |
+| **400** | Bad Request - a problem reading or understanding the request. |  -  |
+| **401** | Unauthorized - authentication required. |  -  |
+| **403** | Forbidden - insufficient permissions to process the request. |  -  |
+| **422** | Unprocessable Entity - a request validation error. |  -  |
+| **500** | Internal Server Error - the server could not process the request. |  -  |
 
 <a name="postMerchantsMerchantIdShippingLocations"></a>
 # **postMerchantsMerchantIdShippingLocations**
@@ -659,10 +659,10 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **merchantId** | **String**| The unique identifier of the merchant account. |
- **shippingLocation** | [**ShippingLocation**](ShippingLocation.md)|  | [optional]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **merchantId** | **String**| The unique identifier of the merchant account. | |
+| **shippingLocation** | [**ShippingLocation**](ShippingLocation.md)|  | [optional] |
 
 ### Return type
 
@@ -680,13 +680,13 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | OK - the request has succeeded. |  -  |
-**204** | No Content - the request has been successfully processed, but there is no additional content. |  -  |
-**400** | Bad Request - a problem reading or understanding the request. |  -  |
-**401** | Unauthorized - authentication required. |  -  |
-**403** | Forbidden - insufficient permissions to process the request. |  -  |
-**422** | Unprocessable Entity - a request validation error. |  -  |
-**500** | Internal Server Error - the server could not process the request. |  -  |
+| **200** | OK - the request has succeeded. |  -  |
+| **204** | No Content - the request has been successfully processed, but there is no additional content. |  -  |
+| **400** | Bad Request - a problem reading or understanding the request. |  -  |
+| **401** | Unauthorized - authentication required. |  -  |
+| **403** | Forbidden - insufficient permissions to process the request. |  -  |
+| **422** | Unprocessable Entity - a request validation error. |  -  |
+| **500** | Internal Server Error - the server could not process the request. |  -  |
 
 <a name="postMerchantsMerchantIdTerminalOrders"></a>
 # **postMerchantsMerchantIdTerminalOrders**
@@ -741,10 +741,10 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **merchantId** | **String**| The unique identifier of the merchant account. |
- **terminalOrderRequest** | [**TerminalOrderRequest**](TerminalOrderRequest.md)|  | [optional]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **merchantId** | **String**| The unique identifier of the merchant account. | |
+| **terminalOrderRequest** | [**TerminalOrderRequest**](TerminalOrderRequest.md)|  | [optional] |
 
 ### Return type
 
@@ -762,13 +762,13 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | OK - the request has succeeded. |  -  |
-**204** | No Content - the request has been successfully processed, but there is no additional content. |  -  |
-**400** | Bad Request - a problem reading or understanding the request. |  -  |
-**401** | Unauthorized - authentication required. |  -  |
-**403** | Forbidden - insufficient permissions to process the request. |  -  |
-**422** | Unprocessable Entity - a request validation error. |  -  |
-**500** | Internal Server Error - the server could not process the request. |  -  |
+| **200** | OK - the request has succeeded. |  -  |
+| **204** | No Content - the request has been successfully processed, but there is no additional content. |  -  |
+| **400** | Bad Request - a problem reading or understanding the request. |  -  |
+| **401** | Unauthorized - authentication required. |  -  |
+| **403** | Forbidden - insufficient permissions to process the request. |  -  |
+| **422** | Unprocessable Entity - a request validation error. |  -  |
+| **500** | Internal Server Error - the server could not process the request. |  -  |
 
 <a name="postMerchantsMerchantIdTerminalOrdersOrderIdCancel"></a>
 # **postMerchantsMerchantIdTerminalOrdersOrderIdCancel**
@@ -823,10 +823,10 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **merchantId** | **String**| The unique identifier of the merchant account. |
- **orderId** | **String**| The unique identifier of the order. |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **merchantId** | **String**| The unique identifier of the merchant account. | |
+| **orderId** | **String**| The unique identifier of the order. | |
 
 ### Return type
 
@@ -844,11 +844,11 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | OK - the request has succeeded. |  -  |
-**204** | No Content - the request has been successfully processed, but there is no additional content. |  -  |
-**400** | Bad Request - a problem reading or understanding the request. |  -  |
-**401** | Unauthorized - authentication required. |  -  |
-**403** | Forbidden - insufficient permissions to process the request. |  -  |
-**422** | Unprocessable Entity - a request validation error. |  -  |
-**500** | Internal Server Error - the server could not process the request. |  -  |
+| **200** | OK - the request has succeeded. |  -  |
+| **204** | No Content - the request has been successfully processed, but there is no additional content. |  -  |
+| **400** | Bad Request - a problem reading or understanding the request. |  -  |
+| **401** | Unauthorized - authentication required. |  -  |
+| **403** | Forbidden - insufficient permissions to process the request. |  -  |
+| **422** | Unprocessable Entity - a request validation error. |  -  |
+| **500** | Internal Server Error - the server could not process the request. |  -  |
 

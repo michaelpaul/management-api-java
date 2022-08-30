@@ -16,8 +16,8 @@ package org.openapitools.client.api;
 import org.openapitools.client.ApiException;
 import org.openapitools.client.model.ListTerminalsResponse;
 import org.openapitools.client.model.RestServiceError;
-import org.junit.Test;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -27,19 +27,17 @@ import java.util.Map;
 /**
  * API tests for TerminalsTerminalLevelApi
  */
-@Ignore
+@Disabled
 public class TerminalsTerminalLevelApiTest {
 
     private final TerminalsTerminalLevelApi api = new TerminalsTerminalLevelApi();
 
-    
     /**
      * Get a list of terminals
      *
      * Returns the payment terminals that the API credential has access to and that match the query parameters.  When using &#x60;searchQuery&#x60;, other query parameters are ignored.  To make this request, your API credential must have one of the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions): * Management API—Terminal actions read * Management API—Terminal actions read and write
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void getTerminalsTest() throws ApiException {
@@ -50,8 +48,8 @@ public class TerminalsTerminalLevelApiTest {
         String brandModels = null;
         Integer pageNumber = null;
         Integer pageSize = null;
-                ListTerminalsResponse response = api.getTerminals(searchQuery, countries, merchantIds, storeIds, brandModels, pageNumber, pageSize);
+        ListTerminalsResponse response = api.getTerminals(searchQuery, countries, merchantIds, storeIds, brandModels, pageNumber, pageSize);
         // TODO: test validations
     }
-    
+
 }
