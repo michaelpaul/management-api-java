@@ -1,0 +1,17 @@
+
+
+# PaginationLinks
+
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**first** | [**LinksElement**](LinksElement.md) |  | 
+**last** | [**LinksElement**](LinksElement.md) |  | 
+**next** | [**LinksElement**](LinksElement.md) |  |  [optional]
+**prev** | [**LinksElement**](LinksElement.md) |  |  [optional]
+**self** | [**LinksElement**](LinksElement.md) |  | 
+
+
+
